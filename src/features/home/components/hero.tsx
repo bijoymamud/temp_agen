@@ -8,7 +8,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[85vh] md:min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative pt-20  lg:pt-0 flex items-center justify-center overflow-hidden">
       <Container className="flex flex-col items-center  text-center max-w-screen-xl">
         <Grid size={30} />
         <div className="lg:mt-36">
@@ -27,11 +27,11 @@ export default function Hero() {
             </p>
           </div>
           <div className="space-x-4">
-            <Button size="lg" variant={"gooeyLeft"} className="h-12 px-8">
+            <Button size="lg" variant={"gooeyLeft"} className="md:h-12 md:px-8">
               Get Started
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <Button variant="outline" size="lg" className="h-12 px-8">
+            <Button variant="outline" size="lg" className="md:h-12 md:px-8">
               Learn More
             </Button>
           </div>

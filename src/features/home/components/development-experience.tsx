@@ -7,10 +7,10 @@ import Image from "next/image";
 
 export default function DevelopmentExperience() {
   return (
-    <div className="relative h-screen pt-10">
+    <div className="relative pt-10">
       <RetroGrid />
-      <Container className=" max-w-screen-xl ">
-        <div className="mb-10">
+      <Container className="max-w-screen-xl ">
+        <div className="lg:mb-10">
           <h2 className="text-3xl font-bold   text-center">How We Work</h2>
           <p className=" max-w-3xl mx-auto text-center ">
             We work with you to understand your business and your customers. We
@@ -18,7 +18,7 @@ export default function DevelopmentExperience() {
             goals.
           </p>
         </div>
-        <div className=" relative h-[80vh]">
+        <div className=" relative h-[40vh] md:h-[60vh] lg:h-[80vh]">
           <Image src={homeWorkImage} className="" alt="Home Work" fill />
         </div>
       </Container>

@@ -21,7 +21,7 @@ export default function RetroGrid({
           className={cn(
             "animate-grid",
 
-            "[background-repeat:repeat] [background-size:60px_60px] [height:300vh] [inset:0%_0px] [margin-left:-50%] [transform-origin:100%_0_0] [width:600vw]",
+            "[background-repeat:repeat] [background-size:40px_60px] [height:300vh] [inset:0%_0px] [margin-left:-50%] [transform-origin:100%_0_0] [width:600vw]",
 
             // Light Styles
             "[background-image:linear-gradient(to_right,hsl(var(--primary))_1px,transparent_0),linear-gradient(to_bottom,hsl(var(--primary))_1px,transparent_0)]"

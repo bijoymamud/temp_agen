@@ -1,5 +1,6 @@
 "use client";
 
+import worldMapPng from "@/assets/images/2560px-World_map_with_points.png";
 import { motion } from "motion/react";
 import Image from "next/image";
 import { useMemo, useRef } from "react";
@@ -45,7 +46,7 @@ export function WorldMap({ dots = [] }: MapProps) {
       <Image
         className="h-full w-full [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)] pointer-events-none select-none opacity-45"
         alt="img"
-        src="/2560px-World_map_with_points.png"
+        src={worldMapPng}
         layout="fill"
         objectFit="cover"
       />
