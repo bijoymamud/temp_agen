@@ -1,55 +1,170 @@
-import Container from "@/components/container";
-import { DotPattern } from "@/components/dot-pattern";
-import { Card } from "@/components/ui/card";
-import { Shield, Star, Zap } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Bolt,
+  Clock,
+  Code,
+  Database,
+  Monitor,
+  Server,
+  Shield,
+} from "lucide-react";
+import React from "react";
 
-const service_data = [
+const services = [
   {
-    icon: Zap,
-    title: "Innovative Design",
-    description:
-      "We deliver creative designs that align with your brand, focusing on usability and modern aesthetics.",
+    icon: "bolt",
+    title: "Fast IT Support",
+    description: "Get quick and efficient IT support for your business needs.",
+    price: 99,
+    duration: "24/7 Support",
   },
   {
-    icon: Shield,
-    title: "Secure Solutions",
-    description:
-      "Protect your digital assets with advanced encryption, threat detection, and robust security protocols.",
+    icon: "server",
+    title: "Cloud Solutions",
+    description: "Secure and scalable cloud infrastructure for your company.",
+    price: 199,
+    duration: "Monthly",
   },
   {
-    icon: Star,
-    title: "Premium Quality",
-    description:
-      "Our projects reflect top-tier quality, combining precision, innovation, and a commitment to excellence.",
+    icon: "shield",
+    title: "Cybersecurity",
+    description: "Protect your business with advanced cybersecurity measures.",
+    price: 299,
+    duration: "Annual Plan",
+  },
+  {
+    icon: "monitor",
+    title: "Network Management",
+    description: "Efficient management and optimization of your network.",
+    price: 149,
+    duration: "Monthly",
+  },
+  {
+    icon: "database",
+    title: "Data Analytics",
+    description: "Harness the power of your data with advanced analytics.",
+    price: 399,
+    duration: "Quarterly",
+  },
+  {
+    icon: "code",
+    title: "Custom Software",
+    description: "Tailored software solutions for your unique business needs.",
+    price: 999,
+    duration: "Per Project",
   },
 ];
 
-const Services = () => {
+export const Icons = {
+  bolt: Bolt,
+  server: Server,
+  shield: Shield,
+  monitor: Monitor,
+  database: Database,
+  code: Code,
+  clock: Clock,
+};
+
+const Services: React.FC = () => {
   return (
-    <section className="relative py-8 bg-muted/20">
-      <DotPattern />
-      <Container className="max-w-screen-xl">
-        <div className="grid gap-12 lg:grid-cols-3">
-          {service_data.map((service, i) => (
-            <Card key={i} className="border-none relative z-10">
-              <div
-                key={i}
-                className="w-full bg-background px-4 py-2 relative overflow-hidden group cursor-pointer rounded-md before:bg-primary before:w-[38px] before:h-[38px] before:absolute before:top-0 before:right-0 before:rounded-bl-[35px] before:z-[-1] hover:before:scale-[31] hover:before:duration-700 before:transition-all before:ease-out before:duration-[600ms] z-[0] shadow h-full"
-              >
-                <service.icon className="absolute top-2 z-20 right-2 text-[1rem] size-4 text-background " />
-                <h3 className="text-[1.5rem] font-bold transition-all duration-500 group-hover:text-background ease-out">
-                  {service.title}
-                </h3>
-                <p className="text-[0.9rem]  transition-all ease-out duration-500 mt-1 group-hover:text-background">
-                  {service.description}
-                </p>
-              </div>
-            </Card>
+    <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="text-start md:text-center">
+        <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
+          Our IT Services
+        </h2>
+        <p className="text-muted-foreground mt-6">
+          Discover our range of IT services designed to empower your business
+        </p>
+      </div>
+
+      <div className="flex flex-col items-center justify-center py-10 md:py-20 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-8">
+          {services.map((service) => (
+            <ServiceCard
+              key={service.title}
+              icon={service.icon as keyof typeof Icons}
+              title={service.title}
+              description={service.description}
+              price={service.price}
+              duration={service.duration}
+            />
           ))}
         </div>
-      </Container>
-    </section>
+      </div>
+    </div>
   );
 };
 
 export default Services;
+
+interface ServiceCardProps {
+  title: string;
+  description: string;
+  icon: keyof typeof Icons;
+  price: number;
+  duration: string;
+}
+
+const ServiceCard: React.FC<ServiceCardProps> = ({
+  title,
+  description,
+  icon,
+  price,
+  duration,
+}) => {
+  const Icon = Icons[icon];
+
+  return (
+    <div className="bg-muted w-full justify-between rounded flex overflow-hidden">
+      {/* left side */}
+      <div className="flex flex-col p-[15px] lg:p-[20px] gap-[18px] flex-grow">
+        <h1 className="text-[1rem] lg:text-[1.3rem] font-bold ">{title}</h1>
+        <div className="flex items-center gap-[10px]">
+          <div className="p-[8px] lg:p-[10px] rounded bg-background text-primary">
+            <Icon className="w-[1.5rem] h-[1.5rem] lg:w-[2rem] lg:h-[2rem]" />
+          </div>
+          <div>
+            <h4 className="text-[0.8rem] lg:text-[1.1rem] font-[600] ">
+              Service Type
+            </h4>
+            <p className="text-[0.6rem] lg:text-[0.9rem] font-[400] text-gray-500">
+              {description}
+            </p>
+          </div>
+        </div>
+        <div className="flex items-center gap-[10px]">
+          <div className="p-[8px] lg:p-[10px] rounded bg-background text-primary">
+            <Icons.clock className="w-[1.5rem] h-[1.5rem] lg:w-[2rem] lg:h-[2rem]" />
+          </div>
+          <div>
+            <h4 className="text-[0.8rem] lg:text-[1.1rem] font-[600] ">
+              Duration
+            </h4>
+            <p className="text-[0.6rem] lg:text-[0.9rem] font-[400]">
+              {duration}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* right side */}
+      <div className="flex flex-col justify-between relative w-[45%] lg:w-[40%] items-center border-l-[2px] p-[15px] lg:p-[20px] border-dashed">
+        {/* top curve */}
+        <div className="w-[45px] h-[45px] rounded-full bg-background absolute top-[-15%] lg:top-[-13%] sm:left-[-13.5%] left-[-19%] lg:left-[-11.5%]"></div>
+
+        <h4 className="text-[0.9rem] lg:text-[1.3rem] font-bold ">
+          IT Service
+        </h4>
+
+        <Button variant={"gooeyRight"}>Get Started</Button>
+
+        <p className="text-[0.9rem] lg:text-[1.1rem] text-gray-500">
+          Price: <span className="text-red-600 font-semibold">${price}</span>
+        </p>
+
+        {/* bottom curve */}
+        <div className="w-[45px] h-[45px] rounded-full  bg-background  absolute bottom-[-15%] lg:bottom-[-13%] left-[-18.5%] sm:left-[-13.5%] lg:left-[-11.5%]"></div>
+      </div>
+    </div>
+  );
+};
