@@ -11,7 +11,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-import { useState } from "react"; // Import useState
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -71,7 +71,7 @@ export default function LoginForm() {
             <FormItem className="grid ">
               <FormLabel className="flex justify-between">
                 Password{" "}
-                <Link href="./recover" className="text-sm underline text-black">
+                <Link href="./recover" className="text-sm underline ">
                   Forgot password?
                 </Link>
               </FormLabel>

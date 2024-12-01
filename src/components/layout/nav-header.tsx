@@ -28,7 +28,7 @@ export function NavHeader() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300   shadow "
+        "fixed top-0 left-0 right-0  transition-all duration-300   shadow  z-50"
       )}
     >
       <div className="relative bg-background/50 backdrop-blur-md">

@@ -10,15 +10,14 @@ import {
 } from "@tabler/icons-react";
 import { motion } from "motion/react";
 
-import Container from "@/components/container";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 
 export function WhyUs() {
   return (
-    <Container className="mb-20">
+    <div className="">
       <div className="mb-10">
-        <h2 className="text-3xl font-bold text-neutral-800  ">Why Choose Us</h2>
-        <p className="mt-4  mx-auto text-neutral-600  ">
+        <h2 className="text-3xl font-bold">Why Choose Us</h2>
+        <p className="mt-4  mx-auto">
           We offer a wide range of features to make your travel experience
           seamless and enjoyable.
         </p>
@@ -35,7 +34,7 @@ export function WhyUs() {
           />
         ))}
       </BentoGrid>
-    </Container>
+    </div>
   );
 }
 

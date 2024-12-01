@@ -4,7 +4,7 @@ import React from "react";
 
 const layout = async ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex flex-col items-center justify-center bg-[url('/b2bhomeMap.png')]  bg-fixed bg-center bg-cover bg-background ">
+    <div className="flex flex-col items-center justify-center bg-fixed bg-center bg-cover header ">
       <NavHeader />
       <div className="w-full min-h-screen backdrop-blur flex flex-col items-center justify-center ">
         <div className="pt-14">{children}</div>
