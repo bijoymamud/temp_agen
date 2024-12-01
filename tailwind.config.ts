@@ -163,6 +163,19 @@ export default {
             transform: 'rotate(215deg) translateX(-500px)',
             opacity: '0'
           }
+        },
+        meteor: {
+          '0%': {
+            transform: 'rotate(215deg) translateX(0)',
+            opacity: '1'
+          },
+          '70%': {
+            opacity: '1'
+          },
+          '100%': {
+            transform: 'rotate(215deg) translateX(-500px)',
+            opacity: '0'
+          }
         }
       },
       animation: {
@@ -171,6 +184,7 @@ export default {
         grid: 'grid 25s linear infinite',
         marquee: 'marquee var(--duration) infinite linear',
         'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
+        meteor: 'meteor 5s linear infinite',
         meteor: 'meteor 5s linear infinite',
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out'
