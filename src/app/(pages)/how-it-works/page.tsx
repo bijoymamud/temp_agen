@@ -18,7 +18,7 @@ export default function HowItWorks() {
       <div className="header">
         <Container className="h-60 flex items-end justify-start max-w-screen-xl">
           <div className="h-20">
-            <h1 className="text-4xl font-semibold text-primary">
+            <h1 className="text-4xl text-primary font-semibold bg-primary/20 backdrop-blur-sm px-2 relative z-10">
               How We Bring Your Ideas to Life
             </h1>
           </div>

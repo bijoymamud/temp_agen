@@ -70,7 +70,7 @@ const TermsAndConditionsPage = () => {
       </div>
       <div className="overflow-hidden w-full relative">
         <Grid size={35} />
-        <Container className="py-16">
+        <Container className="py-16 max-w-screen-xl">
           <p className="mb-6">
             Welcome to {siteInfo.name}. By using or accessing our website you
             agree to be bound by and comply with the following terms of service.

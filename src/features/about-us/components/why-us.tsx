@@ -10,31 +10,40 @@ import {
 } from "@tabler/icons-react";
 import { motion } from "motion/react";
 
+import {
+  Section,
+  SectionContent,
+  SectionDescription,
+  SectionHeader,
+  SectionTitle,
+} from "@/components/section";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 
 export function WhyUs() {
   return (
-    <div className="">
-      <div className="mb-10">
-        <h2 className="text-3xl font-bold">Why Choose Us</h2>
-        <p className="mt-4  mx-auto">
+    <Section className="">
+      <SectionHeader>
+        <SectionTitle>Why Choose Us</SectionTitle>
+        <SectionDescription>
           We offer a wide range of features to make your travel experience
           seamless and enjoyable.
-        </p>
-      </div>
-      <BentoGrid className=" md:auto-rows-[20rem]">
-        {items.map((item, i) => (
-          <BentoGridItem
-            key={i}
-            title={item.title}
-            description={item.description}
-            header={item.header}
-            className={cn("[&>p:text-lg]", item.className)}
-            icon={item.icon}
-          />
-        ))}
-      </BentoGrid>
-    </div>
+        </SectionDescription>
+      </SectionHeader>
+      <SectionContent>
+        <BentoGrid className=" md:auto-rows-[20rem]">
+          {items.map((item, i) => (
+            <BentoGridItem
+              key={i}
+              title={item.title}
+              description={item.description}
+              header={item.header}
+              className={cn("[&>p:text-lg]", item.className)}
+              icon={item.icon}
+            />
+          ))}
+        </BentoGrid>
+      </SectionContent>
+    </Section>
   );
 }
 

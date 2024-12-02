@@ -1,6 +1,7 @@
 "use client";
 
 import { Separator } from "@/components/ui/separator";
+import Link from "next/link";
 import React from "react";
 import { IconType } from "react-icons";
 import { BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
@@ -9,26 +10,49 @@ import { Section, SectionBackground, SectionContent } from "../section";
 
 interface FooterLink {
   title: string;
-  items: string[];
+  items: { label: string; href: string }[];
 }
 
 interface FooterSectionProps {
   title: string;
-  items: string[];
+  items: { label: string; href: string }[];
 }
 
 interface SocialIconProps {
   Icon: IconType;
+  href: string;
 }
 
 interface FooterLinkProps {
   children: React.ReactNode;
+  href: string;
 }
 
 const footerLinks: FooterLink[] = [
-  { title: "About Us", items: ["Our Story", "Team", "Careers"] },
-  { title: "Services", items: ["Web Design", "Marketing", "Consulting"] },
-  { title: "Resources", items: ["Blog", "Guides", "FAQ"] },
+  {
+    title: "About Us",
+    items: [
+      { label: "Our Story", href: "/about-us" },
+      { label: "Team", href: "#" },
+      { label: "Careers", href: "#" },
+    ],
+  },
+  {
+    title: "Services",
+    items: [
+      { label: "Web Design", href: "/services/web-design" },
+      { label: "Marketing", href: "/services/marketing" },
+      { label: "Consulting", href: "/services/consulting" },
+    ],
+  },
+  {
+    title: "Resources",
+    items: [
+      { label: "Blog", href: "/resources/blog" },
+      { label: "Guides", href: "/resources/guides" },
+      { label: "FAQ", href: "/resources/faq" },
+    ],
+  },
 ];
 
 const Footer: React.FC = () => {
@@ -56,10 +80,10 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Get in touch</h3>
             <div className="flex space-x-4">
-              <SocialIcon Icon={CgFacebook} />
-              <SocialIcon Icon={BsTwitter} />
-              <SocialIcon Icon={BsInstagram} />
-              <SocialIcon Icon={BsLinkedin} />
+              <SocialIcon href="https://facebook.com" Icon={CgFacebook} />
+              <SocialIcon href="https://twitter.com" Icon={BsTwitter} />
+              <SocialIcon href="https://instagram.com" Icon={BsInstagram} />
+              <SocialIcon href="https://linkedin.com" Icon={BsLinkedin} />
             </div>
           </div>
         </div>
@@ -67,9 +91,9 @@ const Footer: React.FC = () => {
         <Separator className="my-2" />
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-4 md:mb-0">
-            <FooterLink>Privacy Policy</FooterLink>
-            <FooterLink>Terms of Use</FooterLink>
-            <FooterLink>Contact Us</FooterLink>
+            <FooterLink href="/privacy-policy">Privacy Policy</FooterLink>
+            <FooterLink href="/terms-of-use">Terms of Use</FooterLink>
+            <FooterLink href="/contact-us">Contact Us</FooterLink>
           </div>
           <p className="text-sm text-muted-foreground">
             © 2024 Your Agency. All Rights Reserved.
@@ -86,31 +110,36 @@ const FooterSection: React.FC<FooterSectionProps> = ({ title, items }) => (
     <ul className="space-y-2">
       {items.map((item, index) => (
         <li key={index}>
-          <a
-            href="#"
+          <Link
+            href={item.href}
             className="text-muted-foreground hover:text-primary transition-colors duration-300"
           >
-            {item}
-          </a>
+            {item.label}
+          </Link>
         </li>
       ))}
     </ul>
   </div>
 );
 
-const SocialIcon: React.FC<SocialIconProps> = ({ Icon }) => (
+const SocialIcon: React.FC<SocialIconProps> = ({ Icon, href }) => (
   <a
-    href="#"
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
     className="text-muted-foreground hover:text-primary transition-colors duration-300"
   >
     <Icon className="w-5 h-5" />
   </a>
 );
 
-const FooterLink: React.FC<FooterLinkProps> = ({ children }) => (
-  <a href="#" className="hover:text-primary transition-colors duration-300">
+const FooterLink: React.FC<FooterLinkProps> = ({ children, href }) => (
+  <Link
+    href={href}
+    className="hover:text-primary transition-colors duration-300"
+  >
     {children}
-  </a>
+  </Link>
 );
 
 export default Footer;

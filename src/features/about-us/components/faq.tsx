@@ -1,6 +1,11 @@
 "use client";
 
-import Container from "@/components/container";
+import {
+  Section,
+  SectionContent,
+  SectionHeader,
+  SectionTitle,
+} from "@/components/section";
 import {
   Accordion,
   AccordionContent,
@@ -121,49 +126,50 @@ export function Faq() {
   const [activeCategory, setActiveCategory] = useState<string>("services");
 
   return (
-    <Container className="my-20">
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <h2 className="text-2xl font-semibold mb-4 text-center col-span-full">
-          Frequently Asked Questions
-        </h2>
+    <Section className="">
+      <SectionHeader>
+        <SectionTitle> Frequently Asked Questions</SectionTitle>
+      </SectionHeader>
+      <SectionContent>
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {/* Table of Contents */}
+          <nav className="mb-6 col-span-full md:col-span-1">
+            <h3 className="text-lg font-semibold mb-6">Table of Contents</h3>
+            <ul className="flex flex-col space-y-4">
+              {categories.map((category) => (
+                <li key={category.id}>
+                  <button
+                    className={`text-lg font-medium ${
+                      activeCategory === category.id
+                        ? "text-blue-600"
+                        : "text-gray-800"
+                    }`}
+                    onClick={() => setActiveCategory(category.id)}
+                  >
+                    {category.name}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </nav>
 
-        {/* Table of Contents */}
-        <nav className="mb-6 col-span-full md:col-span-1">
-          <h3 className="text-lg font-semibold mb-6">Table of Contents</h3>
-          <ul className="flex flex-col space-y-4">
-            {categories.map((category) => (
-              <li key={category.id}>
-                <button
-                  className={`text-lg font-medium ${
-                    activeCategory === category.id
-                      ? "text-blue-600"
-                      : "text-gray-800"
-                  }`}
-                  onClick={() => setActiveCategory(category.id)}
-                >
-                  {category.name}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        {/* Accordion for FAQs */}
-        <div className="col-span-full md:col-span-2 lg:col-span-3">
-          <Accordion type="single" collapsible className="w-full">
-            {faqData[activeCategory].map((item, index) => (
-              <AccordionItem value={`item-${index}`} key={index}>
-                <AccordionTrigger className="text-lg font-medium">
-                  {item.question}
-                </AccordionTrigger>
-                <AccordionContent>
-                  <p>{item.answer}</p>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+          {/* Accordion for FAQs */}
+          <div className="col-span-full md:col-span-2 lg:col-span-3">
+            <Accordion type="single" collapsible className="w-full">
+              {faqData[activeCategory].map((item, index) => (
+                <AccordionItem value={`item-${index}`} key={index}>
+                  <AccordionTrigger className="text-lg font-medium">
+                    {item.question}
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <p>{item.answer}</p>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
         </div>
-      </div>
-    </Container>
+      </SectionContent>
+    </Section>
   );
 }

@@ -24,26 +24,19 @@ export default function AboutUs() {
       <div className="header">
         <Container className="h-60 flex items-end justify-start max-w-screen-xl">
           <div className="h-20">
-            <h1 className="text-4xl font-semibold text-primary">
+            <h1 className="text-4xl text-primary font-semibold bg-primary/20 backdrop-blur-sm px-2 relative z-10">
               Your Trusted Partner
             </h1>
           </div>
         </Container>
       </div>
-      <div className="overflow-hidden relative space-y-10">
+      <div className="overflow-hidden relative">
         <Grid size={35} />
-        <Container className="max-w-screen-xl space-y-10">
-          <SolutionsOverview />
-          <OurStory />
-        </Container>
-        <div className="bg-muted py-4">
-          <Container className="max-w-screen-xl">
-            <CoreValue />
-          </Container>
-        </div>
-        <Container className="max-w-screen-xl ">
-          <WhyUs />
-        </Container>
+
+        <SolutionsOverview />
+        <OurStory />
+        <CoreValue />
+        <WhyUs />
 
         <div className="relative border-t">
           <GridPattern
@@ -55,10 +48,9 @@ export default function AboutUs() {
               "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] "
             )}
           />
-          <Container className="max-w-screen-xl pt-10">
-            <OurTeam />
-            <Faq />
-          </Container>
+
+          <OurTeam />
+          <Faq />
         </div>
       </div>
     </section>

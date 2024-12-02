@@ -1,5 +1,12 @@
 "use client";
 
+import {
+  Section,
+  SectionContent,
+  SectionDescription,
+  SectionHeader,
+  SectionTitle,
+} from "@/components/section";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
@@ -68,16 +75,15 @@ export const OurTeam = ({ autoplay = false }: { autoplay?: boolean }) => {
     return Math.floor(Math.random() * 21) - 10;
   };
   return (
-    <div className="relative">
-      <div className="">
-        <h2 className="text-3xl font-bold">Meet Our Team</h2>
-        <p className="mt-4  max-w-2xl">
+    <Section className="">
+      <SectionHeader>
+        <SectionTitle>Meet Our Team</SectionTitle>
+        <SectionDescription>
           Our team is dedicated to providing you with the best possible
           experience and support. We are here to help you every step of the way.
-        </p>
-      </div>
-
-      <div className="antialiased font-sans  py-20">
+        </SectionDescription>
+      </SectionHeader>
+      <SectionContent>
         <div className="relative grid grid-cols-1 md:grid-cols-2  gap-20">
           <div>
             <div className="relative h-80 w-full">
@@ -194,7 +200,7 @@ export const OurTeam = ({ autoplay = false }: { autoplay?: boolean }) => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </SectionContent>
+    </Section>
   );
 };
