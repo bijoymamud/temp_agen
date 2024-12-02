@@ -1,11 +1,15 @@
-import Container from "@/components/container";
+import {
+  Section,
+  SectionBackground,
+  SectionContent,
+} from "@/components/section";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const Cta = () => {
   return (
-    <section className="relative py-24">
-      <div className="absolute inset-0 ">
+    <Section className="py-16">
+      <SectionBackground>
         <svg
           className="absolute w-full h-full"
           viewBox="0 0 100 100"
@@ -17,9 +21,8 @@ const Cta = () => {
             className="animate-pulse"
           />
         </svg>
-      </div>
-
-      <Container className="max-w-screen-xl">
+      </SectionBackground>
+      <SectionContent className="mt-0">
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-primary/5 rounded-3xl" />
           <div className="p-8 md:p-12 lg:p-16 text-center space-y-6 backdrop-blur-xl rounded-3xl">
@@ -41,8 +44,8 @@ const Cta = () => {
             </div>
           </div>
         </div>
-      </Container>
-    </section>
+      </SectionContent>
+    </Section>
   );
 };
 

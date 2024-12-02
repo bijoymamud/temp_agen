@@ -1,213 +1,116 @@
+"use client";
+
+import { Separator } from "@/components/ui/separator";
+import React from "react";
+import { IconType } from "react-icons";
 import { BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { CgFacebook } from "react-icons/cg";
+import { Section, SectionBackground, SectionContent } from "../section";
 
-const Footer = () => {
+interface FooterLink {
+  title: string;
+  items: string[];
+}
+
+interface FooterSectionProps {
+  title: string;
+  items: string[];
+}
+
+interface SocialIconProps {
+  Icon: IconType;
+}
+
+interface FooterLinkProps {
+  children: React.ReactNode;
+}
+
+const footerLinks: FooterLink[] = [
+  { title: "About Us", items: ["Our Story", "Team", "Careers"] },
+  { title: "Services", items: ["Web Design", "Marketing", "Consulting"] },
+  { title: "Resources", items: ["Blog", "Guides", "FAQ"] },
+];
+
+const Footer: React.FC = () => {
   return (
-    <footer className="bg-white boxShadow rounded-xl w-full p-6 lg:p-9">
-      <div className="flex justify-between gap-[30px] flex-wrap w-full">
-        <div className="">
-          <h3 className="text-[1.2rem] font-semibold text-text mb-2">
-            About The Store
-          </h3>
-          <div className="flex flex-col gap-[8px] text-black">
-            <span>
-              <a className="text-[0.9rem] hover:text-blue-400 cursor-pointer">
-                Home
-              </a>
-            </span>
-            <span>
-              <a className="text-[0.9rem] hover:text-blue-400 cursor-pointer">
-                Become a customer
-              </a>
-            </span>
-            <span>
-              <a className="text-[0.9rem] hover:text-blue-400 cursor-pointer">
-                About us
-              </a>
-            </span>
-            <span>
-              <a className="text-[0.9rem] hover:text-blue-400 cursor-pointer">
-                FAQ
-              </a>
-            </span>
-            <span>
-              <a className="text-[0.9rem] hover:text-blue-400 cursor-pointer">
-                Return policy
-              </a>
-            </span>
-            <span>
-              <a className="text-[0.9rem] hover:text-blue-400 cursor-pointer">
-                Contact us
-              </a>
-            </span>
+    <Section className="mb-0 pb-4 border-t">
+      <SectionBackground>
+        <svg
+          className="absolute top-0 right-0 w-48 h-48 text-primary/20 opacity-50"
+          viewBox="0 0 100 100"
+          fill="currentColor"
+        >
+          <path d="M0,0 L100,0 L100,100 Z" />
+        </svg>
+      </SectionBackground>
+
+      <SectionContent className="mt-0 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {footerLinks.map((section, index) => (
+            <FooterSection
+              key={index}
+              title={section.title}
+              items={section.items}
+            />
+          ))}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Get in touch</h3>
+            <div className="flex space-x-4">
+              <SocialIcon Icon={CgFacebook} />
+              <SocialIcon Icon={BsTwitter} />
+              <SocialIcon Icon={BsInstagram} />
+              <SocialIcon Icon={BsLinkedin} />
+            </div>
           </div>
         </div>
 
-        <div className="">
-          <h3 className="text-[1.2rem] font-semibold text-text mb-2">
-            Use Cases
-          </h3>
-          <div className="flex flex-col gap-[8px] text-black">
-            <span>
-              <a className="text-[0.9rem] hover:text-blue-400 cursor-pointer">
-                Use Cases
-              </a>
-            </span>
-            <span>
-              <a className="text-[0.9rem] hover:text-blue-400 cursor-pointer">
-                Web-designers
-              </a>
-            </span>
-            <span>
-              <a className="text-[0.9rem] hover:text-blue-400 cursor-pointer">
-                Marketers
-              </a>
-            </span>
-            <span>
-              <a className="text-[0.9rem] hover:text-blue-400 cursor-pointer">
-                Small Business
-              </a>
-            </span>
-            <span>
-              <a className="text-[0.9rem] hover:text-blue-400 cursor-pointer">
-                Website Builder
-              </a>
-            </span>
+        <Separator className="my-2" />
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-4 md:mb-0">
+            <FooterLink>Privacy Policy</FooterLink>
+            <FooterLink>Terms of Use</FooterLink>
+            <FooterLink>Contact Us</FooterLink>
           </div>
+          <p className="text-sm text-muted-foreground">
+            © 2024 Your Agency. All Rights Reserved.
+          </p>
         </div>
-
-        <div className="">
-          <h3 className="text-[1.2rem] font-semibold text-text mb-2">
-            Resources
-          </h3>
-          <div className="flex flex-col gap-[8px] text-black">
-            <span>
-              <a className="text-[0.9rem] hover:text-blue-400 cursor-pointer">
-                Resources
-              </a>
-            </span>
-            <span>
-              <a className="text-[0.9rem] hover:text-blue-400 cursor-pointer">
-                Academy
-              </a>
-            </span>
-            <span>
-              <a className="text-[0.9rem] hover:text-blue-400 cursor-pointer">
-                Blog
-              </a>
-            </span>
-            <span>
-              <a className="text-[0.9rem] hover:text-blue-400 cursor-pointer">
-                Themes
-              </a>
-            </span>
-            <span>
-              <a className="text-[0.9rem] hover:text-blue-400 cursor-pointer">
-                Hosting
-              </a>
-            </span>
-            <span>
-              <a className="text-[0.9rem] hover:text-blue-400 cursor-pointer">
-                Developers
-              </a>
-            </span>
-            <span>
-              <a className="text-[0.9rem] hover:text-blue-400 cursor-pointer">
-                Support
-              </a>
-            </span>
-          </div>
-        </div>
-
-        <div className="">
-          <h3 className="text-[1.2rem] font-semibold text-text mb-2">
-            Company
-          </h3>
-          <div className="flex flex-col gap-[8px] text-black">
-            <span>
-              <a className="text-[0.9rem] hover:text-blue-400 cursor-pointer">
-                About Us
-              </a>
-            </span>
-            <span>
-              <a className="text-[0.9rem] hover:text-blue-400 cursor-pointer">
-                Careers
-              </a>
-            </span>
-            <span>
-              <a className="text-[0.9rem] hover:text-blue-400 cursor-pointer">
-                FAQs
-              </a>
-            </span>
-            <span>
-              <a className="text-[0.9rem] hover:text-blue-400 cursor-pointer">
-                Teams
-              </a>
-            </span>
-            <span>
-              <a className="text-[0.9rem] hover:text-blue-400 cursor-pointer">
-                Contact Us
-              </a>
-            </span>
-          </div>
-        </div>
-
-        <div className="">
-          <h3 className="text-[1.2rem] font-semibold text-text mb-2">
-            Get in touch
-          </h3>
-          <div className="flex gap-[7px] text-black">
-            <a className="text-[1.3rem] p-1.5 cursor-pointer hover:text-white transition-all duration-300 rounded-full hover:bg-blue-400">
-              <CgFacebook />
-            </a>
-            <a className="text-[1.2rem] p-1.5 cursor-pointer hover:text-white transition-all duration-300 rounded-full hover:bg-blue-400">
-              <BsTwitter />
-            </a>
-            <a className="text-[1.2rem] p-1.5 cursor-pointer hover:text-white transition-all duration-300 rounded-full hover:bg-blue-400">
-              <BsInstagram />
-            </a>
-            <a className="text-[1.2rem] p-1.5 cursor-pointer hover:text-white transition-all duration-300 rounded-full hover:bg-blue-400">
-              <BsLinkedin />
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div className="lg:flex-row border-t border-gray-200 pt-[20px] flex-col flex items-center gap-[15px] w-full justify-between mt-8">
-        <div className="flex flex-wrap gap-y-[6px] gap-x-[15px] sm:gap-[15px] text-gray-400">
-          <span>
-            <a className="text-[0.9rem] hover:text-blue-400 cursor-pointer">
-              Privacy Policy
-            </a>
-          </span>
-          <span>
-            <a className="text-[0.9rem] hover:text-blue-400 cursor-pointer">
-              Terms of Use
-            </a>
-          </span>
-          <span>
-            <a className="text-[0.9rem] hover:text-blue-400 cursor-pointer">
-              Sales and Refunds
-            </a>
-          </span>
-          <span>
-            <a className="text-[0.9rem] hover:text-blue-400 cursor-pointer">
-              Legal
-            </a>
-          </span>
-          <span>
-            <a className="text-[0.9rem] hover:text-blue-400 cursor-pointer">
-              Site Map
-            </a>
-          </span>
-        </div>
-
-        <p className="text-gray-400 cursor-pointer text-[0.8rem]">
-          © 2024 All Rights Reserved.
-        </p>
-      </div>
-    </footer>
+      </SectionContent>
+    </Section>
   );
 };
+
+const FooterSection: React.FC<FooterSectionProps> = ({ title, items }) => (
+  <div>
+    <h3 className="text-lg font-semibold mb-4">{title}</h3>
+    <ul className="space-y-2">
+      {items.map((item, index) => (
+        <li key={index}>
+          <a
+            href="#"
+            className="text-muted-foreground hover:text-primary transition-colors duration-300"
+          >
+            {item}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+);
+
+const SocialIcon: React.FC<SocialIconProps> = ({ Icon }) => (
+  <a
+    href="#"
+    className="text-muted-foreground hover:text-primary transition-colors duration-300"
+  >
+    <Icon className="w-5 h-5" />
+  </a>
+);
+
+const FooterLink: React.FC<FooterLinkProps> = ({ children }) => (
+  <a href="#" className="hover:text-primary transition-colors duration-300">
+    {children}
+  </a>
+);
 
 export default Footer;

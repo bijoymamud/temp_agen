@@ -1,5 +1,9 @@
-import Container from "@/components/container";
 import { DotPattern } from "@/components/dot-pattern";
+import {
+  Section,
+  SectionBackground,
+  SectionContent,
+} from "@/components/section";
 import { Card } from "@/components/ui/card";
 import { Shield, Star, Zap } from "lucide-react";
 
@@ -26,10 +30,12 @@ const service_data = [
 
 const Promotional = () => {
   return (
-    <section className="relative py-8 bg-muted/20">
-      <DotPattern />
-      <Container className="max-w-screen-xl">
-        <div className="grid gap-12 lg:grid-cols-3">
+    <Section size={"sm"}>
+      <SectionBackground className="bg-muted/40">
+        <DotPattern />
+      </SectionBackground>
+      <SectionContent className="mt-0">
+        <div className="grid gap-8 lg:grid-cols-3">
           {service_data.map((service, i) => (
             <Card key={i} className="border-none relative z-10">
               <div
@@ -47,8 +53,8 @@ const Promotional = () => {
             </Card>
           ))}
         </div>
-      </Container>
-    </section>
+      </SectionContent>
+    </Section>
   );
 };
 

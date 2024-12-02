@@ -42,9 +42,9 @@ export function WorldMap({ dots = [] }: MapProps) {
   };
 
   return (
-    <div className="w-full aspect-[2/1] rounded-lg relative font-sans">
+    <div className="w-full aspect-[2/1] rounded-lg relative font-sans ">
       <Image
-        className="h-full w-full [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)] pointer-events-none select-none opacity-45"
+        className="h-full w-full [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)] pointer-events-none select-none "
         alt="img"
         src={worldMapPng}
         layout="fill"
@@ -150,6 +150,9 @@ export function WorldMap({ dots = [] }: MapProps) {
           </g>
         ))}
       </svg>
+
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
     </div>
   );
 }

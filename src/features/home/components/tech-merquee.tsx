@@ -1,4 +1,4 @@
-import Container from "@/components/container";
+import { Section, SectionContent } from "@/components/section";
 import Marquee from "@/components/ui/marquee";
 import * as LucideIcons from "lucide-react";
 import React from "react";
@@ -61,21 +61,23 @@ export function TechMarquee() {
   const secondRow = technologies.slice(midpoint);
 
   return (
-    <Container className=" max-w-screen-xl py-10">
-      <div className="relative flex  w-full flex-col items-center justify-center overflow-hidden ">
-        <Marquee pauseOnHover className="[--duration:40s] ">
-          {firstRow.map((tech) => (
-            <TechCard key={tech.slug} {...tech} />
-          ))}
-        </Marquee>
-        <Marquee reverse pauseOnHover className="[--duration:40s] ">
-          {secondRow.map((tech) => (
-            <TechCard key={tech.slug} {...tech} />
-          ))}
-        </Marquee>
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-background"></div>
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-background"></div>
-      </div>
-    </Container>
+    <Section className="pt-0">
+      <SectionContent className="mt-0">
+        <div className="relative flex  w-full flex-col items-center justify-center overflow-hidden ">
+          <Marquee pauseOnHover className="[--duration:40s] ">
+            {firstRow.map((tech) => (
+              <TechCard key={tech.slug} {...tech} />
+            ))}
+          </Marquee>
+          <Marquee reverse pauseOnHover className="[--duration:40s] ">
+            {secondRow.map((tech) => (
+              <TechCard key={tech.slug} {...tech} />
+            ))}
+          </Marquee>
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-background"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-background"></div>
+        </div>
+      </SectionContent>
+    </Section>
   );
 }

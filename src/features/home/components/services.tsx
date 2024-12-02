@@ -1,3 +1,11 @@
+import { services } from "@/assets/data";
+import {
+  Section,
+  SectionContent,
+  SectionDescription,
+  SectionHeader,
+  SectionTitle,
+} from "@/components/section";
 import { Button } from "@/components/ui/button";
 import {
   Bolt,
@@ -9,51 +17,6 @@ import {
   Shield,
 } from "lucide-react";
 import React from "react";
-
-const services = [
-  {
-    icon: "bolt",
-    title: "Fast IT Support",
-    description: "Get quick and efficient IT support for your business needs.",
-    price: 99,
-    duration: "24/7 Support",
-  },
-  {
-    icon: "server",
-    title: "Cloud Solutions",
-    description: "Secure and scalable cloud infrastructure for your company.",
-    price: 199,
-    duration: "Monthly",
-  },
-  {
-    icon: "shield",
-    title: "Cybersecurity",
-    description: "Protect your business with advanced cybersecurity measures.",
-    price: 299,
-    duration: "Annual Plan",
-  },
-  {
-    icon: "monitor",
-    title: "Network Management",
-    description: "Efficient management and optimization of your network.",
-    price: 149,
-    duration: "Monthly",
-  },
-  {
-    icon: "database",
-    title: "Data Analytics",
-    description: "Harness the power of your data with advanced analytics.",
-    price: 399,
-    duration: "Quarterly",
-  },
-  {
-    icon: "code",
-    title: "Custom Software",
-    description: "Tailored software solutions for your unique business needs.",
-    price: 999,
-    duration: "Per Project",
-  },
-];
 
 export const Icons = {
   bolt: Bolt,
@@ -67,17 +30,14 @@ export const Icons = {
 
 const Services: React.FC = () => {
   return (
-    <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-start md:text-center">
-        <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
-          Our IT Services
-        </h2>
-        <p className="text-muted-foreground mt-6">
+    <Section>
+      <SectionHeader>
+        <SectionTitle>Our IT Services</SectionTitle>
+        <SectionDescription>
           Discover our range of IT services designed to empower your business
-        </p>
-      </div>
-
-      <div className="flex flex-col items-center justify-center py-10 md:py-20 w-full">
+        </SectionDescription>
+      </SectionHeader>
+      <SectionContent>
         <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-8">
           {services.map((service) => (
             <ServiceCard
@@ -90,8 +50,8 @@ const Services: React.FC = () => {
             />
           ))}
         </div>
-      </div>
-    </div>
+      </SectionContent>
+    </Section>
   );
 };
 

@@ -1,26 +1,29 @@
-import { features } from "@/assets/data";
-import Container from "@/components/container";
+import { discover_data } from "@/assets/data";
 import Icons from "@/components/icons";
+import {
+  Section,
+  SectionContent,
+  SectionDescription,
+  SectionHeader,
+  SectionTitle,
+} from "@/components/section";
 
 const Discover = () => {
   return (
-    <Container className="max-w-screen-xl">
-      <div className="text-start md:text-center">
-        <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
-          Discover our powerful features
-        </h2>
-        <p className="text-muted-foreground mt-6">
-          Astra offers a range of features to help you build a stunning website
-          in no time
-        </p>
-      </div>
-      <div className="flex items-center justify-center mx-auto mt-8">
-        <Icons.feature className="w-auto h-80" />
-      </div>
-
-      <div className="flex flex-col items-center justify-center py-10 md:py-20 w-full">
+    <Section>
+      <SectionHeader>
+        <SectionTitle>Discover our powerful features</SectionTitle>
+        <SectionDescription>
+          Our platform is packed with features to help you grow your business.
+          We've got you covered from start to finish.
+        </SectionDescription>
+        <div className="flex w-full items-center justify-center pt-4">
+          <Icons.feature className="h-40" />
+        </div>
+      </SectionHeader>
+      <SectionContent>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-8">
-          {features.map((feature) => (
+          {discover_data.map((feature) => (
             <div
               key={feature.title}
               className="flex flex-col items-start lg:items-start px-0 md:px-0"
@@ -35,8 +38,8 @@ const Discover = () => {
             </div>
           ))}
         </div>
-      </div>
-    </Container>
+      </SectionContent>
+    </Section>
   );
 };
 

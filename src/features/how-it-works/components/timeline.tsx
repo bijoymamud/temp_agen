@@ -85,7 +85,7 @@ export default function Timeline() {
           <path d="M0,0 L100,0 C60,50 40,50 0,100 Z" fill="currentColor" />
         </svg>
 
-        <div className="relative pt-3">
+        <div className="relative pt-9">
           <div className="absolute left-6 top-0 bottom-0 w-px bg-gray-300 " />
           {developmentStages.map((stage, index) => (
             <div key={index} className="mb-8 flex items-start">
