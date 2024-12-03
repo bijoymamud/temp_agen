@@ -1,7 +1,9 @@
+import BackToTop from "@/components/back-to-top";
 import { META_THEME_COLORS, siteConfig } from "@/config/site-info";
 import { ThemeProvider } from "@/providers/theme-provider";
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
+import NextTopLoader from "nextjs-toploader";
 import "./globals.css";
 import "./theme.css";
 
@@ -89,6 +91,7 @@ export default function RootLayout({
           />
         </head>
         <body className={`${spaceGrotesk.variable}  antialiased`}>
+          <NextTopLoader height={2} showSpinner={false} />
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
@@ -99,7 +102,7 @@ export default function RootLayout({
             <div vaul-drawer-wrapper="">
               <div className="relative  bg-background">{children}</div>
             </div>
-            {/* <ThemeSwitcher /> */}
+            <BackToTop />
           </ThemeProvider>
         </body>
       </html>

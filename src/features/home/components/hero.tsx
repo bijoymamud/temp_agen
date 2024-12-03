@@ -1,4 +1,5 @@
 import Container from "@/components/container";
+import ScrollArrowButton from "@/components/scroll-arrow-button";
 import { Badge } from "@/components/ui/badge";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { Button } from "@/components/ui/button";
@@ -66,6 +67,7 @@ export default function Hero() {
           />
         </div>
       </Container>
+      <ScrollArrowButton />
     </section>
   );
 }
