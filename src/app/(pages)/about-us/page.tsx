@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `About Us - ${siteInfo.name}`,
+  title: `About`,
   description: `Learn about ${siteInfo.name} and how we provide cutting-edge web development templates and solutions.`,
 };
 

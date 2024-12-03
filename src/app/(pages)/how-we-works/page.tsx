@@ -8,7 +8,7 @@ import Timeline from "@/features/how-it-works/components/timeline";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `How It Works - ${siteInfo.name}`,
+  title: `How We Works`,
   description: `Learn how to book flights and travel services on ${siteInfo.name}.`,
 };
 

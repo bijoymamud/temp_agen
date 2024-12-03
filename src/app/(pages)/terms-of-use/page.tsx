@@ -5,7 +5,7 @@ import siteInfo from "@/config/site-info";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Terms & Condition - ${siteInfo.name}`,
+  title: `Terms & Condition`,
   description: `Learn about the terms and conditions for using ${siteInfo.name} services.`,
 };
 

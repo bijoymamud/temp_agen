@@ -76,7 +76,7 @@ export function Pricing() {
           commitment required.
         </SectionDescription>
       </SectionHeader>
-      <SectionContent>
+      <SectionContent position={"static"}>
         <div className="flex sm:flex-row flex-col gap-10 sm:gap-0 items-center">
           <Card className=" flex-1">
             <CardHeader className="">

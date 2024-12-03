@@ -6,6 +6,13 @@ import SponsorshipCTA from "@/features/sponsorship/components/cta";
 import SponsorshipFAQ from "@/features/sponsorship/components/faq";
 import SponsorshipProcess from "@/features/sponsorship/components/process";
 
+import siteInfo from "@/config/site-info";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: `Sponsorship`,
+  description: `Learn about ${siteInfo.name} and how we provide cutting-edge web development templates and solutions.`,
+};
+
 const page = () => {
   return (
     <section className="">

@@ -15,7 +15,7 @@ import { Logo } from "./logo";
 const navItems = [
   { title: "Home", href: "/" },
   { title: "About", href: "/about-us" },
-  { title: "How It works", href: "/how-it-works" },
+  { title: "How we works", href: "/how-we-works" },
   { title: "Sponsor", href: "/sponsorship" },
   { title: "Contact Us", href: "/contact-us" },
   { title: "Dashboard", href: "/dashboard" },

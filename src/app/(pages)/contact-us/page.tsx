@@ -1,10 +1,16 @@
-"use client";
 import Container from "@/components/container";
 import { Grid } from "@/components/ui/grid";
+import siteInfo from "@/config/site-info";
 import Address from "@/features/contact-us/components/address";
 import ContactForm from "@/features/contact-us/components/contact-form";
 import { CTASection } from "@/features/contact-us/components/cta-section";
 import { FAQSection } from "@/features/contact-us/components/faq-section";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: `Contact`,
+  description: `Learn about ${siteInfo.name} and how we provide cutting-edge web development templates and solutions.`,
+};
 
 const ContactUs = () => {
   return (

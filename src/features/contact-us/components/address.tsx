@@ -1,3 +1,5 @@
+"use client";
+
 import Container from "@/components/container";
 import { Logo } from "@/components/layout/logo";
 import siteInfo from "@/config/site-info";

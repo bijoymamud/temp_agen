@@ -5,7 +5,7 @@ import siteInfo from "@/config/site-info";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Privacy Policy - ${siteInfo.name}`,
+  title: `Privacy Policy`,
   description: `Learn about how we handle your personal data and protect your privacy at ${siteInfo.name}.`,
 };
 
