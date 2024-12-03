@@ -3,32 +3,45 @@ const siteInfo = {
   description: "A modern design system for your new app",
   startYear: 2024,
   companyInfo: {
-    emails: ['info.mdshakeeb@gmail.com',],
-    phones: ["01711-000000"],
-    whatsapp: '01711-000000',
-    address: '354/1, Afshar Mansion, Bornali, Boalia, Rajshahi',
-    facebook: '#',
-    twitter: '#',
-    instagram: '#',
-    linkedin: '#',
-    youtube: '#',
-    location: "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d29073.095931788102!2d88.57026619478926!3d24.376537393616687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sAfshar%20Mansion%2C%20Bornali%2C%20Boalia%2C%20Rajshahi!5e0!3m2!1sen!2sbd!4v1731905636102!5m2!1sen!2sbd"
+    emails: ['info.mdshakeeb@gmail.com'],
+    phones: ["017953716145"],
+    whatsapp: '01779901142"],',
+    address: 'Dhaka, Bangladesh',
+    facebook: 'https://www.facebook.com/info.mdshakeeb/',
+    twitter: 'https://x.com/info_mdshakeeb',
+    instagram: 'https://www.instagram.com/info.mdshakeeb/',
+    linkedin: 'https://www.linkedin.com/in/mdshakeeb/',
+
+    location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233668.06396683332!2d90.25487776270597!3d23.78075303186913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka!5e0!3m2!1sen!2sbd!4v1733192729753!5m2!1sen!2sbd"
   },
 
   contactInfo: {
-    emails: ['needmytrip@gmail.com'],
-    phones: ["09614-300-600"],
-    whatsapp: '01711-000000"],',
-    address: 'Mohakhali dohs, Rode-30,Hous-419, 5 floor, dhaka-1206',
-    facebook: '#',
-    twitter: '#',
-    instagram: '#',
-    linkedin: '#',
-    youtube: '#',
+    emails: ['info.mdshakeeb@gmail.com'],
+    phones: ["017953716145"],
+    whatsapp: '01779901142"],',
+    address: 'Dhaka, Bangladesh',
+    facebook: 'https://www.facebook.com/info.mdshakeeb/',
+    twitter: 'https://x.com/info_mdshakeeb',
+    instagram: 'https://www.instagram.com/info.mdshakeeb/',
+    linkedin: 'https://www.linkedin.com/in/mdshakeeb/',
   }
 };
 
 export default siteInfo;
+
+export const siteConfig = {
+  name: "Shakeeb's Agency",
+  url: "https://synth-ko.vercel.app/",
+  ogImage: "https://i.ibb.co.com/8dgR73C/Screenshot-2024-12-03-at-8-11-26-AM.png",
+  description:
+    "A modern design system for your new website",
+  links: {
+    twitter: "https://x.com/info_mdshakeeb",
+    github: "https://github.com/info-mdshakeeb",
+  },
+}
+
+export type SiteConfig = typeof siteConfig
 
 export const META_THEME_COLORS = {
   light: "#ffffff",
