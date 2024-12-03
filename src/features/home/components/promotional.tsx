@@ -30,7 +30,7 @@ const service_data = [
 
 const Promotional = () => {
   return (
-    <Section size={"sm"}>
+    <Section>
       <SectionBackground className="bg-muted/40">
         <DotPattern />
       </SectionBackground>

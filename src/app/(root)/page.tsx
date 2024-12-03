@@ -6,6 +6,7 @@ import { Pricing } from "@/features/home/components/pricing";
 import Promotional from "@/features/home/components/promotional";
 import { Reviews } from "@/features/home/components/reviews";
 import Services from "@/features/home/components/services";
+import SponsorBanner from "@/features/home/components/sponsor-banner";
 import { TechMarquee } from "@/features/home/components/tech-merquee";
 import { WhatWeOffer } from "@/features/home/components/what-we-offer";
 
@@ -22,6 +23,7 @@ export default function Page() {
       <Services />
       <Pricing />
       <Reviews />
+      <SponsorBanner />
     </div>
   );
 }

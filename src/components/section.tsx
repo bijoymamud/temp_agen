@@ -2,11 +2,12 @@ import { cva, type VariantProps } from "class-variance-authority";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
+import { twMerge } from "tailwind-merge";
 
 const sectionVariants = cva("w-full", {
   variants: {
     size: {
-      default: "mb-8 pt-10",
+      default: "pb-8 pt-10",
       sm: "py-4 md:py-8",
       lg: "py-16 md:py-32",
     },
@@ -32,10 +33,15 @@ const sectionContentVariants = cva("", {
       padded: "px-4 md:px-8",
       container: "px-4 md:px-8 mx-auto max-w-screen-xl",
     },
+    position: {
+      relative: "relative overflow-hidden",
+      static: "static",
+    },
   },
   defaultVariants: {
     size: "default",
     variant: "container",
+    position: "relative",
   },
 });
 const Section = React.forwardRef<
@@ -56,12 +62,12 @@ const SectionHeader = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> &
     VariantProps<typeof sectionContentVariants>
->(({ className, size, variant, ...props }, ref) => (
+>(({ className, size, variant, position, ...props }, ref) => (
   <div
     ref={ref}
     className={cn(
-      sectionContentVariants({ size, variant }),
-      "space-y-1.5  relative text-center",
+      sectionContentVariants({ size, variant, position }),
+      "space-y-1.5   text-center",
       className
     )}
     {...props}
@@ -74,9 +80,9 @@ const SectionTitle = React.forwardRef<
   React.HTMLAttributes<HTMLHeadingElement>
 >(({ className, ...props }, ref) => {
   return (
-    <h2
+    <p
       ref={ref}
-      className={cn("text-3xl lg:text-4xl font-bold", className)}
+      className={twMerge("text-3xl lg:text-4xl font-bold", className)}
       {...props}
     />
   );
@@ -102,13 +108,13 @@ const SectionContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> &
     VariantProps<typeof sectionContentVariants>
->(({ className, size, variant, ...props }, ref) => {
+>(({ className, size, variant, position, ...props }, ref) => {
   return (
     <div
       ref={ref}
       className={cn(
-        sectionContentVariants({ size, variant }),
-        "mt-16",
+        sectionContentVariants({ size, variant, position }),
+        "mt-16 pb-3",
         className
       )}
       {...props}
