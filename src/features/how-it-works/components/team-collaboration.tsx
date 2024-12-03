@@ -52,7 +52,7 @@ export default function TeamCollaboration() {
           <p className="text-center text-muted-foreground mb-8">
             Our team works collaboratively to bring your vision to life. Each
             member brings unique skills and perspectives to ensure your
-            project's success.
+            project&apos;s success.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {teamMembers.map((member, index) => (

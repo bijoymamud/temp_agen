@@ -13,9 +13,10 @@ const OurStory = () => {
             <p className="text-lg leading-relaxed">
               Founded in <span className="mx-1">{siteInfo.startYear}</span>, we
               started as a small team of passionate developers with a vision to
-              simplify web development. Since then, we've grown into a leading
-              provider of modern web templates, helping thousands of developers
-              and businesses worldwide create outstanding web applications.
+              simplify web development. Since then, we&apos;ve grown into a
+              leading provider of modern web templates, helping thousands of
+              developers and businesses worldwide create outstanding web
+              applications.
             </p>
             <p className="text-lg leading-relaxed">
               Every day, we work tirelessly to improve our templates,

@@ -81,7 +81,7 @@ export function IconCloud({ iconSlugs }: DynamicCloudProps) {
   if (!theme) return null; // Prevent rendering until theme is ready
 
   return (
-    // @ts-ignore
+    // @ts-expect-error: Cloud component does not accept children prop
     <Cloud {...cloudProps}>
       <>{renderedIcons}</>
     </Cloud>

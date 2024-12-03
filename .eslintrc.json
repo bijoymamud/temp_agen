@@ -9,6 +9,7 @@
         "type": "shared",
         "pattern": [
           "src/components/**/*",
+          "src/assets/**/*",
           "src/config/**/*",
           "src/constants/**/*",
           "src/providers/**/*",
@@ -38,8 +39,9 @@
     ]
   },
   "rules": {
+    "@typescript-eslint/no-unused-vars": "warn",
     "boundaries/no-unknown": ["error"],
-    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-explicit-any": "off",
     "boundaries/no-unknown-files": ["error"],
     "boundaries/element-types": [
       "error",

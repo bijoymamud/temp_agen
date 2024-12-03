@@ -30,8 +30,8 @@ const Cta = () => {
               Ready to Transform Your Digital Presence?
             </h2>
             <p className="mx-auto max-w-[600px] text-muted-foreground">
-              Let's collaborate to create something extraordinary. Get in touch
-              with our team today.
+              Let&apos;s collaborate to create something extraordinary. Get in
+              touch with our team today.
             </p>
             <div className="space-x-4">
               <Button size="lg" className="h-12 px-8">

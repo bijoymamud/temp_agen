@@ -7,6 +7,7 @@ import {
 } from "@/components/section";
 import Marquee from "@/components/ui/marquee";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const reviews = [
   {
@@ -72,7 +73,13 @@ const ReviewCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <Image
+          className="rounded-full"
+          width="32"
+          height="32"
+          alt=""
+          src={img}
+        />
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium dark:text-white">
             {name}
@@ -92,8 +99,8 @@ export function Reviews() {
         <SectionTitle>What Our Customers Are Saying</SectionTitle>
 
         <SectionDescription>
-          Don't just take our word for it. Here's what our amazing customers
-          have to say about their experience with our product.
+          Don&apos;t just take our word for it. Here&apos;s what our amazing
+          customers have to say about their experience with our product.
         </SectionDescription>
       </SectionHeader>
       <SectionContent>

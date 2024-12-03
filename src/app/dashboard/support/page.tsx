@@ -9,6 +9,7 @@ import {
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { CornerDownLeft, Mic, Paperclip } from "lucide-react";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: `Dashboard - Support`,
@@ -42,7 +43,9 @@ export default function Page() {
             key={index}
             className="flex items-center p-2 border-b border-gray-200 hover:cursor-pointer"
           >
-            <img
+            <Image
+              height={40}
+              width={40}
               src={user.image}
               alt={user.name}
               className="w-10 h-10 rounded-full mr-3"

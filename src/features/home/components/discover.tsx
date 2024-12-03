@@ -15,7 +15,7 @@ const Discover = () => {
         <SectionTitle>Discover our powerful features</SectionTitle>
         <SectionDescription>
           Our platform is packed with features to help you grow your business.
-          We've got you covered from start to finish.
+          We&apos;ve got you covered from start to finish.
         </SectionDescription>
         <div className="flex w-full items-center justify-center pt-4">
           <Icons.feature className="h-40" />
