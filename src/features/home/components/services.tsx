@@ -7,6 +7,7 @@ import {
   SectionTitle,
 } from "@/components/section";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import {
   Bolt,
   Clock,
@@ -69,13 +70,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
   description,
   icon,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   price,
   duration,
 }) => {
   const Icon = Icons[icon];
 
   return (
-    <div className="bg-muted w-full justify-between rounded flex overflow-hidden">
+    <Card className="bg-muted w-full justify-between  flex overflow-hidden border-none shadow-none">
       {/* left side */}
       <div className="flex flex-col p-[15px] lg:p-[20px] gap-[18px] flex-grow">
         <h1 className="text-[1rem] lg:text-[1.3rem] font-bold ">{title}</h1>
@@ -87,7 +89,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             <h4 className="text-[0.8rem] lg:text-[1.1rem] font-[600] ">
               Service Type
             </h4>
-            <p className="text-[0.6rem] lg:text-[0.9rem] font-[400] text-gray-500">
+            <p className="text-[0.6rem] lg:text-[0.9rem] font-[400] text-muted-foreground">
               {description}
             </p>
           </div>
@@ -100,7 +102,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             <h4 className="text-[0.8rem] lg:text-[1.1rem] font-[600] ">
               Duration
             </h4>
-            <p className="text-[0.6rem] lg:text-[0.9rem] font-[400]">
+            <p className="text-[0.6rem] lg:text-[0.9rem] font-[400] text-muted-foreground">
               {duration}
             </p>
           </div>
@@ -108,7 +110,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       </div>
 
       {/* right side */}
-      <div className="flex flex-col justify-between relative w-[45%] lg:w-[40%] items-center border-l-[2px] p-[15px] lg:p-[20px] border-dashed">
+      <div className="flex flex-col justify-between relative w-[45%] lg:w-[40%] items-center border-l-[2px] p-[15px] lg:p-[20px] border-dashed border-foreground/30 ">
         {/* top curve */}
         <div className="w-[45px] h-[45px] rounded-full bg-background absolute top-[-15%] lg:top-[-13%] sm:left-[-13.5%] left-[-19%] lg:left-[-11.5%]"></div>
 
@@ -119,12 +121,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         <Button variant={"gooeyRight"}>Get Started</Button>
 
         <p className="text-[0.9rem] lg:text-[1.1rem] text-gray-500">
-          Price: <span className="text-red-600 font-semibold">${price}</span>
+          Price: <span className="text-red-600 font-semibold"> Talk</span>
         </p>
 
         {/* bottom curve */}
         <div className="w-[45px] h-[45px] rounded-full  bg-background  absolute bottom-[-15%] lg:bottom-[-13%] left-[-18.5%] sm:left-[-13.5%] lg:left-[-11.5%]"></div>
       </div>
-    </div>
+    </Card>
   );
 };

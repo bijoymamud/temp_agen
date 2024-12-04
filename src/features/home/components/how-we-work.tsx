@@ -15,9 +15,6 @@ import Image from "next/image";
 export function HowWeWork() {
   return (
     <Section className="pb-1">
-      <SectionBackground>
-        <RetroGrid angle={30} />
-      </SectionBackground>
       <SectionHeader className="text-center">
         <SectionTitle>How We Work</SectionTitle>
         <SectionDescription>
@@ -26,9 +23,14 @@ export function HowWeWork() {
           goals.
         </SectionDescription>
       </SectionHeader>
-      <SectionContent className=" h-[300px] md:h-[500px] lg:h-[80vh]">
-        <Image src={homeWorkImage} className="" alt="Home Work" fill />
-      </SectionContent>
+      <div className="relative">
+        <SectionBackground>
+          <RetroGrid angle={30} />
+        </SectionBackground>
+        <SectionContent className=" h-[300px] md:h-[500px] lg:h-[70vh]">
+          <Image src={homeWorkImage} className="" alt="Home Work" fill />
+        </SectionContent>
+      </div>
     </Section>
   );
 }
