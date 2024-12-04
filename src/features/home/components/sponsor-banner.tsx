@@ -9,38 +9,34 @@ import {
   SectionTitle,
 } from "@/components/section";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function SponsorBanner() {
   return (
     <Section className="mb-0 py-20">
       <SectionBackground>
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 overflow-hidden">
           <svg
             className="h-full w-full"
             viewBox="0 0 1000 1000"
             preserveAspectRatio="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <motion.path
+            <path
               d="M0,1000 C300,800 400,600 500,300 C600,600 700,800 1000,1000 Z"
-              fill="url(#gradient)"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 2, ease: "easeInOut" }}
+              className="fill-[url(#gradient)]"
             />
             <defs>
               <linearGradient id="gradient" gradientTransform="rotate(45)">
                 <stop
                   offset="0%"
-                  stopColor="var(--primary)"
-                  stopOpacity="0.1"
+                  className="text-primary/10"
+                  stopColor="currentColor"
                 />
                 <stop
                   offset="100%"
-                  stopColor="var(--secondary)"
-                  stopOpacity="0.1"
+                  className="text-secondary/10"
+                  stopColor="currentColor"
                 />
               </linearGradient>
             </defs>

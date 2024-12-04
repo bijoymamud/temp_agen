@@ -1,5 +1,11 @@
 import Container from "@/components/container";
+import {
+  Section,
+  SectionBackground,
+  SectionContent,
+} from "@/components/section";
 import { Grid } from "@/components/ui/grid";
+import GridPattern from "@/components/ui/grid-pattern";
 import siteInfo from "@/config/site-info";
 import Address from "@/features/contact-us/components/address";
 import ContactForm from "@/features/contact-us/components/contact-form";
@@ -24,21 +30,37 @@ const ContactUs = () => {
           </div>
         </Container>
       </div>
-      <div className="space-y-10">
-        <div className="overflow-hidden w-full relative pt-10">
+      <Section>
+        <SectionBackground>
           <Grid size={35} />
+        </SectionBackground>
+        <SectionContent className="mt-0">
           <Address />
-        </div>
-        <CTASection />
-        <div className="pb-10">
-          <Container className="max-w-screen-xl flex flex-col md:flex-row w-full gap-4">
+        </SectionContent>
+      </Section>
+
+      <CTASection />
+      <Section>
+        <SectionBackground>
+          <GridPattern
+            width={40}
+            height={40}
+            x={-1}
+            y={-1}
+            className={
+              "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)]"
+            }
+          />
+        </SectionBackground>
+        <SectionContent className="">
+          <div className="max-w-screen-xl flex flex-col md:flex-row w-full gap-4">
             <div className="w-full lg:w-2/3">
               <FAQSection />
             </div>
             <ContactForm />
-          </Container>
-        </div>
-      </div>
+          </div>
+        </SectionContent>
+      </Section>
     </section>
   );
 };

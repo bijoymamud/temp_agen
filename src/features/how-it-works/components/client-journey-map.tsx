@@ -1,4 +1,10 @@
-import Container from "@/components/container";
+import {
+  Section,
+  SectionBackground,
+  SectionContent,
+  SectionHeader,
+  SectionTitle,
+} from "@/components/section";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChevronDown, ChevronRight } from "lucide-react";
@@ -42,18 +48,20 @@ const journeySteps = [
 
 export default function ClientJourneyMap() {
   return (
-    <div className="w-full pb-10 relative overflow-hidden">
-      <svg
-        className="absolute top-0 left-0 w-full h-full  opacity-5"
-        viewBox="0 0 100 100"
-        preserveAspectRatio="none"
-      >
-        <path d="M0,0 C50,0 50,100 100,100 L0,100 Z" fill="currentColor" />
-      </svg>
-      <h2 className="text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-center">
-        Your Journey With Us
-      </h2>
-      <Container className="max-w-screen-xl">
+    <Section>
+      <SectionBackground>
+        <svg
+          className="absolute top-0 left-0 w-full h-full  opacity-5"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+        >
+          <path d="M0,0 C50,0 50,100 100,100 L0,100 Z" fill="currentColor" />
+        </svg>
+      </SectionBackground>
+      <SectionHeader>
+        <SectionTitle>Your Journey With Us</SectionTitle>
+      </SectionHeader>
+      <SectionContent>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 lg:gap-4">
           {journeySteps.map((step, index) => (
             <div key={index} className="flex flex-col items-center relative">
@@ -88,7 +96,7 @@ export default function ClientJourneyMap() {
             </div>
           ))}
         </div>
-      </Container>
-    </div>
+      </SectionContent>
+    </Section>
   );
 }

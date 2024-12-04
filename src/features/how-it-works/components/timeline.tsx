@@ -1,3 +1,10 @@
+import {
+  Section,
+  SectionBackground,
+  SectionContent,
+  SectionHeader,
+  SectionTitle,
+} from "@/components/section";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -72,11 +79,8 @@ const developmentStages = [
 
 export default function Timeline() {
   return (
-    <div className="">
-      <h2 className="text-4xl font-bold mb-12 text-center">
-        Our Development Process
-      </h2>
-      <div className="w-full relative overflow-hidden">
+    <Section className="">
+      <SectionBackground>
         <svg
           className="absolute top-0 left-0 w-full h-full  opacity-5"
           viewBox="0 0 100 100"
@@ -84,15 +88,20 @@ export default function Timeline() {
         >
           <path d="M0,0 L100,0 C60,50 40,50 0,100 Z" fill="currentColor" />
         </svg>
+      </SectionBackground>
 
-        <div className="relative pt-9">
+      <SectionHeader>
+        <SectionTitle>Our Development Process</SectionTitle>
+      </SectionHeader>
+      <SectionContent>
+        <div className="relative">
           <div className="absolute left-6 top-0 bottom-0 w-px bg-gray-300 " />
           {developmentStages.map((stage, index) => (
-            <div key={index} className="mb-8 flex items-start">
+            <div key={index} className="flex items-start space-y-3">
               <div className="flex-shrink-0 w-12 h-12 rounded-full bg-background border-2 border-primary flex items-center justify-center mr-4 z-10">
                 {stage.icon}
               </div>
-              <Card className="flex-grow ml-4">
+              <Card className="flex-grow ml-2">
                 <CardHeader>
                   <CardTitle>{stage.title}</CardTitle>
                 </CardHeader>
@@ -110,7 +119,7 @@ export default function Timeline() {
             </div>
           ))}
         </div>
-      </div>
-    </div>
+      </SectionContent>
+    </Section>
   );
 }

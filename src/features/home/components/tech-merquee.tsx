@@ -61,7 +61,7 @@ export function TechMarquee() {
   const secondRow = technologies.slice(midpoint);
 
   return (
-    <Section className="pt-0">
+    <Section className="">
       <SectionContent className="mt-0">
         <div className="relative flex  w-full flex-col items-center justify-center overflow-hidden ">
           <Marquee pauseOnHover className="[--duration:40s] ">

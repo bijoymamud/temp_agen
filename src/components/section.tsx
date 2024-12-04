@@ -96,7 +96,7 @@ const SectionDescription = React.forwardRef<
   <p
     ref={ref}
     className={cn(
-      "text-muted-foreground leading-none tracking-tight max-w-[700px] mx-auto",
+      "text-muted-foreground leading-none tracking-tight max-w-[700px] mx-auto pb-1",
       className
     )}
     {...props}
@@ -114,7 +114,7 @@ const SectionContent = React.forwardRef<
       ref={ref}
       className={cn(
         sectionContentVariants({ size, variant, position }),
-        "mt-16 pb-3",
+        "mt-12 py-2",
         className
       )}
       {...props}

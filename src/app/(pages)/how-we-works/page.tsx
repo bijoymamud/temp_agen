@@ -26,11 +26,9 @@ export default function HowItWorks() {
       </div>
       <div className="overflow-hidden w-full relative">
         <Grid size={35} />
-        <Container className="mt-10 mb-16 max-w-screen-xl space-y-10">
-          <ProcessFlow />
-          <Timeline />
-          <TeamCollaboration />
-        </Container>
+        <ProcessFlow />
+        <Timeline />
+        <TeamCollaboration />
         <ClientJourneyMap />
       </div>
     </section>
