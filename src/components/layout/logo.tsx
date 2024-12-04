@@ -67,3 +67,38 @@ export function Logo() {
     </svg>
   );
 }
+
+export function StaticLogo() {
+  return (
+    <svg
+      width="40"
+      height="40"
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="text-primary transition-colors duration-300 hover:text-primary/80"
+      aria-label="Logo"
+    >
+      <path
+        d="M20 4L34.641 12V28L20 36L5.35898 28V12L20 4Z"
+        className="stroke-current"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M20 4L34.641 12L20 20L5.35898 12L20 4Z"
+        className="fill-current"
+        opacity="0.2"
+      />
+      <path
+        d="M20 20V36"
+        className="stroke-current"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <circle cx="20" cy="20" r="4" className="fill-current" />
+    </svg>
+  );
+}
