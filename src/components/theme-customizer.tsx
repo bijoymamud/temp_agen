@@ -2,7 +2,7 @@
 import { baseColors } from "@/config/base-colors";
 import { useConfigStore } from "@/hooks/use-config";
 import { cn } from "@/lib/utils";
-import { Check, Moon, Repeat, SplitSquareHorizontal, Sun } from "lucide-react";
+import { Check, Moon, Repeat, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import React from "react";
 import { ThemeWrapper } from "./theme-wrapper";
@@ -160,7 +160,7 @@ export function Customizer() {
         </div>
         <div className="space-y-1.5">
           <Label className="text-xs">Mode</Label>
-          <div className="grid grid-cols-3 gap-2">
+          <div className="grid grid-cols-2 gap-2">
             {mounted ? (
               <>
                 <Button
@@ -181,7 +181,7 @@ export function Customizer() {
                   <Moon className="mr-1 -translate-x-1" />
                   Dark
                 </Button>
-                <Button
+                {/* <Button
                   variant={"outline"}
                   size="sm"
                   onClick={() => setMode("system")}
@@ -189,7 +189,7 @@ export function Customizer() {
                 >
                   <SplitSquareHorizontal className="mr-1 -translate-x-1" />
                   System
-                </Button>
+                </Button> */}
               </>
             ) : (
               <>

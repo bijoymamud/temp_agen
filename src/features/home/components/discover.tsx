@@ -7,6 +7,7 @@ import {
   SectionHeader,
   SectionTitle,
 } from "@/components/section";
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Ripple from "@/components/ui/ripple";
 
@@ -26,9 +27,21 @@ const Discover = () => {
       <SectionContent>
         <Card className="overflow-hidden">
           <div className="flex h-8 items-center gap-2 border-b bg-muted px-4">
-            <div className="h-2.5 w-2.5 rounded-full bg-red-500" />
-            <div className="h-2.5 w-2.5 rounded-full bg-yellow-500" />
-            <div className="h-2.5 w-2.5 rounded-full bg-green-500" />
+            <Button
+              size="sm"
+              variant="outline"
+              className="w-3 h-3 p-0 rounded-full bg-red-500 border-red-500"
+            />
+            <Button
+              size="sm"
+              variant="outline"
+              className="w-3 h-3 p-0 rounded-full bg-yellow-500 border-yellow-500"
+            />
+            <Button
+              size="sm"
+              variant="outline"
+              className="w-3 h-3 p-0 rounded-full bg-green-500 border-green-500"
+            />
           </div>
           <div className=" relative ">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-8 p-4 ">

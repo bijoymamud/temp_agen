@@ -1,5 +1,6 @@
 import Container from "@/components/container";
 import ScrollArrowButton from "@/components/scroll-arrow-button";
+import AnimatedShinyText from "@/components/ui/animated-shiny-text";
 import { Badge } from "@/components/ui/badge";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { Button } from "@/components/ui/button";
@@ -15,8 +16,10 @@ export default function Hero() {
         <div className="lg:mt-36">
           <div className="space-y-2 mb-8">
             <Badge variant="secondary" className="px-3 py-2  border relative">
-              <Sparkles className="w-4 h-4 mr-2 text-primary" />
-              Innovative Digital Solutions
+              <AnimatedShinyText className="inline-flex items-center justify-center  transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
+                <Sparkles className="w-4 h-4 mr-2 text-primary" />
+                Innovative Digital Solutions
+              </AnimatedShinyText>
               <BorderBeam size={30} duration={8} delay={9} />
             </Badge>
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
