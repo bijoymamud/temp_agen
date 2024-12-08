@@ -91,7 +91,7 @@ export default function RootLayout({
           />
         </head>
         <body className={`${spaceGrotesk.variable}  antialiased`}>
-          <NextTopLoader height={2} showSpinner={false} />
+          <NextTopLoader height={1} showSpinner={false} />
           <ThemeProvider
             attribute="class"
             defaultTheme="system"

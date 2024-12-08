@@ -7,6 +7,8 @@ import {
   SectionHeader,
   SectionTitle,
 } from "@/components/section";
+import { Card } from "@/components/ui/card";
+import Ripple from "@/components/ui/ripple";
 
 const Discover = () => {
   return (
@@ -22,22 +24,32 @@ const Discover = () => {
         </div>
       </SectionHeader>
       <SectionContent>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-8">
-          {discover_data.map((feature) => (
-            <div
-              key={feature.title}
-              className="flex flex-col items-start lg:items-start px-0 md:px-0"
-            >
-              <div className="flex items-center justify-center bg-primary rounded-full h-10 w-10">
-                <feature.icon className="w-7 h-7 " />
-              </div>
-              <h3 className="text-lg font-medium mt-4">{feature.title}</h3>
-              <p className="text-muted-foreground mt-2 text-start lg:text-start">
-                {feature.info}
-              </p>
+        <Card className="overflow-hidden">
+          <div className="flex h-8 items-center gap-2 border-b bg-muted px-4">
+            <div className="h-2.5 w-2.5 rounded-full bg-red-500" />
+            <div className="h-2.5 w-2.5 rounded-full bg-yellow-500" />
+            <div className="h-2.5 w-2.5 rounded-full bg-green-500" />
+          </div>
+          <div className=" relative ">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-8 p-4 ">
+              {discover_data.map((feature) => (
+                <div
+                  key={feature.title}
+                  className="flex flex-col items-start lg:items-center px-0 md:px-0"
+                >
+                  <div className="flex items-center justify-center bg-primary rounded-full h-10 w-10">
+                    <feature.icon className="w-7 h-7 " />
+                  </div>
+                  <h3 className="text-lg font-medium mt-4">{feature.title}</h3>
+                  <p className="text-muted-foreground mt-2 text-center">
+                    {feature.info}
+                  </p>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+            <Ripple />
+          </div>
+        </Card>
       </SectionContent>
     </Section>
   );

@@ -140,9 +140,7 @@ export function Faq() {
                 <li key={category.id}>
                   <button
                     className={`text-lg font-medium ${
-                      activeCategory === category.id
-                        ? "text-blue-600"
-                        : "text-gray-800"
+                      activeCategory === category.id && "text-primary"
                     }`}
                     onClick={() => setActiveCategory(category.id)}
                   >
