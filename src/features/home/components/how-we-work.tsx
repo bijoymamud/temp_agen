@@ -27,7 +27,7 @@ export function HowWeWork() {
         <SectionBackground>
           <RetroGrid angle={30} />
         </SectionBackground>
-        <SectionContent className=" h-[300px] md:h-[500px] lg:h-[70vh]">
+        <SectionContent className=" h-[300px] md:h-[500px] lg:h-[50vh]">
           <Image src={homeWorkImage} className="" alt="Home Work" fill />
         </SectionContent>
       </div>

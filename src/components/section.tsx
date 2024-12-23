@@ -2,7 +2,6 @@ import { cva, type VariantProps } from "class-variance-authority";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { twMerge } from "tailwind-merge";
 
 const sectionVariants = cva("w-full", {
   variants: {
@@ -44,6 +43,19 @@ const sectionContentVariants = cva("", {
     position: "relative",
   },
 });
+
+const titleVariants = cva("text-3xl lg:text-4xl font-bold", {
+  variants: {
+    variant: {
+      container: "px-4 md:px-8 mx-auto max-w-screen-xl",
+      none: "",
+    },
+  },
+  defaultVariants: {
+    variant: "none",
+  },
+});
+
 const Section = React.forwardRef<
   HTMLElement,
   React.HTMLAttributes<HTMLElement> & VariantProps<typeof sectionVariants>
@@ -77,12 +89,12 @@ SectionHeader.displayName = "SectionHeader";
 
 const SectionTitle = React.forwardRef<
   HTMLHeadingElement,
-  React.HTMLAttributes<HTMLHeadingElement>
->(({ className, ...props }, ref) => {
+  React.HTMLAttributes<HTMLHeadingElement> & VariantProps<typeof titleVariants>
+>(({ className, variant, ...props }, ref) => {
   return (
     <p
       ref={ref}
-      className={twMerge("text-3xl lg:text-4xl font-bold", className)}
+      className={cn(titleVariants({ variant, className }))}
       {...props}
     />
   );
@@ -113,9 +125,8 @@ const SectionContent = React.forwardRef<
     <div
       ref={ref}
       className={cn(
-        sectionContentVariants({ size, variant, position }),
         "mt-12 py-2",
-        className
+        sectionContentVariants({ size, variant, position, className })
       )}
       {...props}
     />

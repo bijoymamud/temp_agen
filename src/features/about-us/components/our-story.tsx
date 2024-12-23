@@ -3,7 +3,7 @@ import { Section, SectionContent } from "@/components/section";
 import siteInfo from "@/config/site-info";
 import Image from "next/image";
 
-const OurStory = () => {
+export const OurStory = () => {
   return (
     <Section>
       <SectionContent className="mt-0">
@@ -36,5 +36,3 @@ const OurStory = () => {
     </Section>
   );
 };
-
-export default OurStory;

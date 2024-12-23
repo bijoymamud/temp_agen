@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import GridPattern from "@/components/ui/grid-pattern";
 import { cn } from "@/lib/utils";
 
-const SolutionsOverview = () => {
+export const SolutionsOverview = () => {
   const cardData = [
     {
       title: "Next.js & React Expertise",
@@ -76,5 +76,3 @@ const SolutionsOverview = () => {
     </Section>
   );
 };
-
-export default SolutionsOverview;

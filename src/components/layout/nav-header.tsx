@@ -11,6 +11,7 @@ import siteInfo from "@/config/site-info";
 import { cn } from "@/lib/utils";
 import Container from "../container";
 import { StaticLogo } from "./logo";
+import { ModeSwitcher } from "./mode-switcher";
 
 const navItems = [
   { title: "Home", href: "/" },
@@ -18,7 +19,6 @@ const navItems = [
   { title: "How we works", href: "/how-we-works" },
   { title: "Sponsor", href: "/sponsorship" },
   { title: "Contact Us", href: "/contact-us" },
-  { title: "Dashboard", href: "/dashboard" },
 ] as const;
 
 export function NavHeader() {
@@ -31,7 +31,7 @@ export function NavHeader() {
         "fixed top-0 left-0 right-0  transition-all duration-300   shadow  z-50"
       )}
     >
-      <div className="relative bg-background/50 backdrop-blur-md">
+      <div className="relative bg-background/50 backdrop-blur-md w-full">
         <Container className="max-w-screen-xl">
           <nav className="flex h-14 items-center justify-between">
             {/* Logo */}
@@ -47,75 +47,77 @@ export function NavHeader() {
               </div>
             </Link>
 
-            {/* Desktop Navigation */}
-            <ul className="hidden md:flex items-center space-x-8">
-              {navItems.map((item) => {
-                const isActive = pathname === item.href;
-                return (
-                  <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      className={cn(
-                        " font-medium transition-colors relative py-1",
-                        "before:absolute before:left-0 before:bottom-0",
-                        "before:h-0.5 before:rounded-full before:bg-primary",
-                        "before:transition-all before:duration-300",
-                        isActive
-                          ? "text-primary before:w-full"
-                          : "hover:text-primary before:w-0 hover:before:w-full"
-                      )}
-                    >
-                      {item.title}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-
-            {/* Mobile Navigation */}
-            <Sheet open={isOpen} onOpenChange={setIsOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="md:hidden">
-                  {isOpen ? (
-                    <X className="h-6 w-6" />
-                  ) : (
-                    <Menu className="h-6 w-6" />
-                  )}
-                  <span className="sr-only">Toggle menu</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent
-                side="top"
-                className="w-full h-[100dvh] border-0 bg-background backdrop-blur-lg"
-              >
-                <nav className="flex flex-col items-center justify-center h-full">
-                  <ul className="flex flex-col items-center gap-8">
-                    {navItems.map((item) => {
-                      const isActive = pathname === item.href;
-                      return (
-                        <li key={item.href}>
-                          <Link
-                            href={item.href}
-                            className={cn(
-                              "text-3xl font-medium transition-colors relative py-2",
-                              "before:absolute before:left-0 before:bottom-0",
-                              "before:h-0.5 before:rounded-full before:bg-primary",
-                              "before:transition-all before:duration-300",
-                              isActive
-                                ? "text-primary before:w-full"
-                                : "hover:text-primary before:w-0 hover:before:w-full"
-                            )}
-                            onClick={() => setIsOpen(false)}
-                          >
-                            {item.title}
-                          </Link>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </nav>
-              </SheetContent>
-            </Sheet>
+            <div className="flex gap-4 items-center">
+              {/* Desktop Navigation */}
+              <ul className="hidden md:flex items-center space-x-8">
+                {navItems.map((item) => {
+                  const isActive = pathname === item.href;
+                  return (
+                    <li key={item.href}>
+                      <Link
+                        href={item.href}
+                        className={cn(
+                          " font-medium transition-colors relative py-1",
+                          "before:absolute before:left-0 before:bottom-0",
+                          "before:h-0.5 before:rounded-full before:bg-primary",
+                          "before:transition-all before:duration-300",
+                          isActive
+                            ? "text-primary before:w-full"
+                            : "hover:text-primary before:w-0 hover:before:w-full"
+                        )}
+                      >
+                        {item.title}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+              {/* Mobile Navigation */}
+              <Sheet open={isOpen} onOpenChange={setIsOpen}>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon" className="md:hidden">
+                    {isOpen ? (
+                      <X className="h-6 w-6" />
+                    ) : (
+                      <Menu className="h-6 w-6" />
+                    )}
+                    <span className="sr-only">Toggle menu</span>
+                  </Button>
+                </SheetTrigger>
+                <SheetContent
+                  side="top"
+                  className="w-full h-[100dvh] border-0 bg-background backdrop-blur-lg"
+                >
+                  <nav className="flex flex-col items-center justify-center h-full">
+                    <ul className="flex flex-col items-center gap-8">
+                      {navItems.map((item) => {
+                        const isActive = pathname === item.href;
+                        return (
+                          <li key={item.href}>
+                            <Link
+                              href={item.href}
+                              className={cn(
+                                "text-3xl font-medium transition-colors relative py-2",
+                                "before:absolute before:left-0 before:bottom-0",
+                                "before:h-0.5 before:rounded-full before:bg-primary",
+                                "before:transition-all before:duration-300",
+                                isActive
+                                  ? "text-primary before:w-full"
+                                  : "hover:text-primary before:w-0 hover:before:w-full"
+                              )}
+                              onClick={() => setIsOpen(false)}
+                            >
+                              {item.title}
+                            </Link>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </nav>
+                </SheetContent>
+              </Sheet>
+              <ModeSwitcher />
+            </div>
           </nav>
         </Container>
       </div>

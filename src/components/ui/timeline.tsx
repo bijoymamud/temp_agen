@@ -8,7 +8,9 @@ import { cn } from "@/lib/utils";
 const Timeline = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => <div {...props} ref={ref} />);
+>(({ className, ...props }, ref) => (
+  <div className={className} {...props} ref={ref} />
+));
 Timeline.displayName = "Timeline";
 
 const TimelineItem = React.forwardRef<
@@ -46,13 +48,13 @@ const TimelineConnector = React.forwardRef<
   TimelineConnectorProps
 >(({ className, hideLine, ...props }, ref) => (
   <div
-    {...props}
     ref={ref}
     className={cn(
       !hideLine &&
         "relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-input",
       className
     )}
+    {...props}
   />
 ));
 TimelineConnector.displayName = "TimelineConnector";

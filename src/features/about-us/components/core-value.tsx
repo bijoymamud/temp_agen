@@ -6,7 +6,7 @@ import {
 } from "@/components/section";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-const CoreValue = () => {
+export const CoreValue = () => {
   return (
     <Section className="bg-muted">
       <SectionHeader>
@@ -32,5 +32,3 @@ const CoreValue = () => {
     </Section>
   );
 };
-
-export default CoreValue;

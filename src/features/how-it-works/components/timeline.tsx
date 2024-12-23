@@ -328,7 +328,9 @@ export default function TimelineSection() {
               </TimelineItemLabel>
               {phase.steps.map((step, stepIndex) => (
                 <TimelineItem key={stepIndex}>
-                  <TimelineConnector>
+                  <TimelineConnector
+                    hideLine={stepIndex === phase.steps.length - 1}
+                  >
                     <TimelineDot size="lg" variant="outline">
                       {step.icon}
                     </TimelineDot>
