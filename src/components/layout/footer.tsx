@@ -123,14 +123,15 @@ const FooterSection: React.FC<FooterSectionProps> = ({ title, items }) => (
 );
 
 const SocialIcon: React.FC<SocialIconProps> = ({ Icon, href }) => (
-  <a
+  <Link
     href={href}
     target="_blank"
     rel="noopener noreferrer"
+    aria-label="Social media link"
     className="text-muted-foreground hover:text-primary transition-colors duration-300"
   >
     <Icon className="w-5 h-5" />
-  </a>
+  </Link>
 );
 
 const FooterLink: React.FC<FooterLinkProps> = ({ children, href }) => (

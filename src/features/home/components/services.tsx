@@ -75,7 +75,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   const Icon = Icons[icon];
 
   return (
-    <Card className=" w-full justify-between  flex overflow-hidden ">
+    <Card className=" w-full justify-between  flex overflow-hidden relative bg-primary/10 backdrop-blur-2xl shadow-none border-none">
       {/* left side */}
       <div className="flex flex-col p-[15px] lg:p-[20px] gap-[18px] flex-grow">
         <h1 className="text-[1rem] lg:text-[1.3rem] font-bold ">{title}</h1>
@@ -84,10 +84,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             <Icon className="w-[1.5rem] h-[1.5rem] lg:w-[2rem] lg:h-[2rem]" />
           </div>
           <div>
-            <h4 className="text-[0.8rem] lg:text-[1.1rem] font-[600] ">
+            <p className="text-[0.8rem] lg:text-[1.1rem] font-[600] ">
               Service Type
-            </h4>
-            <p className="text-[0.6rem] lg:text-[0.9rem] font-[400] text-muted-foreground">
+            </p>
+            <p className="text-[0.6rem] lg:text-[0.9rem] font-[400] text-muted-foreground max-w-sm">
               {description}
             </p>
           </div>
@@ -97,9 +97,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             <Icons.clock className="w-[1.5rem] h-[1.5rem] lg:w-[2rem] lg:h-[2rem]" />
           </div>
           <div>
-            <h4 className="text-[0.8rem] lg:text-[1.1rem] font-[600] ">
+            <p className="text-[0.8rem] lg:text-[1.1rem] font-[600] ">
               Duration
-            </h4>
+            </p>
             <p className="text-[0.6rem] lg:text-[0.9rem] font-[400] text-muted-foreground">
               {duration}
             </p>
@@ -112,14 +112,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         {/* top curve */}
         <div className="w-[45px] h-[45px] rounded-full bg-background absolute top-[-15%] lg:top-[-13%] sm:left-[-13.5%] left-[-19%] lg:left-[-11.5%]"></div>
 
-        <h4 className="text-[0.9rem] lg:text-[1.3rem] font-bold ">
-          IT Service
-        </h4>
+        <p className="text-[0.9rem] lg:text-[1.3rem] font-bold ">IT Service</p>
 
         <Button variant={"gooeyRight"}>Get Started</Button>
 
         <p className="text-[0.9rem] lg:text-[1.1rem] text-gray-500">
-          Price: <span className="text-red-600 font-semibold"> Talk</span>
+          Price: <span className="text-destructive font-semibold"> Talk</span>
         </p>
 
         {/* bottom curve */}
