@@ -103,7 +103,7 @@ export function Reviews() {
           customers have to say about their experience with our product.
         </SectionDescription>
       </SectionHeader>
-      <SectionContent size={"sm"}>
+      <SectionContent>
         <Marquee pauseOnHover className="[--duration:20s]">
           {firstRow.map((review) => (
             <ReviewCard key={review.username} {...review} />
