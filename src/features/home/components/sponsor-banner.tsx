@@ -11,7 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export default function SponsorBanner() {
+export function SponsorBanner() {
   return (
     <Section className="mb-0 py-20">
       <SectionBackground>

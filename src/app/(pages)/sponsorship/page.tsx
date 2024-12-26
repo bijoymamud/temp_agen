@@ -1,31 +1,32 @@
 import Container from "@/components/container";
 import { Grid } from "@/components/ui/grid";
-import BecomeSponsor from "@/features/sponsorship/components/become-sponsor";
-import SponsorshipBenefits from "@/features/sponsorship/components/benefits";
-import SponsorshipCTA from "@/features/sponsorship/components/cta";
-import SponsorshipFAQ from "@/features/sponsorship/components/faq";
-import SponsorshipProcess from "@/features/sponsorship/components/process";
-
 import siteInfo from "@/config/site-info";
+import { SponsorshipComponents } from "@/features/sponsorship";
 import { Metadata } from "next";
+import { Fragment } from "react";
 export const metadata: Metadata = {
   title: `Sponsorship`,
   description: `Learn about ${siteInfo.name} and how we provide cutting-edge web development templates and solutions.`,
 };
 
+const {
+  BecomeSponsor,
+  SponsorshipBenefits,
+  SponsorshipCTA,
+  SponsorshipFAQ,
+  SponsorshipProcess,
+} = SponsorshipComponents;
+
 const page = () => {
   return (
-    <section className="">
+    <Fragment>
       <div className="header">
         <Container className="h-40 lg:h-60 flex items-end justify-start max-w-screen-xl">
-          <div className="h-10 lg:h-20">
-            <h1 className="text-xl lg:text-4xl text-primary font-semibold bg-primary/20 backdrop-blur-sm px-2 relative z-10">
-              Sponsorship Opportunities
-            </h1>
-          </div>
+          <h1 className="text-xl lg:text-4xl text-primary font-semibold bg-primary/20 backdrop-blur-sm px-2 relative z-10">
+            Sponsorship Opportunities
+          </h1>
         </Container>
       </div>
-
       <div className="overflow-hidden relative">
         <Grid size={35} />
         <SponsorshipBenefits />
@@ -34,7 +35,7 @@ const page = () => {
         <SponsorshipCTA />
         <SponsorshipFAQ />
       </div>
-    </section>
+    </Fragment>
   );
 };
 

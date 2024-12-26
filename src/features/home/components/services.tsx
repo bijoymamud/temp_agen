@@ -29,9 +29,9 @@ export const Icons = {
   clock: Clock,
 };
 
-const Services: React.FC = () => {
+export const Services = () => {
   return (
-    <Section>
+    <Section className="header">
       <SectionHeader>
         <SectionTitle>Our IT Services</SectionTitle>
         <SectionDescription>
@@ -56,8 +56,6 @@ const Services: React.FC = () => {
   );
 };
 
-export default Services;
-
 interface ServiceCardProps {
   title: string;
   description: string;
@@ -77,7 +75,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   const Icon = Icons[icon];
 
   return (
-    <Card className="bg-muted w-full justify-between  flex overflow-hidden border-none shadow-none">
+    <Card className=" w-full justify-between  flex overflow-hidden ">
       {/* left side */}
       <div className="flex flex-col p-[15px] lg:p-[20px] gap-[18px] flex-grow">
         <h1 className="text-[1rem] lg:text-[1.3rem] font-bold ">{title}</h1>

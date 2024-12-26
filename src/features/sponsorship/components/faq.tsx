@@ -36,7 +36,7 @@ const faqs = [
   },
 ];
 
-export default function SponsorshipFAQ() {
+export function SponsorshipFAQ() {
   return (
     <Section className="">
       <SectionBackground>

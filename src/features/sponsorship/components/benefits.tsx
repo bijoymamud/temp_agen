@@ -31,7 +31,7 @@ const benefits = [
   },
 ];
 
-export default function SponsorshipBenefits() {
+export function SponsorshipBenefits() {
   return (
     <Section>
       <SectionContent className="mt-0">

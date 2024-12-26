@@ -147,11 +147,11 @@ const whySponsorCards = [
   },
 ];
 
-export default function BecomeSponsor() {
+export function BecomeSponsor() {
   const [selectedTier, setSelectedTier] = useState("Silver");
 
   return (
-    <Section>
+    <Section className="">
       <SectionHeader>
         <SectionTitle>Become a Sponsor</SectionTitle>
         <SectionDescription>

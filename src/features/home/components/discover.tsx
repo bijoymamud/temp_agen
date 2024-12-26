@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Ripple from "@/components/ui/ripple";
 
-const Discover = () => {
+export const Discover = () => {
   return (
     <Section>
       <SectionHeader>
@@ -67,5 +67,3 @@ const Discover = () => {
     </Section>
   );
 };
-
-export default Discover;

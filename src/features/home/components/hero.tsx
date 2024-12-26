@@ -8,7 +8,7 @@ import { Grid } from "@/components/ui/grid";
 import { WorldMap } from "@/components/ui/world-map";
 import { ArrowRight, Sparkles } from "lucide-react";
 
-export default function Hero() {
+export function Hero() {
   return (
     <section className="relative pt-20  lg:pt-0 flex items-center justify-center overflow-hidden">
       <Container className="flex flex-col items-center  text-center max-w-screen-xl">

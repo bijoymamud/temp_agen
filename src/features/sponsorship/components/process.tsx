@@ -58,9 +58,9 @@ const steps = [
   },
 ];
 
-export default function SponsorshipProcess() {
+export function SponsorshipProcess() {
   return (
-    <Section>
+    <Section className="header">
       <SectionHeader>
         <SectionTitle>Sponsorship Process</SectionTitle>
       </SectionHeader>

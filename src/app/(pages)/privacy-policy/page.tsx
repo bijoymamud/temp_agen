@@ -14,11 +14,9 @@ const PrivacyPolicyPage = () => {
     <div className="">
       <div className="header">
         <Container className="h-40 lg:h-60 flex items-end justify-start max-w-screen-xl">
-          <div className="h-10 lg:h-20">
-            <h1 className="text-xl lg:text-4xl text-primary font-semibold bg-primary/20 backdrop-blur-sm px-2 relative z-10">
-              Privacy Policy
-            </h1>
-          </div>
+          <h1 className="text-xl lg:text-4xl text-primary font-semibold bg-primary/20 backdrop-blur-sm px-2 relative z-10">
+            Privacy Policy
+          </h1>
         </Container>
       </div>
       <div className="overflow-hidden w-full relative">
@@ -28,15 +26,14 @@ const PrivacyPolicyPage = () => {
             Privacy Policy
           </h1>
           <p className="mb-6">
-            {siteInfo.name} Address: BEL Tower, Ground Floor, House 19, Road 1,
-            Dhanmondi, Dhaka 1205, Bangladesh. At{siteInfo.name}, we are
-            committed to protecting and preserving the privacy of our visitors
-            and customers when visiting our site or communicating electronically
-            with us. This Privacy Policy explains how we process any personal
-            data we collect from you or that you provide to us through our
-            website and social media sites. By using our services, you agree to
-            the collection and use of information in accordance with this
-            policy.
+            {siteInfo.name} Address : {siteInfo.contactInfo.address} At {"  "}
+            {siteInfo.name}, we are committed to protecting and preserving the
+            privacy of our visitors and customers when visiting our site or
+            communicating electronically with us. This Privacy Policy explains
+            how we process any personal data we collect from you or that you
+            provide to us through our website and social media sites. By using
+            our services, you agree to the collection and use of information in
+            accordance with this policy.
           </p>
 
           <section className="mb-6">
@@ -198,12 +195,12 @@ const PrivacyPolicyPage = () => {
             <p className="mb-2">
               If you have any questions about this Privacy Policy, please
               contact us:{" "}
-              {/* <a
+              <a
                 href={siteInfo.companyInfo.emails[0]}
                 className="text-blue-500 underline"
               >
                 {siteInfo.companyInfo.emails[0]}
-              </a> */}
+              </a>
             </p>
           </section>
         </Container>

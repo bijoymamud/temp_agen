@@ -1,19 +1,23 @@
-import Cta from "@/features/home/components/cta";
-import Discover from "@/features/home/components/discover";
-import HeroSection from "@/features/home/components/hero";
-import { HowWeWork } from "@/features/home/components/how-we-work";
-import { Pricing } from "@/features/home/components/pricing";
-import Promotional from "@/features/home/components/promotional";
-import { Reviews } from "@/features/home/components/reviews";
-import Services from "@/features/home/components/services";
-import SponsorBanner from "@/features/home/components/sponsor-banner";
-import { TechMarquee } from "@/features/home/components/tech-merquee";
-import { WhatWeOffer } from "@/features/home/components/what-we-offer";
+import { HomeComponents } from "@/features/home";
+
+const {
+  Cta,
+  Discover,
+  Hero,
+  HowWeWork,
+  Pricing,
+  Promotional,
+  Reviews,
+  Services,
+  SponsorBanner,
+  TechMarquee,
+  WhatWeOffer,
+} = HomeComponents;
 
 export default function Page() {
   return (
     <div className="relative">
-      <HeroSection />
+      <Hero />
       <Promotional />
       <HowWeWork />
       <TechMarquee />

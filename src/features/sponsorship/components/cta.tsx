@@ -2,7 +2,7 @@ import { Section, SectionContent } from "@/components/section";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export default function SponsorshipCTA() {
+export function SponsorshipCTA() {
   return (
     <Section className="bg-primary/20  ">
       <SectionContent className="mt-0 pb-5 flex items-center justify-center flex-col">

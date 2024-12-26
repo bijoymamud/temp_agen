@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const CoreValue = () => {
   return (
-    <Section className="bg-muted">
+    <Section className="header">
       <SectionHeader>
         <SectionTitle>Our Core Values</SectionTitle>
       </SectionHeader>

@@ -28,7 +28,7 @@ const service_data = [
   },
 ];
 
-const Promotional = () => {
+export const Promotional = () => {
   return (
     <Section>
       <SectionBackground className="bg-muted/40">
@@ -57,5 +57,3 @@ const Promotional = () => {
     </Section>
   );
 };
-
-export default Promotional;

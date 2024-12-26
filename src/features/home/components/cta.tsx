@@ -6,7 +6,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
-const Cta = () => {
+export function Cta() {
   return (
     <Section className="py-16">
       <SectionBackground>
@@ -47,6 +47,4 @@ const Cta = () => {
       </SectionContent>
     </Section>
   );
-};
-
-export default Cta;
+}
