@@ -1,5 +1,6 @@
 "use client";
 
+import { Animate } from "@/components/animated";
 import {
   Section,
   SectionContent,
@@ -227,10 +228,10 @@ export function BecomeSponsor() {
       <SectionHeader className="mt-16">
         <SectionTitle>Why Sponsor Us?</SectionTitle>
       </SectionHeader>
-      <SectionContent>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {whySponsorCards.map((card, index) => (
-            <Card key={index} className="relative overflow-hidden">
+      <SectionContent className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {whySponsorCards.map((card, index) => (
+          <Animate key={index} index={index}>
+            <Card className="relative overflow-hidden">
               {card.bgPattern}
               <CardHeader className="relative">
                 <card.icon className="h-12 w-12 text-primary mb-2" />
@@ -243,8 +244,8 @@ export function BecomeSponsor() {
                 </Badge>
               </CardContent>
             </Card>
-          ))}
-        </div>
+          </Animate>
+        ))}
       </SectionContent>
     </Section>
   );

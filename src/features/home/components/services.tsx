@@ -73,7 +73,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   const Icon = Icons[icon];
 
   return (
-    <Card className=" w-full justify-between  flex overflow-hidden relative bg-primary/10 backdrop-blur-2xl shadow-none border-none">
+    <Card className=" w-full justify-between  flex overflow-hidden relative bg-primary/20 backdrop-blur-3xl shadow-none border-none">
       {/* left side */}
       <div className="flex flex-col p-[15px] lg:p-[20px] gap-[18px] flex-grow">
         <h1 className="text-[1rem] lg:text-[1.3rem] font-bold ">{title}</h1>

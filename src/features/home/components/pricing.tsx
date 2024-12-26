@@ -122,7 +122,10 @@ export function Pricing() {
                 <CardTitle className="text-[1.3rem] font-[500]">
                   Premium Plan
                 </CardTitle>
-                <Badge className="py-[5px] px-4 bg-secondary  rounded-full text-[0.6rem] sm:text-[0.9rem] uppercase">
+                <Badge
+                  variant={"destructive"}
+                  className="py-[5px] px-4  rounded-full text-[0.6rem] sm:text-[0.9rem] uppercase"
+                >
                   Priority Service
                 </Badge>
               </div>

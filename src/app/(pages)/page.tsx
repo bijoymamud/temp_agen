@@ -24,6 +24,7 @@ export default function Page() {
       <Discover />
       <WhatWeOffer />
       <Cta />
+      {/* <FeaturesSectionDemo /> */}
       <Services />
       <Pricing />
       <Reviews />

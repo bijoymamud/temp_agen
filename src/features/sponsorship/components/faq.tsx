@@ -61,7 +61,7 @@ export function SponsorshipFAQ() {
           className="w-full max-w-3xl mx-auto"
         >
           {faqs.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`} asChild>
+            <AccordionItem key={index} value={`item-${index}`}>
               <Animate index={index}>
                 <AccordionTrigger>{faq.question}</AccordionTrigger>
                 <AccordionContent>{faq.answer}</AccordionContent>
