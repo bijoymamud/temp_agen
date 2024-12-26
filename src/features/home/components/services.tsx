@@ -38,19 +38,17 @@ export const Services = () => {
           Discover our range of IT services designed to empower your business
         </SectionDescription>
       </SectionHeader>
-      <SectionContent>
-        <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-8">
-          {services.map((service) => (
-            <ServiceCard
-              key={service.title}
-              icon={service.icon as keyof typeof Icons}
-              title={service.title}
-              description={service.description}
-              price={service.price}
-              duration={service.duration}
-            />
-          ))}
-        </div>
+      <SectionContent className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+        {services.map((service) => (
+          <ServiceCard
+            key={service.title}
+            icon={service.icon as keyof typeof Icons}
+            title={service.title}
+            description={service.description}
+            price={service.price}
+            duration={service.duration}
+          />
+        ))}
       </SectionContent>
     </Section>
   );

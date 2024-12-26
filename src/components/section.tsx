@@ -22,11 +22,6 @@ const sectionVariants = cva("w-full", {
 });
 const sectionContentVariants = cva("", {
   variants: {
-    size: {
-      default: "space-y-8",
-      sm: "space-y-4",
-      lg: "space-y-12",
-    },
     variant: {
       "full-w": "w-full",
       padded: "px-4 md:px-8",
@@ -38,7 +33,6 @@ const sectionContentVariants = cva("", {
     },
   },
   defaultVariants: {
-    size: "default",
     variant: "container",
     position: "relative",
   },
@@ -74,11 +68,11 @@ const SectionHeader = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> &
     VariantProps<typeof sectionContentVariants>
->(({ className, size, variant, position, ...props }, ref) => (
+>(({ className, variant, position, ...props }, ref) => (
   <div
     ref={ref}
     className={cn(
-      sectionContentVariants({ size, variant, position }),
+      sectionContentVariants({ variant, position }),
       "space-y-1.5   text-center",
       className
     )}
@@ -120,14 +114,14 @@ const SectionContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> &
     VariantProps<typeof sectionContentVariants>
->(({ className, size, variant, position, ...props }, ref) => {
+>(({ className, variant, position, ...props }, ref) => {
   return (
     <div
-      ref={ref}
       className={cn(
         "mt-12 py-2",
-        sectionContentVariants({ size, variant, position, className })
+        sectionContentVariants({ variant, position, className })
       )}
+      ref={ref}
       {...props}
     />
   );

@@ -1,3 +1,4 @@
+import { Animate } from "@/components/animated";
 import {
   Section,
   SectionBackground,
@@ -60,9 +61,11 @@ export function SponsorshipFAQ() {
           className="w-full max-w-3xl mx-auto"
         >
           {faqs.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger>{faq.question}</AccordionTrigger>
-              <AccordionContent>{faq.answer}</AccordionContent>
+            <AccordionItem key={index} value={`item-${index}`} asChild>
+              <Animate index={index}>
+                <AccordionTrigger>{faq.question}</AccordionTrigger>
+                <AccordionContent>{faq.answer}</AccordionContent>
+              </Animate>
             </AccordionItem>
           ))}
         </Accordion>
