@@ -46,7 +46,7 @@ const journeySteps = [
   },
 ];
 
-export default function ClientJourneyMap() {
+export function ClientJourneyMap() {
   return (
     <Section>
       <SectionBackground>

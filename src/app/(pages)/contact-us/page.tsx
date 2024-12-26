@@ -7,27 +7,22 @@ import {
 import { Grid } from "@/components/ui/grid";
 import GridPattern from "@/components/ui/grid-pattern";
 import siteInfo from "@/config/site-info";
-import Address from "@/features/contact-us/components/address";
-import ContactForm from "@/features/contact-us/components/contact-form";
-import { CTASection } from "@/features/contact-us/components/cta-section";
-import { FAQSection } from "@/features/contact-us/components/faq-section";
+import { ContactUsComponents } from "@/features/contact-us";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: `Contact`,
   description: `Learn about ${siteInfo.name} and how we provide cutting-edge web development templates and solutions.`,
 };
-
+const { Address, CTASection, ContactForm, FAQSection } = ContactUsComponents;
 const ContactUs = () => {
   return (
     <section className="">
       <div className="header">
         <Container className="h-40 lg:h-60 flex items-end justify-start max-w-screen-xl">
-          <div className="h-10 lg:h-20">
-            <h1 className="text-xl lg:text-4xl text-primary font-semibold bg-primary/20 backdrop-blur-sm px-2 relative z-10">
-              Git in Touch
-            </h1>
-          </div>
+          <h1 className="text-xl lg:text-4xl text-primary font-semibold bg-primary/20 backdrop-blur-sm px-2 relative z-10">
+            Git in Touch
+          </h1>
         </Container>
       </div>
       <Section>

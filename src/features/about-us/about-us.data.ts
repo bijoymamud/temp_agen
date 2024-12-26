@@ -139,4 +139,3 @@ export const ContactUsFaqData: Record<string, IFaqItem[]> = {
   ],
 };
 //? end data for the faq component
-

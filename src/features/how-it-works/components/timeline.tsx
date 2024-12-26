@@ -303,7 +303,7 @@ const developmentProcess = [
   },
 ];
 
-export default function TimelineSection() {
+export function TimelineSection() {
   return (
     <Section className="">
       <SectionBackground>

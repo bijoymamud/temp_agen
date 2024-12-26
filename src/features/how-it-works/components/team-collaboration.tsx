@@ -31,7 +31,7 @@ const teamMembers = [
   },
 ];
 
-export default function TeamCollaboration() {
+export function TeamCollaboration() {
   return (
     <Section>
       <SectionHeader>

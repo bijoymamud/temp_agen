@@ -34,7 +34,7 @@ const formSchema = z.object({
 // Define the types for form data
 type FormData = z.infer<typeof formSchema>;
 
-const ContactForm = () => {
+export const ContactForm = () => {
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -115,5 +115,3 @@ const ContactForm = () => {
     </Card>
   );
 };
-
-export default ContactForm;

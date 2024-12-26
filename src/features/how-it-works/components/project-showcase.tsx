@@ -39,7 +39,7 @@ const projects = [
   },
 ];
 
-export default function ProjectShowcase() {
+export function ProjectShowcase() {
   const [activeTab, setActiveTab] = useState("E-commerce Platform");
 
   return (

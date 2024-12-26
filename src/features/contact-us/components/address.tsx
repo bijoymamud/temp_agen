@@ -31,7 +31,7 @@ const ContactInfoItem: React.FC<ContactInfoItemProps> = ({
   </div>
 );
 
-const Address = () => {
+export const Address = () => {
   const [loading, setLoading] = useState(true);
 
   return (
@@ -125,5 +125,3 @@ const Address = () => {
     </Container>
   );
 };
-
-export default Address;

@@ -25,7 +25,7 @@ const steps = [
   },
 ];
 
-export default function ProcessFlow() {
+export function ProcessFlow() {
   return (
     <Section className="">
       <SectionContent className="mt-0">
