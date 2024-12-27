@@ -73,7 +73,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   const Icon = Icons[icon];
 
   return (
-    <Card className=" w-full justify-between  flex overflow-hidden relative bg-primary/20 backdrop-blur-3xl shadow-none border-none">
+    <Card className=" w-full justify-between  flex overflow-hidden  bg-primary/10 backdrop-blur-3xl">
       {/* left side */}
       <div className="flex flex-col p-[15px] lg:p-[20px] gap-[18px] flex-grow">
         <h1 className="text-[1rem] lg:text-[1.3rem] font-bold ">{title}</h1>
@@ -108,7 +108,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       {/* right side */}
       <div className="flex flex-col justify-between relative w-[45%] lg:w-[40%] items-center border-l-[2px] p-[15px] lg:p-[20px] border-dashed border-foreground/30 ">
         {/* top curve */}
-        <div className="w-[45px] h-[45px] rounded-full bg-background absolute top-[-15%] lg:top-[-13%] sm:left-[-13.5%] left-[-19%] lg:left-[-11.5%]"></div>
+        {/* <div className="w-[45px] h-[45px] rounded-full bg-background absolute top-[-15%] lg:top-[-13%] sm:left-[-13.5%] left-[-19%] lg:left-[-11.5%]"></div> */}
 
         <p className="text-[0.9rem] lg:text-[1.3rem] font-bold ">IT Service</p>
 
@@ -119,7 +119,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         </p>
 
         {/* bottom curve */}
-        <div className="w-[45px] h-[45px] rounded-full  bg-background  absolute bottom-[-15%] lg:bottom-[-13%] left-[-18.5%] sm:left-[-13.5%] lg:left-[-11.5%]"></div>
+        {/* <div className="w-[45px] h-[45px] rounded-full  bg-background  absolute bottom-[-15%] lg:bottom-[-13%] left-[-18.5%] sm:left-[-13.5%] lg:left-[-11.5%]"></div> */}
       </div>
     </Card>
   );

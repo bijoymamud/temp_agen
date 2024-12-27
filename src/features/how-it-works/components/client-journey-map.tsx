@@ -1,3 +1,4 @@
+import { Animate } from "@/components/animated";
 import {
   Section,
   SectionBackground,
@@ -61,10 +62,13 @@ export function ClientJourneyMap() {
       <SectionHeader>
         <SectionTitle>Your Journey With Us</SectionTitle>
       </SectionHeader>
-      <SectionContent>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 lg:gap-4">
-          {journeySteps.map((step, index) => (
-            <div key={index} className="flex flex-col items-center relative">
+      <SectionContent className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 lg:gap-4">
+        {journeySteps.map((step, index) => (
+          <Animate key={index} index={index}>
+            <div
+              key={index}
+              className="flex flex-col items-center relative h-full"
+            >
               <Card className="w-full h-full bg-background/50 backdrop-blur-sm border-primary/10 hover:border-primary/20 transition-all duration-300">
                 <CardHeader className="p-4">
                   <CardTitle className="text-center text-lg">
@@ -94,8 +98,8 @@ export function ClientJourneyMap() {
                 </>
               )}
             </div>
-          ))}
-        </div>
+          </Animate>
+        ))}
       </SectionContent>
     </Section>
   );

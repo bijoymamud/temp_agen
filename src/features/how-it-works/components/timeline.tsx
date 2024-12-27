@@ -1,3 +1,4 @@
+import { Animate } from "@/components/animated";
 import {
   Section,
   SectionBackground,
@@ -39,7 +40,7 @@ import {
   Wrench,
   Zap,
 } from "lucide-react";
-import React from "react";
+import { Fragment } from "react";
 
 const developmentProcess = [
   {
@@ -322,7 +323,7 @@ export function TimelineSection() {
       <SectionContent>
         <Timeline>
           {developmentProcess.map((phase, phaseIndex) => (
-            <React.Fragment key={phaseIndex}>
+            <Fragment key={phaseIndex}>
               <TimelineItemLabel className="mb-5">
                 {phase.phase}
               </TimelineItemLabel>
@@ -335,26 +336,28 @@ export function TimelineSection() {
                       {step.icon}
                     </TimelineDot>
                   </TimelineConnector>
-                  <TimelineContent>
-                    <Card className="">
-                      <CardContent className="p-3 text-sm text-muted-foreground">
-                        <TimelineContentLabel>
-                          {step.title}
-                        </TimelineContentLabel>
-                        <TimelineContentDescription>
-                          {step.description}
-                        </TimelineContentDescription>
-                        <div className="mt-2 flex flex-wrap gap-2">
-                          {step.skills.map((skill, skillIndex) => (
-                            <Badge key={skillIndex}>{skill}</Badge>
-                          ))}
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </TimelineContent>
+                  <Animate key={stepIndex} index={stepIndex}>
+                    <TimelineContent>
+                      <Card className="">
+                        <CardContent className="p-3 text-sm text-muted-foreground">
+                          <TimelineContentLabel>
+                            {step.title}
+                          </TimelineContentLabel>
+                          <TimelineContentDescription>
+                            {step.description}
+                          </TimelineContentDescription>
+                          <div className="mt-2 flex flex-wrap gap-2">
+                            {step.skills.map((skill, skillIndex) => (
+                              <Badge key={skillIndex}>{skill}</Badge>
+                            ))}
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </TimelineContent>
+                  </Animate>
                 </TimelineItem>
               ))}
-            </React.Fragment>
+            </Fragment>
           ))}
         </Timeline>
       </SectionContent>
