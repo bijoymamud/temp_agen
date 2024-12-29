@@ -321,7 +321,7 @@ export function TimelineSection() {
         <SectionTitle>Our Development Process</SectionTitle>
       </SectionHeader>
       <SectionContent>
-        <Timeline>
+        <Timeline className="">
           {developmentProcess.map((phase, phaseIndex) => (
             <Fragment key={phaseIndex}>
               <TimelineItemLabel className="mb-5">
@@ -336,7 +336,7 @@ export function TimelineSection() {
                       {step.icon}
                     </TimelineDot>
                   </TimelineConnector>
-                  <Animate key={stepIndex} index={stepIndex}>
+                  <Animate key={stepIndex}>
                     <TimelineContent>
                       <Card className="">
                         <CardContent className="p-3 text-sm text-muted-foreground">

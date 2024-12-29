@@ -15,6 +15,7 @@ import {
   MessageCircle,
   TrendingUp,
 } from "lucide-react";
+
 const steps = [
   {
     title: "Initial Consultation",
@@ -67,7 +68,7 @@ export function SponsorshipProcess() {
       </SectionHeader>
       <SectionContent className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {steps.map((step, index) => (
-          <Animate key={index} index={index}>
+          <Animate key={index} index={index * 0.4}>
             <Card className="h-full overflow-hidden ">
               <CardHeader className={`${step.color} text-white p-4`}>
                 <CardTitle className="flex items-center text-lg font-semibold">

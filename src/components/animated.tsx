@@ -1,5 +1,6 @@
 "use client";
 
+import { useAnimationStore } from "@/hooks/use-animate-index";
 import {
   AnimationControls,
   motion,
@@ -7,7 +8,7 @@ import {
   Variants,
 } from "framer-motion";
 import * as React from "react";
-import { useCallback, useEffect, useMemo } from "react";
+import { useCallback, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 interface AnimateProps {
@@ -54,29 +55,23 @@ const Animate: React.FC<AnimateProps> = React.memo(
       }
     }, [inView, controls, startAnimation]);
 
-    const selectedVariant = useMemo(() => {
-      const randomIndex = Math.floor(Math.random() * animationVariants.length);
-      return animationVariants[randomIndex];
-    }, []);
+    const { selectedVariant } = useAnimationStore();
+    const currentVariant = animationVariants[selectedVariant];
 
-    const memoizedMotionProps = useMemo(
-      () => ({
-        ref,
-        initial: "hidden",
-        animate: controls,
-        variants: selectedVariant,
-        transition: {
+    return (
+      <motion.div
+        className="w-full h-full"
+        ref={ref}
+        initial="hidden"
+        animate={controls}
+        variants={currentVariant}
+        transition={{
           delay: index * delay,
           duration: 0.6,
           ease: [0.25, 0.1, 0.25, 1],
-        },
-        ...props,
-      }),
-      [ref, controls, index, delay, props, selectedVariant]
-    );
-
-    return (
-      <motion.div className="w-full h-full" {...memoizedMotionProps}>
+        }}
+        {...props}
+      >
         {children}
       </motion.div>
     );

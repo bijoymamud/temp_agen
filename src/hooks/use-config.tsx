@@ -18,7 +18,7 @@ export const useConfigStore = create<ConfigState>()(
   persist(
     (set) => ({
       config: {
-        theme: "zinc",
+        theme: "violet",
         radius: 0.5,
       },
       setConfig: (newConfig) =>
