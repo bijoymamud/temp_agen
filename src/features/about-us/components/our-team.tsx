@@ -1,5 +1,6 @@
 "use client";
 
+import { Animate } from "@/components/animated";
 import {
   Section,
   SectionContent,
@@ -42,16 +43,17 @@ export const OurTeam = ({ autoplay = false }: { autoplay?: boolean }) => {
     return Math.floor(Math.random() * 21) - 10;
   };
   return (
-    <Section className="">
-      <SectionHeader>
-        <SectionTitle>Meet Our Team</SectionTitle>
-        <SectionDescription>
-          Our team is dedicated to providing you with the best possible
-          experience and support. We are here to help you every step of the way.
-        </SectionDescription>
-      </SectionHeader>
-      <SectionContent>
-        <div className="relative grid grid-cols-1 md:grid-cols-2  gap-20">
+    <Animate>
+      <Section>
+        <SectionHeader>
+          <SectionTitle>Meet Our Team</SectionTitle>
+          <SectionDescription>
+            Our team is dedicated to providing you with the best possible
+            experience and support. We are here to help you every step of the
+            way.
+          </SectionDescription>
+        </SectionHeader>
+        <SectionContent className="relative grid grid-cols-1 md:grid-cols-2  gap-20">
           <div>
             <div className="relative h-80 w-full">
               <AnimatePresence>
@@ -168,8 +170,8 @@ export const OurTeam = ({ autoplay = false }: { autoplay?: boolean }) => {
               </button>
             </div>
           </div>
-        </div>
-      </SectionContent>
-    </Section>
+        </SectionContent>
+      </Section>
+    </Animate>
   );
 };

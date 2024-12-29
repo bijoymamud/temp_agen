@@ -10,11 +10,13 @@ import {
 import * as React from "react";
 import { useCallback, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import { twMerge } from "tailwind-merge";
 
 interface AnimateProps {
   index?: number;
   delay?: number;
   children: React.ReactNode;
+  className?: string;
 }
 
 const animationVariants: Variants[] = [
@@ -37,7 +39,7 @@ const animationVariants: Variants[] = [
 ];
 
 const Animate: React.FC<AnimateProps> = React.memo(
-  ({ children, index = 0, delay = 0.1, ...props }) => {
+  ({ children, index = 0, delay = 0.1, className, ...props }) => {
     const controls = useAnimation();
     const [ref, inView] = useInView({
       triggerOnce: true,
@@ -60,7 +62,7 @@ const Animate: React.FC<AnimateProps> = React.memo(
 
     return (
       <motion.div
-        className="w-full h-full"
+        className={twMerge("w-full h-full", className)}
         ref={ref}
         initial="hidden"
         animate={controls}

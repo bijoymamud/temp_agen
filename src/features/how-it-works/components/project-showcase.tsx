@@ -5,39 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
 import { useState } from "react";
-
-const projects = [
-  {
-    name: "E-commerce Platform",
-    description:
-      "A fully responsive e-commerce platform with advanced search and filtering capabilities.",
-    image: "/placeholder.svg?height=400&width=600",
-    technologies: ["Next.js", "Tailwind CSS", "Stripe", "PostgreSQL"],
-    results: [
-      "50% increase in conversion rate",
-      "30% reduction in page load time",
-    ],
-  },
-  {
-    name: "Social Media Dashboard",
-    description:
-      "A comprehensive dashboard for managing multiple social media accounts with analytics.",
-    image: "/placeholder.svg?height=400&width=600",
-    technologies: ["React", "D3.js", "Node.js", "MongoDB"],
-    results: [
-      "40% improvement in engagement metrics",
-      "25% increase in client retention",
-    ],
-  },
-  {
-    name: "Real Estate Listing App",
-    description:
-      "A mobile-first web application for browsing and managing real estate listings.",
-    image: "/placeholder.svg?height=400&width=600",
-    technologies: ["React Native", "GraphQL", "AWS", "Elasticsearch"],
-    results: ["60% faster property search", "35% increase in lead generation"],
-  },
-];
+import { projects } from "../how-it-works.data";
 
 export function ProjectShowcase() {
   const [activeTab, setActiveTab] = useState("E-commerce Platform");

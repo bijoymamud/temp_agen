@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { Animate } from "../animated";
 
 export const BentoGrid = ({
   className,
@@ -25,15 +26,18 @@ export const BentoGridItem = ({
   description,
   header,
   icon,
+  index,
 }: {
   className?: string;
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
   header?: React.ReactNode;
   icon?: React.ReactNode;
+  index?: number;
 }) => {
   return (
-    <div
+    <Animate
+      index={index}
       className={cn(
         "row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4  dark:border-white/[0.2]  border  justify-between flex flex-col space-y-4 ",
         className
@@ -45,6 +49,6 @@ export const BentoGridItem = ({
         <div className="font-bold  mb-2 mt-2">{title}</div>
         <div className="text-xs">{description}</div>
       </div>
-    </div>
+    </Animate>
   );
 };

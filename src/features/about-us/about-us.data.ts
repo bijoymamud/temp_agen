@@ -48,6 +48,7 @@ export const ContactUsFaqCategories: ICategory[] = [
   { id: "billing", name: "Billing & Payments" },
   { id: "support", name: "Support & Policies" },
 ];
+
 export const ContactUsFaqData: Record<string, IFaqItem[]> = {
   services: [
     {
@@ -139,3 +140,28 @@ export const ContactUsFaqData: Record<string, IFaqItem[]> = {
   ],
 };
 //? end data for the faq component
+
+//! 3. Solutions component data
+
+export const solutionsCardData = [
+  {
+    title: "Next.js & React Expertise",
+    content: [
+      "Our templates leverage the power of Next.js and React, providing you with server-side rendering, static site generation, and seamless client-side transitions.",
+      "Experience the perfect blend of performance and developer experience with our meticulously crafted components and layouts.",
+    ],
+  },
+  {
+    title: "Full-Stack Solutions",
+    content: [
+      "From frontend to backend, we've got you covered. Our templates include Express.js server setups and Node.js best practices for a complete development ecosystem.",
+      "Build robust, scalable applications with our full-stack templates that seamlessly integrate frontend and backend technologies.",
+    ],
+  },
+  {
+    title: "Modern Frontend Tooling",
+    content: [
+      "Stay ahead of the curve with our templates featuring the latest frontend technologies. From CSS-in-JS solutions to state management libraries, we provide you with the tools to create stunning, responsive user interfaces.",
+    ],
+  },
+];

@@ -1,3 +1,4 @@
+import { Animate } from "@/components/animated";
 import {
   Section,
   SectionContent,
@@ -7,29 +8,7 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
-const teamMembers = [
-  {
-    name: "Alice",
-    role: "Project Manager",
-    avatar: "/placeholder.svg?height=100&width=100",
-  },
-  {
-    name: "Bob",
-    role: "Designer",
-    avatar: "/placeholder.svg?height=100&width=100",
-  },
-  {
-    name: "Charlie",
-    role: "Developer",
-    avatar: "/placeholder.svg?height=100&width=100",
-  },
-  {
-    name: "Diana",
-    role: "QA Specialist",
-    avatar: "/placeholder.svg?height=100&width=100",
-  },
-];
+import { teamMembers } from "../how-it-works.data";
 
 export function TeamCollaboration() {
   return (
@@ -40,7 +19,7 @@ export function TeamCollaboration() {
       <SectionContent>
         <Card className="bg-background/50 backdrop-blur-sm border-primary/10">
           <CardHeader>
-            <div className="flex flex-wrap justify-center -space-x-4 mb-4">
+            <Animate className="flex flex-wrap justify-center -space-x-4 mb-4">
               {teamMembers.map((member, index) => (
                 <Avatar
                   key={index}
@@ -50,7 +29,7 @@ export function TeamCollaboration() {
                   <AvatarFallback>{member.name[0]}</AvatarFallback>
                 </Avatar>
               ))}
-            </div>
+            </Animate>
             <CardTitle className="text-center text-xl font-semibold">
               Meet Our Team
             </CardTitle>
@@ -61,7 +40,8 @@ export function TeamCollaboration() {
               member brings unique skills and perspectives to ensure your
               project&apos;s success.
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+            <Animate className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {teamMembers.map((member, index) => (
                 <div key={index} className="text-center space-y-2">
                   <div>
@@ -71,7 +51,7 @@ export function TeamCollaboration() {
                   </div>
                 </div>
               ))}
-            </div>
+            </Animate>
           </CardContent>
         </Card>
       </SectionContent>

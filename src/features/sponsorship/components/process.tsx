@@ -6,59 +6,8 @@ import {
   SectionTitle,
 } from "@/components/section";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  ArrowRight,
-  CheckCircle,
-  Clock,
-  FileText,
-  HandshakeIcon,
-  MessageCircle,
-  TrendingUp,
-} from "lucide-react";
-
-const steps = [
-  {
-    title: "Initial Consultation",
-    description: "We'll discuss your goals and find the right sponsorship fit.",
-    icon: MessageCircle,
-    color: "bg-blue-500",
-  },
-  {
-    title: "Proposal",
-    description:
-      "We'll provide a detailed sponsorship proposal tailored to your needs.",
-    icon: FileText,
-    color: "bg-green-500",
-  },
-  {
-    title: "Agreement",
-    description:
-      "Once terms are agreed, we'll finalize the sponsorship contract.",
-    icon: HandshakeIcon,
-    color: "bg-yellow-500",
-  },
-  {
-    title: "Activation",
-    description:
-      "We'll work together to implement and activate your sponsorship benefits.",
-    icon: TrendingUp,
-    color: "bg-purple-500",
-  },
-  {
-    title: "Ongoing Support",
-    description:
-      "Our team will provide continuous support throughout the sponsorship period.",
-    icon: Clock,
-    color: "bg-red-500",
-  },
-  {
-    title: "Evaluation",
-    description:
-      "We'll regularly assess the partnership and discuss potential improvements.",
-    icon: CheckCircle,
-    color: "bg-indigo-500",
-  },
-];
+import { ArrowRight } from "lucide-react";
+import { steps } from "../sponsorship.data";
 
 export function SponsorshipProcess() {
   return (

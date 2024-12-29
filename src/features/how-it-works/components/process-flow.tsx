@@ -2,26 +2,7 @@ import { Animate } from "@/components/animated";
 import { Section, SectionContent } from "@/components/section";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
-
-const steps = [
-  {
-    title: "Consultation",
-    description: "A  consultation to understand your needs and goals.",
-  },
-  {
-    title: "Strategy",
-    description: "A tailored strategy to achieve your objectives.",
-  },
-  {
-    title: "Execution",
-    description:
-      "We implement the strategy with precision and attention to detail.",
-  },
-  {
-    title: "Refinement",
-    description: " Refine and optimize to ensure the best results.",
-  },
-];
+import { steps } from "../how-it-works.data";
 
 export function ProcessFlow() {
   return (

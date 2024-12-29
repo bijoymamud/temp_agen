@@ -34,6 +34,7 @@ export function WhyUs() {
           {items.map((item, i) => (
             <BentoGridItem
               key={i}
+              index={i}
               title={item.title}
               description={item.description}
               header={item.header}

@@ -9,43 +9,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChevronDown, ChevronRight } from "lucide-react";
-
-const journeySteps = [
-  {
-    title: "Discovery",
-    description: "Initial consultation and project scoping",
-    outcomes: ["Project brief", "Initial timeline", "Budget estimate"],
-  },
-  {
-    title: "Planning",
-    description: "Detailed project planning and strategy development",
-    outcomes: [
-      "Project roadmap",
-      "Technical specifications",
-      "Design concepts",
-    ],
-  },
-  {
-    title: "Design",
-    description: "Creating the visual and interactive elements",
-    outcomes: ["Wireframes", "UI designs", "Prototype"],
-  },
-  {
-    title: "Development",
-    description: "Building the website or application",
-    outcomes: ["Frontend code", "Backend systems", "Content integration"],
-  },
-  {
-    title: "Testing",
-    description: "Rigorous quality assurance and user testing",
-    outcomes: ["Bug fixes", "Performance optimization", "User feedback"],
-  },
-  {
-    title: "Launch",
-    description: "Deploying the project and going live",
-    outcomes: ["Site deployment", "Final checks", "Handover documents"],
-  },
-];
+import { journeySteps } from "../how-it-works.data";
 
 export function ClientJourneyMap() {
   return (

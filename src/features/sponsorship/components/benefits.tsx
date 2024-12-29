@@ -1,36 +1,7 @@
 import { Animate } from "@/components/animated";
 import { Section, SectionContent } from "@/components/section";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
-import { Globe, TrendingUp, Users, Zap } from "lucide-react";
-
-const benefits = [
-  {
-    title: "Global Exposure",
-    description:
-      "Reach a worldwide audience of IT professionals and decision-makers.",
-    icon: Globe,
-    color: "bg-blue-500 dark:bg-blue-600",
-  },
-  {
-    title: "Networking Opportunities",
-    description:
-      "Connect with industry leaders and potential clients at our events.",
-    icon: Users,
-    color: "bg-green-500 dark:bg-green-600",
-  },
-  {
-    title: "Brand Recognition",
-    description: "Increase your brand visibility within the IT community.",
-    icon: Zap,
-    color: "bg-yellow-500 dark:bg-yellow-600",
-  },
-  {
-    title: "Thought Leadership",
-    description: "Showcase your expertise through speaking engagements.",
-    icon: TrendingUp,
-    color: "bg-purple-500 dark:bg-purple-600",
-  },
-];
+import { benefits } from "../sponsorship.data";
 
 export function SponsorshipBenefits() {
   return (
