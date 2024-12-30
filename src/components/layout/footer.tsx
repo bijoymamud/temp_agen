@@ -6,6 +6,7 @@ import React from "react";
 import { IconType } from "react-icons";
 import { BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { CgFacebook } from "react-icons/cg";
+import { Animate } from "../animated";
 import { Section, SectionBackground, SectionContent } from "../section";
 
 interface FooterLink {
@@ -71,11 +72,13 @@ const Footer: React.FC = () => {
       <SectionContent className="mt-0 relative">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {footerLinks.map((section, index) => (
-            <FooterSection
-              key={index}
-              title={section.title}
-              items={section.items}
-            />
+            <Animate key={index} index={index}>
+              <FooterSection
+                key={index}
+                title={section.title}
+                items={section.items}
+              />
+            </Animate>
           ))}
           <div>
             <h3 className="text-lg font-semibold mb-4">Get in touch</h3>
