@@ -1,4 +1,4 @@
-import { discover_data } from "@/assets/data";
+import { Animate } from "@/components/animated";
 import Icons from "@/components/icons";
 import {
   Section,
@@ -10,6 +10,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Ripple from "@/components/ui/ripple";
+import { discover_data } from "../home.data";
 
 export const Discover = () => {
   return (
@@ -57,19 +58,23 @@ export const Discover = () => {
           </div>
           <div className=" relative ">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-8 p-4 ">
-              {discover_data.map((feature) => (
-                <div
-                  key={feature.title}
-                  className="flex flex-col items-start lg:items-center px-0 md:px-0"
-                >
-                  <div className="flex items-center justify-center bg-primary rounded-full h-10 w-10">
-                    <feature.icon className="w-7 h-7 " />
+              {discover_data.map((feature, _i) => (
+                <Animate key={_i} index={_i}>
+                  <div
+                    key={feature.title}
+                    className="flex flex-col items-start lg:items-center px-0 md:px-0"
+                  >
+                    <div className="flex items-center justify-center bg-primary rounded-full h-10 w-10">
+                      <feature.icon className="w-7 h-7 " />
+                    </div>
+                    <h3 className="text-lg font-medium mt-4">
+                      {feature.title}
+                    </h3>
+                    <p className="text-muted-foreground mt-2 text-center">
+                      {feature.info}
+                    </p>
                   </div>
-                  <h3 className="text-lg font-medium mt-4">{feature.title}</h3>
-                  <p className="text-muted-foreground mt-2 text-center">
-                    {feature.info}
-                  </p>
-                </div>
+                </Animate>
               ))}
             </div>
             <Ripple />

@@ -1,4 +1,4 @@
-import { what_we_offer } from "@/assets/data";
+import { Animate } from "@/components/animated";
 import {
   Section,
   SectionBackground,
@@ -9,6 +9,7 @@ import {
 } from "@/components/section";
 import { Grid } from "@/components/ui/grid";
 import { cn } from "@/lib/utils";
+import { what_we_offer } from "../home.data";
 
 const Feature = ({
   title,
@@ -65,7 +66,9 @@ export function WhatWeOffer() {
       <SectionContent>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  relative z-10">
           {what_we_offer.map((feature, index) => (
-            <Feature key={feature.title} {...feature} index={index} />
+            <Animate key={index} index={index}>
+              <Feature key={feature.title} {...feature} index={index} />
+            </Animate>
           ))}
         </div>
       </SectionContent>

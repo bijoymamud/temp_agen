@@ -1,4 +1,4 @@
-import { services } from "@/assets/data";
+import { Animate } from "@/components/animated";
 import {
   Section,
   SectionContent,
@@ -18,6 +18,7 @@ import {
   Shield,
 } from "lucide-react";
 import React from "react";
+import { services } from "../home.data";
 
 export const Icons = {
   bolt: Bolt,
@@ -39,15 +40,17 @@ export const Services = () => {
         </SectionDescription>
       </SectionHeader>
       <SectionContent className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
-        {services.map((service) => (
-          <ServiceCard
-            key={service.title}
-            icon={service.icon as keyof typeof Icons}
-            title={service.title}
-            description={service.description}
-            price={service.price}
-            duration={service.duration}
-          />
+        {services.map((service, _i) => (
+          <Animate key={_i} index={_i}>
+            <ServiceCard
+              key={service.title}
+              icon={service.icon as keyof typeof Icons}
+              title={service.title}
+              description={service.description}
+              price={service.price}
+              duration={service.duration}
+            />
+          </Animate>
         ))}
       </SectionContent>
     </Section>

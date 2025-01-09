@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   description: `Learn about ${siteInfo.name} and how we provide cutting-edge web development templates and solutions.`,
 };
 const { Address, CTASection, ContactForm, FAQSection } = ContactUsComponents;
+
 const ContactUs = () => {
   return (
     <section className="">
