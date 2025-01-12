@@ -9,6 +9,7 @@
         "type": "shared",
         "pattern": [
           "src/components/**/*",
+          "src/context/**/*",
           "src/assets/**/*",
           "src/config/**/*",
           "src/constants/**/*",

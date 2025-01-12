@@ -1,20 +1,7 @@
 "use client";
 
-import {
-  BookOpen,
-  Bot,
-  Frame,
-  LifeBuoy,
-  Map,
-  PieChart,
-  Send,
-  Settings2,
-  SquareTerminal,
-} from "lucide-react";
-import * as React from "react";
-
 import { NavMain } from "@/components/nav-main";
-import { NavProjects } from "@/components/nav-projects";
+import { GeneralLink } from "@/components/nav-projects";
 import { NavSecondary } from "@/components/nav-secondary";
 import { NavUser } from "@/components/nav-user";
 import {
@@ -27,10 +14,22 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import siteInfo from "@/config/site-info";
+import {
+  BookOpen,
+  Bot,
+  Frame,
+  LifeBuoy,
+  Map,
+  PieChart,
+  Send,
+  Settings2,
+  SquareTerminal,
+} from "lucide-react";
 import Link from "next/link";
+import * as React from "react";
 import { Logo } from "./logo";
 
-const data = {
+export const data = {
   user: {
     name: "shadcn",
     email: "m@example.com",
@@ -135,15 +134,15 @@ const data = {
       icon: Send,
     },
   ],
-  projects: [
+  General: [
     {
-      name: "Design ",
-      url: "/dashboard/react",
+      name: "Dashboard",
+      url: "/dashboard",
       icon: Frame,
     },
     {
-      name: "Sales & Marketing",
-      url: "#",
+      name: "Users",
+      url: "/dashboard/user",
       icon: PieChart,
     },
     {
@@ -162,15 +161,12 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
               <Link href="/">
-                <div className="flex aspect-square size-8 items-center justify-center rounded-lg ">
+                <div className="flex aspect-square size-8 items-center justify-center rounded-lg">
                   <Logo />
                 </div>
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-semibold">
                     {siteInfo.name}
-                  </span>
-                  <span className="truncate text-xs">
-                    {siteInfo.description}
                   </span>
                 </div>
               </Link>
@@ -179,8 +175,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent className="">
+        <GeneralLink projects={data.General} />
         <NavMain items={data.navMain} />
-        <NavProjects projects={data.projects} />
+
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
