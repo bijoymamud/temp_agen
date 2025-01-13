@@ -125,7 +125,7 @@ export const data = {
   navSecondary: [
     {
       title: "Support",
-      url: "#",
+      url: "/dashboard/support",
       icon: LifeBuoy,
     },
     {

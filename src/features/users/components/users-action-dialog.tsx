@@ -119,7 +119,7 @@ export function UsersActionDialog({ currentRow, open, onOpenChange }: Props) {
 
   const onSubmit = (values: UserForm) => {
     form.reset();
-    toast.info("User's data has been saved.");
+    toast.info(JSON.stringify(values, null, 2));
 
     onOpenChange(false);
   };
