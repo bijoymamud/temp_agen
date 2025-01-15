@@ -7,7 +7,6 @@ import {
   IconError404,
   IconHelp,
   IconLayoutDashboard,
-  IconLock,
   IconLockAccess,
   IconMessages,
   IconNotification,
@@ -17,8 +16,7 @@ import {
   IconSettings,
   IconTool,
   IconUserCog,
-  IconUserOff,
-  IconUsers,
+  IconUsers
 } from '@tabler/icons-react'
 
 
@@ -94,30 +92,20 @@ export const sidebarData: ISidebarData = {
           icon: IconBug,
           items: [
             {
-              title: 'Unauthorized',
-              url: '/401',
-              icon: IconLock,
-            },
-            {
-              title: 'Forbidden',
-              url: '/403',
-              icon: IconUserOff,
-            },
-            {
               title: 'Not Found',
               url: '/404',
               icon: IconError404,
-            },
-            {
-              title: 'Internal Server Error',
-              url: '/500',
-              icon: IconServerOff,
             },
             {
               title: 'Maintenance Error',
               url: '/maintenance',
               icon: IconBarrierBlock,
             },
+            {
+              title: 'Coming Soon',
+              url: '/coming-soon',
+              icon: IconServerOff,
+            }
           ],
         },
       ],
