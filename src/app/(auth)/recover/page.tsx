@@ -22,7 +22,7 @@ export default function Page() {
         <RecoverForm />
         <div className="mt-4 text-center text-sm">
           Remember your password?{" "}
-          <Link href="../login" className="underline">
+          <Link href="../sign-in" className="underline">
             Back to login
           </Link>
         </div>

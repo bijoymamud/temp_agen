@@ -51,7 +51,7 @@ const ResetPassword = () => {
     setLoading(true);
     try {
       toast.success("Password change successfully done");
-      router.push(`/login`);
+      router.push(`/sign-in`);
     } catch (error: any) {
       toast.error(error.message || "An error occurred");
     } finally {

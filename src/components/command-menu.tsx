@@ -20,7 +20,8 @@ import { useSearch } from "@/context/search-context";
 import { useTheme } from "next-themes";
 
 import { useRouter } from "next/navigation";
-import { data } from "./layout/app-sidebar";
+
+import { sidebarData } from "@/assets/data/sidebar.data";
 import { ScrollArea } from "./ui/scroll-area";
 
 export function CommandMenu() {
@@ -43,7 +44,7 @@ export function CommandMenu() {
       <CommandList>
         <ScrollArea type="hover" className="h-72 pr-1">
           <CommandEmpty>No results found.</CommandEmpty>
-          {data.navMain.map((group) => (
+          {sidebarData.navGroups.map((group) => (
             <CommandGroup key={group.title} heading={group.title}>
               {group.items.map((navItem, i) => {
                 if (navItem.url)
@@ -52,7 +53,13 @@ export function CommandMenu() {
                       key={`${navItem.url}-${i}`}
                       value={navItem.title}
                       onSelect={() => {
-                        runCommand(() => router.push(navItem.url));
+                        if (navItem.url) {
+                          if (navItem.url) {
+                            runCommand(() =>
+                              router.push(navItem.url as string)
+                            );
+                          }
+                        }
                       }}
                     >
                       <div className="mr-2 flex h-4 w-4 items-center justify-center">
@@ -62,20 +69,20 @@ export function CommandMenu() {
                     </CommandItem>
                   );
 
-                // return navItem?.map((subItem, i) => (
-                //   <CommandItem
-                //     key={`${subItem.url}-${i}`}
-                //     value={subItem.title}
-                //     onSelect={() => {
-                //       runCommand(() => router.push(subItem.url))
-                //     }}
-                //   >
-                //     <div className='mr-2 flex h-4 w-4 items-center justify-center'>
-                //       <IconArrowRightDashed className='size-2 text-muted-foreground/80' />
-                //     </div>
-                //     {subItem.title}
-                //   </CommandItem>
-                // ))
+                return navItem.items?.map((subItem, i) => (
+                  <CommandItem
+                    key={`${subItem.url}-${i}`}
+                    value={subItem.title}
+                    onSelect={() => {
+                      runCommand(() => router.push(subItem.url as string));
+                    }}
+                  >
+                    <div className="mr-2 flex h-4 w-4 items-center justify-center">
+                      <IconArrowRightDashed className="size-2 text-muted-foreground/80" />
+                    </div>
+                    {subItem.title}
+                  </CommandItem>
+                ));
               })}
             </CommandGroup>
           ))}

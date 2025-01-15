@@ -2,7 +2,7 @@ export function DotPattern() {
   return (
     <div className="absolute inset-0  h-full w-full">
       <svg
-        className="absolute h-full w-full   [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+        className="absolute h-full w-full [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
         aria-hidden="true"
       >
         <defs>
