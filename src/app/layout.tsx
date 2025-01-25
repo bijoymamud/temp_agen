@@ -1,4 +1,3 @@
-import BackToTop from "@/components/back-to-top";
 import { META_THEME_COLORS, siteConfig } from "@/config/site-info";
 import { ThemeProvider } from "@/providers/theme-provider";
 import type { Metadata, Viewport } from "next";
@@ -102,7 +101,6 @@ export default function RootLayout({
             <div vaul-drawer-wrapper="">
               <div className="relative  bg-background">{children}</div>
             </div>
-            <BackToTop />
           </ThemeProvider>
         </body>
       </html>

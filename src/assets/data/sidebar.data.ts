@@ -36,6 +36,11 @@ export const sidebarData: ISidebarData = {
           icon: IconLayoutDashboard,
         },
         {
+          title: 'Events',
+          url: '/dashboard/events',
+          icon: IconLayoutDashboard,
+        },
+        {
           title: 'Tasks',
           url: '/dashboard/tasks',
           icon: IconChecklist,
@@ -47,7 +52,7 @@ export const sidebarData: ISidebarData = {
         },
         {
           title: 'Chats',
-          url: '/dashboard/support',
+          url: '/dashboard/chat',
           badge: '3',
           icon: IconMessages,
         },
@@ -146,7 +151,7 @@ export const sidebarData: ISidebarData = {
         },
         {
           title: 'Help Center',
-          url: '/help-center',
+          url: '/dashboard/support',
           icon: IconHelp,
         },
       ],
