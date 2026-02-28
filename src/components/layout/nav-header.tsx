@@ -17,7 +17,7 @@ const navItems = [
   { title: "Home", href: "/" },
   { title: "About", href: "/about-us" },
   { title: "How we works", href: "/how-we-works" },
-  { title: "Sponsor", href: "/sponsorship" },
+  // { title: "Sponsor", href: "/sponsorship" },
   { title: "Contact Us", href: "/contact-us" },
 ] as const;
 

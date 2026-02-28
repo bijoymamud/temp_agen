@@ -117,25 +117,36 @@ export const projects = [
 //! TeamCollaboration data
 export const teamMembers = [
   {
-    name: "Alice",
-    role: "Project Manager",
+    name: "Al Mamud Bijoy",
+    role: "Frontend Developer",
+    avatar: "https://i.ibb.co.com/R4DQDT7X/image-12.jpg?height=100&width=100",
+  },
+  {
+    name: "Md Shakeeb",
+    role: "Mern-Stack Developer",
     avatar: "/placeholder.svg?height=100&width=100",
   },
   {
-    name: "Bob",
-    role: "Designer",
+    name: "Kawsar Hossain Suzan ",
+    role: "Mobile App Developer",
     avatar: "/placeholder.svg?height=100&width=100",
   },
   {
-    name: "Charlie",
-    role: "Developer",
+    name: "Raihan Rafi",
+    role: "Mobile App Developer",
     avatar: "/placeholder.svg?height=100&width=100",
   },
   {
-    name: "Diana",
-    role: "QA Specialist",
-    avatar: "/placeholder.svg?height=100&width=100",
+    name: "Nilutpal Majumder",
+    role: "UI/UX Designer",
+    avatar: "https://i.ibb.co.com/mVdBJH5d/Image-14.jpg",
   },
+  {
+    name: "Khairul Kabir",
+    role: "Data Scientist",
+    avatar: "https://i.ibb.co.com/Sgqj6CP/freepik-skin-enhancer-42171.jpg",
+  },
+
 ];
 
 //! timeline data

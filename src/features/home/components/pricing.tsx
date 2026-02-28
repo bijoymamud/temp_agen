@@ -106,7 +106,7 @@ export function Pricing() {
                   <b>Pricing based on project scope.</b> <br />
                   Contact us for a personalized quote.
                 </p>
-                <Button className="">Get Started</Button>
+                {/* <Button className="">Get Started</Button> */}
               </div>
             </CardFooter>
           </Card>
@@ -156,7 +156,7 @@ export function Pricing() {
                   <br />
                   Custom pricing based on project requirements.
                 </p>
-                <Button className="text-[0.9rem]">Contact Us</Button>
+                {/* <Button className="text-[0.9rem]">Contact Us</Button> */}
               </div>
             </CardFooter>
           </Card>

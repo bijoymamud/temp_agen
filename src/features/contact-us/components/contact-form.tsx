@@ -19,7 +19,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { toast } from "sonner";
+import { toast, Toaster } from "sonner";
 import { z } from "zod";
 
 // Define the schema for form validation
@@ -49,7 +49,7 @@ export const ContactForm = () => {
     try {
       console.log("Form submitted:", data);
       toast.success("Your message has been sent!");
-      form.reset(); // Reset the form after successful submission
+      form.reset();
     } catch (error) {
       console.error("Error submitting form:", error);
       toast.error("There was an error sending your message.");
@@ -58,6 +58,7 @@ export const ContactForm = () => {
 
   return (
     <Card>
+      <Toaster position="bottom-right" richColors />
       <CardHeader>
         <CardTitle className="text-2xl">Send Us a Message</CardTitle>
         <CardDescription>

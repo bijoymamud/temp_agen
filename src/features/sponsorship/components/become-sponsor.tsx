@@ -23,6 +23,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { sponsorshipTiers, whySponsorCards } from "../sponsorship.data";
+import Link from "next/link";
 
 export function BecomeSponsor() {
   const [selectedTier, setSelectedTier] = useState("Silver");
@@ -95,9 +96,14 @@ export function BecomeSponsor() {
             </Tabs>
           </CardContent>
           <CardFooter className="flex flex-col items-center">
-            <Button size="lg" className="w-full md:w-auto">
+            {/* <Button size="lg" className="w-full md:w-auto">
               Apply for {selectedTier} Sponsorship
-            </Button>
+            </Button> */}
+            <Link href="/contact-us">
+              <Button size="lg" className="w-full md:w-auto">
+                Apply for {selectedTier} Sponsorship
+              </Button>
+            </Link>
             <p className="mt-4 text-sm text-muted-foreground">
               * Custom packages available. Contact us for more information.
             </p>

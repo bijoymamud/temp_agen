@@ -22,7 +22,7 @@ const ContactUs = () => {
       <div className="header">
         <Container className="h-40 lg:h-60 flex items-end justify-start max-w-screen-xl">
           <h1 className="text-xl lg:text-4xl text-primary font-semibold bg-primary/20 backdrop-blur-sm px-2 relative z-10">
-            Git in Touch
+            Get in Touch
           </h1>
         </Container>
       </div>

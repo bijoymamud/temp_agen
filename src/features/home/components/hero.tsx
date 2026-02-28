@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Grid } from "@/components/ui/grid";
 import { WorldMap } from "@/components/ui/world-map";
 import { ArrowRight, Sparkles } from "lucide-react";
+import Link from "next/link";
 
 export function Hero() {
   return (
@@ -22,7 +23,7 @@ export function Hero() {
               </AnimatedShinyText>
               <BorderBeam size={30} duration={8} delay={9} />
             </Badge>
-            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
+            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl ">
               Transform Your Digital Presence
             </h1>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
@@ -30,11 +31,13 @@ export function Hero() {
               and drive results.
             </p>
           </div>
-          <div className="space-x-4">
-            <Button size="lg" variant={"gooeyLeft"} className="md:h-12 md:px-8">
-              Get Started
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+          <div className="space-x-4 mb-8">
+            <Link href="/contact-us">
+              <Button size="lg" variant={"gooeyLeft"} className="md:h-12 md:px-8">
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
             <Button variant="outline" size="lg" className="md:h-12 md:px-8">
               Learn More
             </Button>
