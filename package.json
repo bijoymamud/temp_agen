@@ -7,7 +7,7 @@
     "dev:office": "next dev -p 4433",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@faker-js/faker": "^9.3.0",

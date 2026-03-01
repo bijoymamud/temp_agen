@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   applicationName: siteConfig.shortName,
   description: siteConfig.description,
-  keywords: siteConfig.keywords,
+  keywords: [...siteConfig.keywords],
   authors: [
     {
       name: siteConfig.creator,
