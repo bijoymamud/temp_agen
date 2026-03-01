@@ -31,7 +31,7 @@ export default siteInfo;
 
 export const siteConfig = {
   name: "Synth-ko",
-  url: "https://synth-ko.vercel.app/",
+  url: "https://synth-ko.com/",
   ogImage: "https://i.ibb.co.com/8dgR73C/Screenshot-2024-12-03-at-8-11-26-AM.png",
   description:
     "A modern design system for your new website",

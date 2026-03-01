@@ -1,9 +1,16 @@
 import Container from "@/components/container";
 import { Button } from "@/components/ui/button";
+import siteInfo from "@/config/site-info";
 import { LeftSide } from "@/features/services/components/left-side";
 import { RightSide } from "@/features/services/components/right-side";
 import { Mail, Receipt } from "lucide-react";
+import type { Metadata } from "next";
 import type { JSX } from "react";
+
+export const metadata: Metadata = {
+  title: "Service Details",
+  description: `Review service details, order status, and support options from ${siteInfo.name}.`,
+};
 
 export default function Page(): JSX.Element {
   return (

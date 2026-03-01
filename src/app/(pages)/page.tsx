@@ -1,4 +1,11 @@
+import siteInfo from "@/config/site-info";
 import { HomeComponents } from "@/features/home";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home",
+  description: `Explore ${siteInfo.name} services, process, and solutions for modern web products.`,
+};
 
 const {
   Cta,

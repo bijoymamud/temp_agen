@@ -6,7 +6,13 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import LoginForm from "@/features/auth/components/forms/login";
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Sign In",
+  description: "Sign in to access your account and continue managing your services.",
+};
 
 export default function Login() {
   return (

@@ -1,6 +1,15 @@
 import { NavHeader } from "@/components/layout/nav-header";
 import siteInfo from "@/config/site-info";
+import type { Metadata } from "next";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: {
+    default: "Account",
+    template: "%s | Account",
+  },
+  description: `Manage your ${siteInfo.name} account access, security, and recovery settings.`,
+};
 
 const layout = async ({ children }: { children: React.ReactNode }) => {
   return (

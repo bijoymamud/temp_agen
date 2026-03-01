@@ -51,7 +51,7 @@ export const apps = [
     name: "Zoom",
     logo: <IconBrandZoom />,
     connected: true,
-    desc: "Host Zoom meetings directly from the dashboard.",
+    desc: "Host Zoom meetings directly from your workspace.",
   },
   {
     name: "Stripe",
@@ -69,7 +69,7 @@ export const apps = [
     name: "Medium",
     logo: <IconBrandMedium />,
     connected: false,
-    desc: "Explore and share Medium stories on your dashboard.",
+    desc: "Explore and share Medium stories in your workspace.",
   },
   {
     name: "Skype",
@@ -81,7 +81,7 @@ export const apps = [
     name: "Docker",
     logo: <IconBrandDocker />,
     connected: false,
-    desc: "Effortlessly manage Docker containers on your dashboard.",
+    desc: "Effortlessly manage Docker containers in one place.",
   },
   {
     name: "GitHub",

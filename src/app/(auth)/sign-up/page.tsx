@@ -6,7 +6,13 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import RegisterForm from "@/features/auth/components/forms/resister";
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Sign Up",
+  description: "Create a new account to start using Synth-ko services and features.",
+};
 
 export default function RegisterPage() {
   return (

@@ -94,9 +94,9 @@ export const projects = [
     ],
   },
   {
-    name: "Social Media Dashboard",
+    name: "Social Media Workspace",
     description:
-      "A comprehensive dashboard for managing multiple social media accounts with analytics.",
+      "A comprehensive workspace for managing multiple social media accounts with analytics.",
     image: "/placeholder.svg?height=400&width=600",
     technologies: ["React", "D3.js", "Node.js", "MongoDB"],
     results: [

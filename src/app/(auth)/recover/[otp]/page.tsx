@@ -6,8 +6,14 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Link from "next/link";
+import type { Metadata } from "next";
 
 import OTPVerify from "@/features/auth/components/forms/otp";
+
+export const metadata: Metadata = {
+  title: "Verify OTP",
+  description: "Enter the one-time password sent to your email to continue recovery.",
+};
 
 export default function Page() {
   return (

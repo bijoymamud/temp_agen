@@ -6,8 +6,14 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import RecoverForm from "@/features/auth/components/forms/recover";
+import type { Metadata } from "next";
 
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Recover Password",
+  description: "Request a one-time code to recover your account password securely.",
+};
 
 export default function Page() {
   return (

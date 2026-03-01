@@ -14,7 +14,6 @@ const AppBreadcrumb = () => {
 
   const breadcrumbMap: { [key: string]: string } = {
     "/": "Home",
-    "/dashboard": "dashboard",
   };
 
   const formatDynamicSegment = (segment: string) => {

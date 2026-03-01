@@ -6,6 +6,12 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import ResetPassword from "@/features/auth/components/forms/reset-password";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Reset Password",
+  description: "Set a new password to complete your account recovery.",
+};
 
 const Page = () => {
   return (

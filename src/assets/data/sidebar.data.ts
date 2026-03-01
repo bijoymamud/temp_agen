@@ -3,20 +3,15 @@ import {
   IconBarrierBlock,
   IconBrowserCheck,
   IconBug,
-  IconChecklist,
   IconError404,
   IconHelp,
-  IconLayoutDashboard,
   IconLockAccess,
-  IconMessages,
   IconNotification,
-  IconPackages,
   IconPalette,
   IconServerOff,
   IconSettings,
   IconTool,
   IconUserCog,
-  IconUsers
 } from '@tabler/icons-react'
 
 
@@ -27,42 +22,6 @@ export const sidebarData: ISidebarData = {
     avatar: '/avatars/shadcn.jpg',
   },
   navGroups: [
-    {
-      title: 'General',
-      items: [
-        {
-          title: 'Dashboard',
-          url: '/dashboard',
-          icon: IconLayoutDashboard,
-        },
-        {
-          title: 'Events',
-          url: '/dashboard/events',
-          icon: IconLayoutDashboard,
-        },
-        {
-          title: 'Tasks',
-          url: '/dashboard/tasks',
-          icon: IconChecklist,
-        },
-        {
-          title: 'Apps',
-          url: '/dashboard/apps',
-          icon: IconPackages,
-        },
-        {
-          title: 'Chats',
-          url: '/dashboard/chat',
-          badge: '3',
-          icon: IconMessages,
-        },
-        {
-          title: 'Users',
-          url: '/dashboard/user',
-          icon: IconUsers,
-        },
-      ],
-    },
     {
       title: 'Pages',
       items: [
@@ -151,7 +110,7 @@ export const sidebarData: ISidebarData = {
         },
         {
           title: 'Help Center',
-          url: '/dashboard/support',
+          url: '/contact-us',
           icon: IconHelp,
         },
       ],
