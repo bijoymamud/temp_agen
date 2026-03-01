@@ -15,24 +15,22 @@ const spaceGrotesk = localFont({
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
-    template: `%s _ ${siteConfig.name}`,
+    template: `%s | ${siteConfig.name}`,
   },
   metadataBase: new URL(siteConfig.url),
+  applicationName: siteConfig.shortName,
   description: siteConfig.description,
-  keywords: [
-    "IT services",
-    "software development",
-    "web development",
-    "technology solutions",
-    "IT consulting",
-  ],
+  keywords: siteConfig.keywords,
   authors: [
     {
-      name: "shakeeb",
-      url: "https://mdshakeeb.vercel.app/",
+      name: siteConfig.creator,
+      url: siteConfig.links.github,
     },
   ],
-  creator: "shakeeb",
+  creator: siteConfig.creator,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -45,7 +43,7 @@ export const metadata: Metadata = {
         url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: siteConfig.name,
+        alt: `${siteConfig.name} logo`,
       },
     ],
   },
@@ -54,17 +52,27 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     images: [siteConfig.ogImage],
-    creator: "@info_mdshakeeb",
+    creator: siteConfig.xHandle,
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+    shortcut: "/favicon.ico",
   },
-  // manifest: `${siteConfig.url}/site.webmanifest`,
+  manifest: "/site.webmanifest",
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
   themeColor: META_THEME_COLORS.light,
 };
 
