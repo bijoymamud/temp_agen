@@ -57,7 +57,7 @@ export function ClientJourneyMap() {
               </Card>
               {index < journeySteps.length - 1 && (
                 <>
-                  <ChevronRight className="hidden xl:block w-6 h-6 text-primary absolute -right-3 top-1/2 transform -translate-y-1/2" />
+                  <ChevronRight className="hidden xl:block w-6 h-6 text-primary absolute -right-5 top-1/2 transform -translate-y-1/2" />
                   <ChevronDown className="block xl:hidden w-6 h-6 text-primary mt-4" />
                 </>
               )}

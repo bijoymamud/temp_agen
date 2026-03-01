@@ -99,7 +99,7 @@ const Footer: React.FC = () => {
             <FooterLink href="/contact-us">Contact Us</FooterLink>
           </div>
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Synthko Official. All Rights Reserved.
+            © {new Date().getFullYear()} <span className="font-medium">SYNTH-KO</span> Official. All Rights Reserved.
           </p>
         </div>
       </SectionContent>

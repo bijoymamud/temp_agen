@@ -3,7 +3,7 @@ const siteInfo = {
   description: "A modern design system for your new app",
   startYear: 2024,
   companyInfo: {
-    emails: ['info.mdshakeeb@gmail.com'],
+    emails: ['synthkofficial@gmail.com'],
     phones: ["017953716145"],
     whatsapp: '01779901142"],',
     address: 'Dhaka, Bangladesh',
@@ -16,7 +16,7 @@ const siteInfo = {
   },
 
   contactInfo: {
-    emails: ['info.mdshakeeb@gmail.com'],
+    emails: ['synthkofficial@gmail.com'],
     phones: ["017953716145"],
     whatsapp: '01779901142"],',
     address: 'Dhaka, Bangladesh',
