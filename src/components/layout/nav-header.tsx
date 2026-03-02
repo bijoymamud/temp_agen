@@ -10,7 +10,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import siteInfo from "@/config/site-info";
 import { cn } from "@/lib/utils";
 import Container from "../container";
-import { StaticLogo } from "./logo";
+import { StaticLogo, StaticWhiteLogo } from "./logo";
 import { ModeSwitcher } from "./mode-switcher";
 
 const navItems = [
@@ -33,10 +33,11 @@ export function NavHeader() {
     >
       <div className="relative bg-background/50 backdrop-blur-md w-full">
         <Container className="max-w-screen-xl">
-          <nav className="flex h-14 items-center justify-between">
+          <nav className="flex h-16 items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center  group space-x-1">
-              <StaticLogo />
+              {/* <StaticLogo /> */}
+              <StaticWhiteLogo />
               <div className="flex flex-col">
                 <span className="text-lg font-bold tracking-tight transition-colors group-hover:text-primary uppercase">
                   {siteInfo.name}

@@ -1,5 +1,5 @@
+import ComingSoonClient from "@/app/coming-soon-client";
 import siteInfo from "@/config/site-info";
-import ComingSoonClient from "@/features/errors/components/coming-soon-client";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
