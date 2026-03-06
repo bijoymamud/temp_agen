@@ -41,8 +41,10 @@ const footerLinks: FooterLink[] = [
   {
     title: "Services",
     items: [
-      { label: "Web Design", href: "/services/web-design" },
-      { label: "Marketing", href: "/services/marketing" },
+      { label: "Web Development", href: "/services/web-development" },
+      { label: "UI/UX Desing", href: "/services/ui-ux" },
+      { label: "SaaS Development", href: "/services/saas-development" },
+      { label: "Cross-platform Apps", href: "/services/cross-platform" },
       { label: "Consulting", href: "/services/consulting" },
     ],
   },
@@ -51,7 +53,7 @@ const footerLinks: FooterLink[] = [
     items: [
       { label: "Blog", href: "/resources/blog" },
       { label: "Guides", href: "/resources/guides" },
-      { label: "FAQ", href: "/resources/faq" },
+      // { label: "FAQ", href: "/resources/faq" },
     ],
   },
 ];
