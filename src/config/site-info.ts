@@ -4,7 +4,7 @@ const siteInfo = {
   startYear: 2024,
   companyInfo: {
     emails: ["synthkofficial@gmail.com"],
-    phones: ["017953716145"],
+    phones: ["01959843534"],
     whatsapp: "01779901142",
     address: "Dhaka, Bangladesh",
     facebook: "https://www.facebook.com/info.mdshakeeb/",
@@ -16,7 +16,7 @@ const siteInfo = {
   },
   contactInfo: {
     emails: ["synthkofficial@gmail.com"],
-    phones: ["017953716145"],
+    phones: ["01959843534"],
     whatsapp: "01779901142",
     address: "Dhaka, Bangladesh",
     facebook: "https://www.facebook.com/info.mdshakeeb/",
@@ -54,5 +54,5 @@ export type SiteConfig = typeof siteConfig;
 
 export const META_THEME_COLORS = {
   light: "#ffffff",
-  dark: "#09090b",
+  dark: "#070d19",
 } as const;

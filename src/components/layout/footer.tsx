@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
       </SectionBackground>
 
       <SectionContent className="mt-0 relative">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {footerLinks.map((section, index) => (
             <Animate key={index} index={index}>
               <FooterSection
@@ -82,7 +82,7 @@ const Footer: React.FC = () => {
               />
             </Animate>
           ))}
-          <div>
+          {/* <div>
             <h3 className="text-lg font-semibold mb-4">Get in touch</h3>
             <div className="flex space-x-4">
               <SocialIcon href="https://facebook.com" Icon={CgFacebook} />
@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
               <SocialIcon href="https://instagram.com" Icon={BsInstagram} />
               <SocialIcon href="https://linkedin.com" Icon={BsLinkedin} />
             </div>
-          </div>
+          </div> */}
         </div>
 
         <Separator className="my-2" />
@@ -101,7 +101,9 @@ const Footer: React.FC = () => {
             <FooterLink href="/contact-us">Contact Us</FooterLink>
           </div>
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} <span className="font-medium">SYNTH-KO</span> Official. All Rights Reserved.
+            © {new Date().getFullYear()}{" "}
+            <span className="font-medium">SYNTH-KO</span> Official. All Rights
+            Reserved.
           </p>
         </div>
       </SectionContent>

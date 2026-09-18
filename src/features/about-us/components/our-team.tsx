@@ -39,9 +39,11 @@ export const OurTeam = ({ autoplay = false }: { autoplay?: boolean }) => {
     }
   }, [autoplay]);
 
-  const randomRotateY = () => {
-    return Math.floor(Math.random() * 21) - 10;
+  const getRotation = (index: number) => {
+    const angles = [-3, 3, -2, 4, -4, 2];
+    return angles[index % angles.length];
   };
+
   return (
     <Animate>
       <Section>
@@ -53,9 +55,9 @@ export const OurTeam = ({ autoplay = false }: { autoplay?: boolean }) => {
             way.
           </SectionDescription>
         </SectionHeader>
-        <SectionContent className="relative grid grid-cols-1 md:grid-cols-2  gap-20">
+        <SectionContent className="relative grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
           <div>
-            <div className="relative h-80 w-full">
+            <div className="relative h-96 sm:h-[440px] md:h-[460px] w-full max-w-sm sm:max-w-md mx-auto">
               <AnimatePresence>
                 {ContactUsTestimonials.map((testimonial, index) => (
                   <motion.div
@@ -64,23 +66,23 @@ export const OurTeam = ({ autoplay = false }: { autoplay?: boolean }) => {
                       opacity: 0,
                       scale: 0.9,
                       z: -100,
-                      rotate: randomRotateY(),
+                      rotate: getRotation(index),
                     }}
                     animate={{
                       opacity: isActive(index) ? 1 : 0.7,
                       scale: isActive(index) ? 1 : 0.95,
                       z: isActive(index) ? 0 : -100,
-                      rotate: isActive(index) ? 0 : randomRotateY(),
+                      rotate: isActive(index) ? 0 : getRotation(index),
                       zIndex: isActive(index)
                         ? 10
                         : ContactUsTestimonials.length + 2 - index,
-                      y: isActive(index) ? [0, -80, 0] : 0,
+                      y: isActive(index) ? [0, -50, 0] : 0,
                     }}
                     exit={{
                       opacity: 0,
                       scale: 0.9,
                       z: 100,
-                      rotate: randomRotateY(),
+                      rotate: getRotation(index),
                     }}
                     transition={{
                       duration: 0.4,
@@ -92,9 +94,9 @@ export const OurTeam = ({ autoplay = false }: { autoplay?: boolean }) => {
                       src={testimonial.src}
                       alt={testimonial.name}
                       width={500}
-                      height={500}
+                      height={600}
                       draggable={false}
-                      className="h-full w-full rounded-3xl object-cover object-center"
+                      className="h-full w-full rounded-3xl object-cover object-top"
                     />
                   </motion.div>
                 ))}
