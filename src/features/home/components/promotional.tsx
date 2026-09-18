@@ -40,7 +40,7 @@ export const Promotional = () => {
             <Card key={i} className="border-none relative z-10">
               <div
                 key={i}
-                className="w-full bg-background px-4 py-2 relative overflow-hidden group cursor-pointer rounded-md before:bg-primary before:w-[38px] before:h-[38px] before:absolute before:top-0 before:right-0 before:rounded-bl-[35px] before:z-[-1] hover:before:scale-[31] hover:before:duration-700 before:transition-all before:ease-out before:duration-[600ms] z-[0] shadow h-full"
+                className="w-full bg-background px-4 py-2 relative overflow-hidden group cursor-pointer rounded-md before:bg-primary before:w-[38px] before:h-[38px] before:absolute before:top-0 before:right-0 before:rounded-bl-[35px] before:z-[-1] hover:before:scale-[31] hover:before:duration-700 before:transition-all before:ease-out before:duration-700 z-[0] shadow h-full"
               >
                 <service.icon className="absolute top-2 z-20 right-2 text-[1rem] size-4 text-background " />
                 <h3 className="text-[1.5rem] font-bold transition-all duration-500 group-hover:text-background ease-out">

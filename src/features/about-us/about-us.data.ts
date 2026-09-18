@@ -4,42 +4,48 @@ import { ICategory, IFaqItem } from "./about-us.type";
 export const ContactUsTestimonials = [
   {
     quote:
-      "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
-    name: "Sarah Chen",
-    designation: "Product Manager at TechFlow",
-    src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "Leading our strategic vision to build cutting-edge solutions, scale our agency, and empower teams through innovative technology.",
+    name: "Raihan Rafi",
+    designation: "CEO",
+    src: "https://res.cloudinary.com/dpi0t9wfn/image/upload/v1789760364/rafi_ntmx5q.jpg",
   },
   {
     quote:
-      "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
-    name: "Michael Rodriguez",
-    designation: "CTO at InnovateSphere",
-    src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "Fostering strategic partnerships and innovation to drive long-term business growth and sustainable impact across industries.",
+    name: "Shakeebul Islam",
+    designation: "Co Founder & Software Engineer",
+    src: "https://res.cloudinary.com/dpi0t9wfn/image/upload/v1789758023/shakeeb_pebhkn.jpg",
   },
   {
     quote:
-      "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
-    name: "Emily Watson",
-    designation: "Operations Director at CloudScale",
-    src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "Developing state-of-the-art AI algorithms, predictive models, and scalable machine learning workflows that solve complex challenges.",
+    name: "Khairul Kabir",
+    designation: "Machine Learning Engineer",
+    src: "https://res.cloudinary.com/dpi0t9wfn/image/upload/v1789758023/khairul_kpeizm.jpg",
   },
   {
     quote:
-      "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
-    name: "James Kim",
-    designation: "Engineering Lead at DataPro",
-    src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "Architecting resilient full-stack systems and performant modern web applications with seamless user experiences.",
+    name: "Tanvir Ahmed",
+    designation: "Full-Stack Developer",
+    src: "https://res.cloudinary.com/dpi0t9wfn/image/upload/v1789758223/male-programmer_tapxmv.avif",
   },
   {
     quote:
-      "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
-    name: "Lisa Thompson",
-    designation: "VP of Technology at FutureNet",
-    src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "Designing human-centered interfaces and intuitive design systems that bridge technology and elegance.",
+    name: "Ashiqur Rahman",
+    designation: "UI/UX Design",
+    src: "https://res.cloudinary.com/dpi0t9wfn/image/upload/v1789758532/Ashiqur_Rahman_gug79w.jpg",
+  },
+  {
+    quote:
+      "Managing robust cloud infrastructure, automated CI/CD pipelines, and ensuring 99.9% uptime and reliability.",
+    name: "Mahfuzur Rahman",
+    designation: "Cloud & DevOps Engineer",
+    src: "https://res.cloudinary.com/dpi0t9wfn/image/upload/v1789760635/mahfuzur_pubklw.jpg",
   },
 ];
-//? end data for our-team components 
-
+//? end data for our-team components
 
 //! 2. Start data for the -> Faq component
 export const ContactUsFaqCategories: ICategory[] = [

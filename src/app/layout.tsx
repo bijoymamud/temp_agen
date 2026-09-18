@@ -4,7 +4,6 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import NextTopLoader from "nextjs-toploader";
 import "./globals.css";
-import "./theme.css";
 
 const spaceGrotesk = localFont({
   src: "./fonts/SpaceGrotesk.woff2",
