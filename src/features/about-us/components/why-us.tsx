@@ -21,7 +21,7 @@ import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 
 export function WhyUs() {
   return (
-    <Section className="">
+    <Section id="why-us" className="scroll-mt-24">
       <SectionHeader>
         <SectionTitle>Why Choose Us</SectionTitle>
         <SectionDescription>

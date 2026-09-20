@@ -6,7 +6,7 @@ import { BorderBeam } from "@/components/ui/border-beam";
 import { Button } from "@/components/ui/button";
 import { Grid } from "@/components/ui/grid";
 import { WorldMap } from "@/components/ui/world-map";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Globe2, Sparkles } from "lucide-react";
 import Link from "next/link";
 
 export function Hero() {
@@ -18,10 +18,10 @@ export function Hero() {
           <div className="space-y-2 mb-8">
             <Badge variant="secondary" className="px-3 py-2  border relative">
               <AnimatedShinyText className="inline-flex items-center justify-center  transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-                <Sparkles className="w-4 h-4 mr-2 text-primary" />
+                <Globe2 className="w-4 h-4 mr-2 text-primary" />
                 Innovative Digital Solutions
               </AnimatedShinyText>
-              <BorderBeam size={30} duration={8} delay={9} />
+              <BorderBeam size={50} duration={8} delay={9} />
             </Badge>
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl ">
               Transform Your Digital Presence
@@ -33,7 +33,11 @@ export function Hero() {
           </div>
           <div className="space-x-4 mb-8">
             <Link href="/contact-us">
-              <Button size="lg" variant={"gooeyLeft"} className="md:h-12 md:px-8">
+              <Button
+                size="lg"
+                variant={"gooeyLeft"}
+                className="md:h-12 md:px-8"
+              >
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>

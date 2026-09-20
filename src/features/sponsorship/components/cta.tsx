@@ -12,7 +12,7 @@ export function SponsorshipCTA() {
           make a significant impact.
         </p>
         <Button asChild size="lg" className="mt-4">
-          <Link href="#">Apply for Sponsorship</Link>
+          <Link href="/contact-us">Apply for Sponsorship</Link>
         </Button>
       </SectionContent>
     </Section>
