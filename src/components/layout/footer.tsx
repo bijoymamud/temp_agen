@@ -33,16 +33,16 @@ const footerLinks: FooterLink[] = [
   {
     title: "About Us",
     items: [
-      { label: "Our Story", href: "/about-us" },
-      { label: "Team", href: "#" },
-      { label: "Careers", href: "#" },
+      { label: "Our Team", href: "/about-us#team" },
+      { label: "Careers", href: "/careers" },
+      { label: "Why Choose Us", href: "/about-us#why-us" },
     ],
   },
   {
     title: "Services",
     items: [
       { label: "Web Development", href: "/services/web-development" },
-      { label: "UI/UX Desing", href: "/services/ui-ux" },
+      { label: "UI/UX Design", href: "/services/ui-ux" },
       { label: "SaaS Development", href: "/services/saas-development" },
       { label: "Cross-platform Apps", href: "/services/cross-platform" },
       { label: "Consulting", href: "/services/consulting" },
@@ -82,15 +82,20 @@ const Footer: React.FC = () => {
               />
             </Animate>
           ))}
-          {/* <div>
+          <div>
             <h3 className="text-lg font-semibold mb-4">Get in touch</h3>
             <div className="flex space-x-4">
-              <SocialIcon href="https://facebook.com" Icon={CgFacebook} />
-              <SocialIcon href="https://twitter.com" Icon={BsTwitter} />
-              <SocialIcon href="https://instagram.com" Icon={BsInstagram} />
-              <SocialIcon href="https://linkedin.com" Icon={BsLinkedin} />
+              <SocialIcon
+                href="https://www.facebook.com/synthko"
+                Icon={CgFacebook}
+              />
+
+              <SocialIcon
+                href="https://www.linkedin.com/company/synthko/home/"
+                Icon={BsLinkedin}
+              />
             </div>
-          </div> */}
+          </div>
         </div>
 
         <Separator className="my-2" />

@@ -8,13 +8,11 @@ export function CTASection() {
         <h2 className="text-3xl font-bold mb-4">
           Ready to Start Your Project?
         </h2>
-        <p className="mb-8">
+        <p className="">
           Let&apos;s bring your vision to life. Our team is ready to help you
           create an amazing digital experience.
         </p>
-        <Button size="lg">Get Started Now</Button>
       </Container>
     </div>
   );
 }
-

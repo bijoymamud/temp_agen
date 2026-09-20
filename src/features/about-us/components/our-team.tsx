@@ -46,7 +46,7 @@ export const OurTeam = ({ autoplay = false }: { autoplay?: boolean }) => {
 
   return (
     <Animate>
-      <Section>
+      <Section id="team" className="scroll-mt-24">
         <SectionHeader>
           <SectionTitle>Meet Our Team</SectionTitle>
           <SectionDescription>

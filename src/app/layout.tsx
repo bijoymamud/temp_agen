@@ -3,6 +3,7 @@ import { ThemeProvider } from "@/providers/theme-provider";
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import NextTopLoader from "nextjs-toploader";
+import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
 const spaceGrotesk = localFont({
@@ -108,6 +109,7 @@ export default function RootLayout({
             <div vaul-drawer-wrapper="">
               <div className="relative  bg-background">{children}</div>
             </div>
+            <Toaster position="bottom-right" richColors />
           </ThemeProvider>
         </body>
       </html>

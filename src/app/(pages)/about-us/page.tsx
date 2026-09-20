@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: `About`,
   description: `Learn about ${siteInfo.name} and how we provide cutting-edge web development templates and solutions.`,
 };
-const { Solutions, OurStory, CoreValue, WhyUs, OurTeam, Faq } =
+const { Solutions, CoreValue, WhyUs, OurTeam, Faq } =
   AboutUsComponents;
 
 export default function AboutUs() {
@@ -27,7 +27,6 @@ export default function AboutUs() {
       <div className="overflow-hidden relative">
         <Grid size={35} />
         <Solutions />
-        <OurStory />
         <CoreValue />
         <WhyUs />
         <div className="relative border-t">
