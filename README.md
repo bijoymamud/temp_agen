@@ -3,7 +3,6 @@
 
 > A brief tagline or description of the project.
 
-![Project Screenshot](path/to/screenshot.png)
 
 ## Table of Contents
 
