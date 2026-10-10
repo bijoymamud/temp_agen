@@ -119,7 +119,7 @@ export const teamMembers = [
   {
     name: "Al Mamud Bijoy",
     role: "Frontend Developer",
-    avatar: "https://i.ibb.co.com/R4DQDT7X/image-12.jpg?height=100&width=100",
+    avatar: "/images/team/bijoy.jpg",
   },
   {
     name: "Md Shakeeb",
@@ -139,12 +139,12 @@ export const teamMembers = [
   {
     name: "Nilutpal Majumder",
     role: "UI/UX Designer",
-    avatar: "https://i.ibb.co.com/mVdBJH5d/Image-14.jpg",
+    avatar: "/images/team/nilutpal-maj.png",
   },
   {
     name: "Khairul Kabir",
     role: "Data Scientist",
-    avatar: "https://i.ibb.co.com/Sgqj6CP/freepik-skin-enhancer-42171.jpg",
+    avatar: "/images/team/khairul.jpg",
   },
 
 ];
