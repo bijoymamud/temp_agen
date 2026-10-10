@@ -26,16 +26,16 @@ export const ContactUsTestimonials = [
   {
     quote:
       "Architecting resilient full-stack systems and performant modern web applications with seamless user experiences.",
-    name: "Tanvir Ahmed",
+    name: "Tamim Ahmed",
     designation: "Full-Stack Developer",
-    src: "https://res.cloudinary.com/dpi0t9wfn/image/upload/v1789758223/male-programmer_tapxmv.avif",
+    src: "/images/team/tamim.jpg",
   },
   {
     quote:
       "Designing human-centered interfaces and intuitive design systems that bridge technology and elegance.",
-    name: "Ashiqur Rahman",
+    name: "Nilutpal Majumder",
     designation: "UI/UX Design",
-    src: "https://res.cloudinary.com/dpi0t9wfn/image/upload/v1789758532/Ashiqur_Rahman_gug79w.jpg",
+    src: "/images/team/nilutpal-maj.png",
   },
   {
     quote:
