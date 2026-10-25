@@ -20,7 +20,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import siteInfo from "@/config/site-info";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Check, Copy, Mail, MessageSquare, Send, Sparkles } from "lucide-react";
+import { Check, Copy, Mail, MessageSquare, Send } from "lucide-react";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { toast } from "sonner";

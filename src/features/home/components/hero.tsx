@@ -6,7 +6,7 @@ import { BorderBeam } from "@/components/ui/border-beam";
 import { Button } from "@/components/ui/button";
 import { Grid } from "@/components/ui/grid";
 import { WorldMap } from "@/components/ui/world-map";
-import { ArrowRight, Globe2, Sparkles } from "lucide-react";
+import { ArrowRight, Globe2 } from "lucide-react";
 import Link from "next/link";
 
 export function Hero() {

@@ -15,6 +15,7 @@ import { ModeSwitcher } from "./mode-switcher";
 
 const navItems = [
   { title: "Home", href: "/" },
+  { title: "Projects", href: "/projects" },
   { title: "About", href: "/about-us" },
   { title: "How we works", href: "/how-we-works" },
   // { title: "Sponsor", href: "/sponsorship" },
