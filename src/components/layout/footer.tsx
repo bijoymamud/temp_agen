@@ -34,6 +34,7 @@ const footerLinks: FooterLink[] = [
     title: "About Us",
     items: [
       { label: "Our Team", href: "/about-us#team" },
+      { label: "Projects & Portfolio", href: "/projects" },
       { label: "Careers", href: "/careers" },
       { label: "Why Choose Us", href: "/about-us#why-us" },
     ],

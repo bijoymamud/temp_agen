@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Grid } from "@/components/ui/grid";
 import siteInfo from "@/config/site-info";
-import { ArrowUpRight, ChevronDown, Mail, Sparkles, UserX } from "lucide-react";
+import { ArrowUpRight, ChevronDown, Mail, UserX } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
