@@ -26,6 +26,12 @@ export function NavHeader() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = React.useState(false);
 
+  const checkIsActive = (href: string) => {
+    if (!pathname) return false;
+    if (href === "/") return pathname === "/";
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
+
   return (
     <header
       className={cn(
@@ -52,7 +58,7 @@ export function NavHeader() {
               {/* Desktop Navigation */}
               <ul className="hidden md:flex items-center space-x-8">
                 {navItems.map((item) => {
-                  const isActive = pathname === item.href;
+                  const isActive = checkIsActive(item.href);
                   return (
                     <li key={item.href}>
                       <Link
@@ -92,7 +98,7 @@ export function NavHeader() {
                   <nav className="flex flex-col items-center justify-center h-full">
                     <ul className="flex flex-col items-center gap-8">
                       {navItems.map((item) => {
-                        const isActive = pathname === item.href;
+                        const isActive = checkIsActive(item.href);
                         return (
                           <li key={item.href}>
                             <Link
