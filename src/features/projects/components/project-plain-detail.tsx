@@ -43,7 +43,9 @@ export function ProjectPlainDetail({ project }: ProjectPlainDetailProps) {
         {/* ======================================================== */}
         <div className="space-y-4">
           <div className="flex flex-wrap items-center gap-2.5 text-xs font-mono uppercase tracking-wider text-muted-foreground">
-            <span className="text-primary font-semibold">{project.category}</span>
+            <span className="text-primary font-semibold">
+              {project.category}
+            </span>
             <span>•</span>
             <span>{project.year}</span>
             {project.clientIndustry && (
@@ -66,28 +68,50 @@ export function ProjectPlainDetail({ project }: ProjectPlainDetailProps) {
           <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-y border-border/50 py-4 text-sm text-muted-foreground">
             <div className="flex flex-wrap items-center gap-6">
               <div>
-                <span className="text-foreground font-semibold">Client:</span> {project.client}
+                <span className="text-foreground font-semibold">Client:</span>{" "}
+                {project.client}
               </div>
               <div>
-                <span className="text-foreground font-semibold">Timeline:</span> {project.duration}
+                <span className="text-foreground font-semibold">Timeline:</span>{" "}
+                {project.duration}
               </div>
               <div>
-                <span className="text-foreground font-semibold">Discipline:</span> {project.category}
+                <span className="text-foreground font-semibold">
+                  Discipline:
+                </span>{" "}
+                {project.category}
               </div>
             </div>
 
             <div className="flex items-center gap-2.5">
               {project.links.live && (
-                <Button asChild size="sm" className="gap-1.5 text-xs rounded-md font-medium">
-                  <a href={project.links.live} target="_blank" rel="noopener noreferrer">
+                <Button
+                  asChild
+                  size="sm"
+                  className="gap-1.5 text-xs rounded-md font-medium"
+                >
+                  <a
+                    href={project.links.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <span>Live Website</span>
                     <ExternalLink className="h-3.5 w-3.5" />
                   </a>
                 </Button>
               )}
               {project.links.github && (
-                <Button asChild variant="outline" size="sm" className="gap-1.5 text-xs rounded-md font-medium">
-                  <a href={project.links.github} target="_blank" rel="noopener noreferrer">
+                <Button
+                  asChild
+                  variant="outline"
+                  size="sm"
+                  className="gap-1.5 text-xs rounded-md font-medium"
+                >
+                  <a
+                    href={project.links.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Github className="h-3.5 w-3.5" />
                     <span>Source</span>
                   </a>
@@ -179,7 +203,8 @@ export function ProjectPlainDetail({ project }: ProjectPlainDetailProps) {
                 Core Capabilities & Deliverables
               </h2>
               <p className="text-sm text-muted-foreground">
-                Key user experiences, algorithms, and backend systems implemented in this project:
+                Key user experiences, algorithms, and backend systems
+                implemented in this project:
               </p>
             </div>
 
@@ -204,52 +229,57 @@ export function ProjectPlainDetail({ project }: ProjectPlainDetailProps) {
         {/* ======================================================== */}
         {/* 6. Architectural Highlights                              */}
         {/* ======================================================== */}
-        {project.architectureHighlights && project.architectureHighlights.length > 0 && (
-          <div className="space-y-4 pt-4 border-t border-border/40">
-            <h2 className="text-xl sm:text-2xl font-bold text-foreground">
-              System Architecture & Infrastructure Highlights
-            </h2>
-            <div className="space-y-2.5 pt-1">
-              {project.architectureHighlights.map((highlight, index) => (
-                <div key={index} className="flex items-start gap-3 text-sm sm:text-base text-muted-foreground leading-relaxed">
-                  <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                  <span>{highlight}</span>
-                </div>
-              ))}
+        {project.architectureHighlights &&
+          project.architectureHighlights.length > 0 && (
+            <div className="space-y-4 pt-4 border-t border-border/40">
+              <h2 className="text-xl sm:text-2xl font-bold text-foreground">
+                System Architecture & Infrastructure Highlights
+              </h2>
+              <div className="space-y-2.5 pt-1">
+                {project.architectureHighlights.map((highlight, index) => (
+                  <div
+                    key={index}
+                    className="flex items-start gap-3 text-sm sm:text-base text-muted-foreground leading-relaxed"
+                  >
+                    <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                    <span>{highlight}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
         {/* ======================================================== */}
         {/* 7. Technology Stack                                      */}
         {/* ======================================================== */}
-        {project.techStackCategorized && project.techStackCategorized.length > 0 && (
-          <div className="space-y-4 pt-4 border-t border-border/40">
-            <h2 className="text-xl sm:text-2xl font-bold text-foreground">
-              Technology Stack
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 pt-1">
-              {project.techStackCategorized.map((group, idx) => (
-                <div key={idx} className="space-y-2">
-                  <div className="text-xs font-mono uppercase tracking-wider text-foreground font-bold">
-                    {group.category}
+        {project.techStackCategorized &&
+          project.techStackCategorized.length > 0 && (
+            <div className="space-y-4 pt-4 border-t border-border/40">
+              <h2 className="text-xl sm:text-2xl font-bold text-foreground">
+                Technology Stack
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 pt-1">
+                {project.techStackCategorized.map((group, idx) => (
+                  <div key={idx} className="space-y-2">
+                    <div className="text-xs font-mono uppercase tracking-wider text-foreground font-bold">
+                      {group.category}
+                    </div>
+                    <div className="flex flex-wrap gap-1.5">
+                      {group.items.map((tech) => (
+                        <Badge
+                          key={tech}
+                          variant="secondary"
+                          className="text-xs font-mono py-0.5 px-2 rounded-md bg-secondary text-secondary-foreground"
+                        >
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
                   </div>
-                  <div className="flex flex-wrap gap-1.5">
-                    {group.items.map((tech) => (
-                      <Badge
-                        key={tech}
-                        variant="secondary"
-                        className="text-xs font-mono py-0.5 px-2 rounded-md bg-secondary text-secondary-foreground"
-                      >
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
         {/* ======================================================== */}
         {/* 8. Interface Screenshots Gallery                         */}
@@ -261,7 +291,8 @@ export function ProjectPlainDetail({ project }: ProjectPlainDetailProps) {
                 Interface & Visual Showcase
               </h2>
               <p className="text-sm text-muted-foreground">
-                High-resolution captures demonstrating the production interface and workflows:
+                High-resolution captures demonstrating the production interface
+                and workflows:
               </p>
             </div>
 
@@ -278,7 +309,9 @@ export function ProjectPlainDetail({ project }: ProjectPlainDetailProps) {
                     />
                   </div>
                   <div className="space-y-0.5">
-                    <div className="text-sm font-semibold text-foreground">{item.title}</div>
+                    <div className="text-sm font-semibold text-foreground">
+                      {item.title}
+                    </div>
                     <div className="text-xs text-muted-foreground leading-relaxed">
                       {item.caption}
                     </div>
@@ -304,20 +337,15 @@ export function ProjectPlainDetail({ project }: ProjectPlainDetailProps) {
             </blockquote>
 
             <div className="flex items-center gap-3 pl-4 pt-1">
-              <div className="relative h-10 w-10 rounded-full overflow-hidden border border-border/60">
-                <Image
-                  src={project.testimonial.avatar}
-                  alt={project.testimonial.author}
-                  fill
-                  className="object-cover"
-                />
-              </div>
               <div>
                 <div className="text-sm font-bold text-foreground">
                   {project.testimonial.author}
                 </div>
                 <div className="text-xs text-muted-foreground font-mono">
-                  {project.testimonial.role}, <span className="text-foreground">{project.testimonial.company}</span>
+                  {project.testimonial.role},{" "}
+                  <span className="text-foreground">
+                    {project.testimonial.company}
+                  </span>
                 </div>
               </div>
             </div>
@@ -364,10 +392,15 @@ export function ProjectPlainDetail({ project }: ProjectPlainDetailProps) {
               Let&apos;s build your next digital breakthrough.
             </h3>
             <p className="text-sm text-muted-foreground max-w-lg mx-auto leading-relaxed">
-              Have an ambitious vision or complex requirements? Discuss your project with our engineering team today.
+              Have an ambitious vision or complex requirements? Discuss your
+              project with our engineering team today.
             </p>
             <div className="pt-2">
-              <Button asChild size="default" className="font-semibold text-xs rounded-md">
+              <Button
+                asChild
+                size="default"
+                className="font-semibold text-xs rounded-md"
+              >
                 <Link href="/contact-us">
                   <span>Start a Conversation</span>
                   <ArrowUpRight className="h-4 w-4 ml-1" />

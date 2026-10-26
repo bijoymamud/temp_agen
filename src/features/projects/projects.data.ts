@@ -12,104 +12,184 @@ export const PROJECT_CATEGORIES: ProjectCategory[] = [
 export const PROJECTS_DATA: Project[] = [
   {
     id: "1",
-    slug: "nexus-cloud-erp",
-    title: "Nexus Enterprise ERP",
-    tagline: "Next-generation ERP & resource planning suite for global distributed teams.",
+    slug: "collabify",
+    title: "Collabify — Developer Collaboration Platform",
+    tagline: "Turning Ideas into Reality Through Collaboration.",
     description:
-      "A mission-critical enterprise resource planning platform engineered with Next.js, GraphQL, and microservices architecture. Coordinates financial accounting, automated payroll, and multi-tenant inventory.",
+      "A developer collaboration platform designed to help developers share project ideas, find collaborators, organize project teams, track development tasks, and work toward better software quality.",
+
     category: "SaaS",
-    client: "Nexus Global Inc.",
-    clientIndustry: "Enterprise Supply Chain & Logistics",
-    year: "2024",
-    duration: "6 Months",
+    client: "Collabify",
+    clientIndustry: "Software Development & Developer Collaboration",
+    year: "2026",
+    duration: "Ongoing Development",
+    status: "BETA",
+
     thumbnail:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
+      "https://res.cloudinary.com/k3z91ydz/image/upload/f_auto/q_auto/collabify.png?q=80&w=1200&auto=format&fit=crop",
     heroBanner:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600&auto=format&fit=crop",
-    tags: ["Next.js 15", "TypeScript", "GraphQL", "Tailwind CSS", "PostgreSQL", "Docker"],
-    featured: true,
-    overview:
-      "Nexus Global needed a unified digital operating backbone to replace 4 legacy fragmented software silos across their European and North American operational hubs. The goal was sub-second financial reconciliations, instant inventory synching, and strict SOC2-compliant role governance.",
-    problem:
-      "The client was experiencing data discrepancies across disconnected ERP modules, manual export/import delays averaging 18 hours weekly, and frequent bottlenecks during end-of-month reconciliations affecting 45,000 internal enterprise users.",
-    solution:
-      "We engineered an event-driven microservices architecture fronted by Next.js and Turbopack. We implemented Redis pub/sub for real-time ledger updates, GraphQL federated gateways for unified entity resolution, and dynamic TanStack tables capable of rendering 100k+ rows with smooth virtualized scrolling.",
-    architectureHighlights: [
-      "Distributed event bus powered by Redis Streams and Apache Kafka for asynchronous ledger ingestion",
-      "Multi-tenant data isolation with dynamic row-level security policies in PostgreSQL",
-      "Federated GraphQL API layer caching responses at cloud edge nodes with Redis",
-      "Automated CI/CD deployment pipelines on Kubernetes with zero-downtime rolling upgrades",
+      "https://res.cloudinary.com/k3z91ydz/image/upload/f_auto/q_auto/collabify.png?q=80&w=1600&auto=format&fit=crop",
+
+    tags: [
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "Prisma",
+      "PostgreSQL",
+      "Developer Collaboration",
+      "Project Management",
+      "Quality Assurance",
     ],
+
+    featured: true,
+
+    overview:
+      "Collabify is a BETA-stage developer collaboration platform built to bring project discovery, team collaboration, task management, and software quality assurance opportunities into one ecosystem. Developers can share innovative ideas, showcase ongoing work, and publish partially completed projects to attract potential contributors. The platform aims to help developers connect with collaborators, coordinate work through dedicated project groups, and organize development activities using project tracking boards. It also plans to connect project owners with professional QA testers through a human-led hiring solution.",
+
+    problem:
+      "Developers often struggle to turn promising software ideas into completed products because finding suitable collaborators and building a capable team can be difficult. Ongoing projects may become challenging to manage when communication is fragmented, responsibilities are unclear, and development progress is difficult to track. Additionally, AI-assisted coding does not guarantee reliable software; applications may still contain functional bugs, security vulnerabilities, performance issues, and overlooked edge cases. Developers need a more connected environment for finding collaborators, coordinating development, organizing tasks, and obtaining professional software testing support.",
+
+    solution:
+      "Collabify aims to connect the essential stages of collaborative software development in one platform. Developers can publish ideas and ongoing projects, discover potential contributors, communicate through project-focused groups, and organize development tasks using project tracking boards. The backend uses Node.js and Express.js, with Prisma for database access and PostgreSQL as the database. The frontend uses TypeScript. The platform is under active development, with some features implemented and others still in progress. A human-led QA hiring solution is planned to help project owners connect with professional testers for manual testing and software quality assessment.",
+
+    architectureHighlights: [
+      "TypeScript-based frontend for the developer-facing platform",
+      "Node.js and Express.js backend for server-side application functionality and API development",
+      "Prisma for database access and data operations",
+      "PostgreSQL relational database for application data",
+      "Project discovery and collaboration workflows for sharing ideas and finding contributors",
+      "Project-focused developer groups and tracking boards for team communication and task organization",
+      "Planned QA hiring workflow for connecting project owners with professional software testers",
+    ],
+
     keyFeatures: [
       {
-        title: "Multi-Currency Automated Ledger",
+        title: "Project & Idea Sharing",
         description:
-          "Real-time exchange rate ingestion with automated double-entry ledger bookkeeping and one-click reconciliation reports.",
+          "Developers can share software ideas, showcase ongoing projects, and publish partially completed work to help potential contributors discover opportunities to participate. Feature availability may vary during the BETA development stage.",
       },
       {
-        title: "Predictive Inventory Replenishment",
+        title: "Developer Collaboration",
         description:
-          "Machine learning algorithms forecasting stock depletion thresholds and generating automated purchase requests.",
+          "The platform is designed to help developers discover collaboration opportunities and connect with people who can contribute complementary technical skills, including frontend development, backend development, and UI/UX design.",
       },
       {
-        title: "Granular RBAC & Audit Trails",
+        title: "Dedicated Developer Groups",
         description:
-          "Tamper-proof audit logs recording every financial mutation with biometric authorization prompts for high-value transactions.",
+          "Project-focused groups provide a dedicated space for team communication, technical discussions, development updates, and coordination around shared project goals.",
       },
       {
-        title: "Executive Observability Dashboard",
+        title: "Project Tracking Board",
         description:
-          "Interactive analytics visualizing cash flows, burn rates, warehouse throughput, and employee performance in real-time.",
+          "A project management feature designed to help teams organize development tasks, clarify responsibilities, monitor progress, and maintain visibility into outstanding work.",
+      },
+      {
+        title: "Human-Led Quality Assurance",
+        description:
+          "A planned QA hiring solution intended to connect project owners with professional testers who can manually test applications, identify defects, validate functionality, and assess software quality before release.",
+      },
+      {
+        title: "Collaborative Development Ecosystem",
+        description:
+          "Collabify brings project discovery, developer collaboration, team communication, task organization, and planned quality assurance opportunities together in a unified development ecosystem.",
       },
     ],
+
     stats: [
-      { label: "Active Enterprise Users", value: "45K+", subtext: "Across 14 countries" },
-      { label: "Ledger Mutation Latency", value: "<120ms", subtext: "99th percentile" },
-      { label: "Monthly Operational Savings", value: "34%", subtext: "Verified ROI" },
-      { label: "System Uptime", value: "99.98%", subtext: "Over 12 consecutive months" },
+      {
+        label: "Product Stage",
+        value: "BETA",
+        subtext: "Platform under development",
+      },
+      {
+        label: "Frontend Language",
+        value: "TypeScript",
+        subtext: "Verified technology",
+      },
+      {
+        label: "Backend",
+        value: "Node.js",
+        subtext: "Express.js application framework",
+      },
+      {
+        label: "Database",
+        value: "PostgreSQL",
+        subtext: "Accessed using Prisma",
+      },
     ],
+
     techStackCategorized: [
-      { category: "Frontend", items: ["Next.js 15", "React 19", "Tailwind CSS", "TanStack Table", "Framer Motion"] },
-      { category: "Backend & API", items: ["Node.js", "GraphQL Federation", "Apollo Server", "Express"] },
-      { category: "Database & Caching", items: ["PostgreSQL", "Prisma ORM", "Redis Streams", "TimescaleDB"] },
-      { category: "DevOps & Cloud", items: ["Docker", "Kubernetes", "AWS ECS", "Terraform", "GitHub Actions"] },
+      {
+        category: "Frontend",
+        items: ["TypeScript"],
+      },
+      {
+        category: "Backend & API",
+        items: ["Node.js", "Express.js"],
+      },
+      {
+        category: "Database & ORM",
+        items: ["PostgreSQL", "Prisma"],
+      },
+      {
+        category: "Authentication & Integrations",
+        items: ["Not specified"],
+      },
+      {
+        category: "Deployment & DevOps",
+        items: ["Not specified"],
+      },
     ],
-    techStack: ["Next.js", "React 19", "Tailwind CSS", "Node.js", "PostgreSQL", "Redis", "GraphQL"],
+
+    techStack: ["TypeScript", "Node.js", "Express.js", "Prisma", "PostgreSQL"],
+
     gallery: [
       {
-        url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
-        title: "Unified Financial Operations Console",
-        caption: "High-density ledger reconciliation screen with virtualized rows and automated discrepancy flags.",
+        url: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop",
+        title: "Developer Collaboration",
+        caption:
+          "Illustrative image representing developers collaborating to build software projects. Replace with an actual Collabify interface screenshot when available.",
       },
       {
         url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
-        title: "Real-Time Warehouse Stock Telemetry",
-        caption: "Global supply chain tracking overview showing live transit checkpoints and inventory levels.",
+        title: "Project Management",
+        caption:
+          "Illustrative project management visual representing task organization and progress tracking. This is not a verified screenshot of the Collabify tracking board.",
       },
       {
-        url: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1200&auto=format&fit=crop",
-        title: "Executive KPI & Cashflow Engine",
-        caption: "Comprehensive performance overview delivering predictive forecasts and expenditure tracking.",
+        url: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop",
+        title: "Team Collaboration",
+        caption:
+          "Illustrative image representing team communication and project coordination. Replace with the actual developer group interface when available.",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
+        title: "Quality Assurance",
+        caption:
+          "Illustrative image representing software quality review and testing. The human-led QA hiring solution is planned.",
       },
     ],
+
     testimonial: {
-      quote:
-        "Synth-ko did not just build an ERP; they transformed our business operations. What previously took our accounting staff 3 days every month is now reconciled in under 4 minutes.",
-      author: "Marcus Vance",
-      role: "VP of Digital Operations",
-      company: "Nexus Global Inc.",
-      avatar: "https://res.cloudinary.com/dpi0t9wfn/image/upload/v1789760364/rafi_ntmx5q.jpg",
+      quote: "No verified testimonial is currently available for this project.",
+      author: "Not provided",
+      role: "Not provided",
+      company: "Collabify",
+      avatar:
+        "https://ui-avatars.com/api/?name=Collabify&background=334155&color=ffffff",
     },
+
     links: {
-      live: "https://example.com/nexus-erp",
-      github: "https://github.com/info-mdshakeeb/nexus-erp",
+      live: "",
+      github: "",
     },
   },
   {
     id: "2",
     slug: "aurora-ai-analytics",
     title: "Aurora AI Intelligence Hub",
-    tagline: "Autonomous telemetry, predictive model deployment, and real-time observability.",
+    tagline:
+      "Autonomous telemetry, predictive model deployment, and real-time observability.",
     description:
       "An AI-powered operational copilot that ingests millions of telemetry data points to forecast system degradation, detect infrastructure anomalies, and suggest automated remediation workflows.",
     category: "AI & Cloud",
@@ -121,7 +201,15 @@ export const PROJECTS_DATA: Project[] = [
       "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
     heroBanner:
       "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1600&auto=format&fit=crop",
-    tags: ["Python", "FastAPI", "React", "Docker", "PyTorch", "Kubernetes", "Vector DB"],
+    tags: [
+      "Python",
+      "FastAPI",
+      "React",
+      "Docker",
+      "PyTorch",
+      "Kubernetes",
+      "Vector DB",
+    ],
     featured: true,
     overview:
       "HyperScale Cloud provides hosting infrastructure for thousands of microservices. They sought an AI-first intelligence cockpit capable of digesting gigabytes of distributed telemetry every second and automatically isolating root causes before end-user degradation occurred.",
@@ -159,32 +247,73 @@ export const PROJECTS_DATA: Project[] = [
     ],
     stats: [
       { label: "Anomaly Accuracy", value: "99.4%", subtext: "Precision rate" },
-      { label: "MTTR Reduction", value: "58%", subtext: "Mean time to resolution" },
-      { label: "Events Ingested / Sec", value: "2.4M", subtext: "Continuous telemetry" },
-      { label: "False Positives Cut", value: "81%", subtext: "Compared to legacy rules" },
+      {
+        label: "MTTR Reduction",
+        value: "58%",
+        subtext: "Mean time to resolution",
+      },
+      {
+        label: "Events Ingested / Sec",
+        value: "2.4M",
+        subtext: "Continuous telemetry",
+      },
+      {
+        label: "False Positives Cut",
+        value: "81%",
+        subtext: "Compared to legacy rules",
+      },
     ],
     techStackCategorized: [
-      { category: "Frontend & UI", items: ["React", "TypeScript", "Tailwind CSS", "Cytoscape.js", "Lucide React"] },
-      { category: "AI & Machine Learning", items: ["PyTorch", "Hugging Face", "ChromaDB", "LangChain", "NumPy"] },
-      { category: "Backend & Ingestion", items: ["FastAPI", "Python 3.12", "Celery", "Kafka", "TimescaleDB"] },
-      { category: "Infrastructure", items: ["Kubernetes", "Helm", "Docker", "Prometheus", "Grafana"] },
+      {
+        category: "Frontend & UI",
+        items: [
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Cytoscape.js",
+          "Lucide React",
+        ],
+      },
+      {
+        category: "AI & Machine Learning",
+        items: ["PyTorch", "Hugging Face", "ChromaDB", "LangChain", "NumPy"],
+      },
+      {
+        category: "Backend & Ingestion",
+        items: ["FastAPI", "Python 3.12", "Celery", "Kafka", "TimescaleDB"],
+      },
+      {
+        category: "Infrastructure",
+        items: ["Kubernetes", "Helm", "Docker", "Prometheus", "Grafana"],
+      },
     ],
-    techStack: ["React", "FastAPI", "Python", "Kubernetes", "PyTorch", "TimescaleDB", "ChromaDB"],
+    techStack: [
+      "React",
+      "FastAPI",
+      "Python",
+      "Kubernetes",
+      "PyTorch",
+      "TimescaleDB",
+      "ChromaDB",
+    ],
     gallery: [
       {
         url: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
         title: "Live Microservice Anomaly Radar",
-        caption: "Real-time cluster telemetry monitoring highlighting anomalous latency deviations.",
+        caption:
+          "Real-time cluster telemetry monitoring highlighting anomalous latency deviations.",
       },
       {
         url: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1200&auto=format&fit=crop",
         title: "Automated Incident Root Cause Summary",
-        caption: "AI-generated contextual breakdown explaining root cause factors and remediation options.",
+        caption:
+          "AI-generated contextual breakdown explaining root cause factors and remediation options.",
       },
       {
         url: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1200&auto=format&fit=crop",
         title: "Cluster Topology & Mesh Traffic Visualizer",
-        caption: "Service graph showing live throughput, error rates, and inter-service dependencies.",
+        caption:
+          "Service graph showing live throughput, error rates, and inter-service dependencies.",
       },
     ],
     testimonial: {
@@ -193,7 +322,8 @@ export const PROJECTS_DATA: Project[] = [
       author: "Elena Rostova",
       role: "Chief Architect",
       company: "HyperScale Cloud Systems",
-      avatar: "https://res.cloudinary.com/dpi0t9wfn/image/upload/v1789758023/khairul_kpeizm.jpg",
+      avatar:
+        "https://res.cloudinary.com/dpi0t9wfn/image/upload/v1789758023/khairul_kpeizm.jpg",
     },
     links: {
       live: "https://example.com/aurora-ai",
@@ -204,7 +334,8 @@ export const PROJECTS_DATA: Project[] = [
     id: "3",
     slug: "finpulse-mobile-banking",
     title: "FinPulse NeoBanking App",
-    tagline: "Next-gen cross-platform digital banking with zero-fee cross-border payments.",
+    tagline:
+      "Next-gen cross-platform digital banking with zero-fee cross-border payments.",
     description:
       "A fluid, high-security mobile neo-banking client with instant virtual card issuance, peer-to-peer lightning payments, biometrics authentication, and budgeting AI.",
     category: "Mobile Apps",
@@ -216,7 +347,14 @@ export const PROJECTS_DATA: Project[] = [
       "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop",
     heroBanner:
       "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=1600&auto=format&fit=crop",
-    tags: ["React Native", "Expo", "TypeScript", "Node.js", "Stripe API", "Zustand"],
+    tags: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "Node.js",
+      "Stripe API",
+      "Zustand",
+    ],
     featured: true,
     overview:
       "FinPulse is an innovative UK-based financial technology company striving to make international personal banking instantaneous and zero-cost for digital nomads, travelers, and remote contractors.",
@@ -253,33 +391,77 @@ export const PROJECTS_DATA: Project[] = [
       },
     ],
     stats: [
-      { label: "App Store Rating", value: "4.9 ★", subtext: "Over 28,000 reviews" },
-      { label: "Monthly Transfer Volume", value: "$18M+", subtext: "Processed securely" },
-      { label: "KYC Account Onboarding", value: "30 Sec", subtext: "Automated verification" },
-      { label: "Active Mobile Users", value: "180K+", subtext: "In UK & European Union" },
+      {
+        label: "App Store Rating",
+        value: "4.9 ★",
+        subtext: "Over 28,000 reviews",
+      },
+      {
+        label: "Monthly Transfer Volume",
+        value: "$18M+",
+        subtext: "Processed securely",
+      },
+      {
+        label: "KYC Account Onboarding",
+        value: "30 Sec",
+        subtext: "Automated verification",
+      },
+      {
+        label: "Active Mobile Users",
+        value: "180K+",
+        subtext: "In UK & European Union",
+      },
     ],
     techStackCategorized: [
-      { category: "Mobile Core", items: ["React Native", "Expo SDK 52", "TypeScript", "Reanimated 3", "React Navigation"] },
-      { category: "Backend Services", items: ["Node.js", "Fastify", "Stripe Connect API", "Plaid API"] },
-      { category: "Data & Storage", items: ["PostgreSQL", "Redis", "SQLite (Offline)", "AWS KMS"] },
-      { category: "Security & Testing", items: ["SecureEnclave", "Detox E2E", "Jest", "Appium"] },
+      {
+        category: "Mobile Core",
+        items: [
+          "React Native",
+          "Expo SDK 52",
+          "TypeScript",
+          "Reanimated 3",
+          "React Navigation",
+        ],
+      },
+      {
+        category: "Backend Services",
+        items: ["Node.js", "Fastify", "Stripe Connect API", "Plaid API"],
+      },
+      {
+        category: "Data & Storage",
+        items: ["PostgreSQL", "Redis", "SQLite (Offline)", "AWS KMS"],
+      },
+      {
+        category: "Security & Testing",
+        items: ["SecureEnclave", "Detox E2E", "Jest", "Appium"],
+      },
     ],
-    techStack: ["React Native", "Expo", "TypeScript", "Stripe", "Node.js", "Zustand"],
+    techStack: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "Stripe",
+      "Node.js",
+      "Zustand",
+    ],
     gallery: [
       {
         url: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop",
         title: "Digital Multi-Currency Wallet",
-        caption: "Sleek card visualizer with real-time balance conversion across 32 currencies.",
+        caption:
+          "Sleek card visualizer with real-time balance conversion across 32 currencies.",
       },
       {
         url: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=1200&auto=format&fit=crop",
         title: "Interactive Transaction History",
-        caption: "Categorized expenses and live spending trend analytics with search filtering.",
+        caption:
+          "Categorized expenses and live spending trend analytics with search filtering.",
       },
       {
         url: "https://images.unsplash.com/photo-1556742049-0a67c5574f73?q=80&w=1200&auto=format&fit=crop",
         title: "Instant Virtual Card Generator",
-        caption: "Frictionless card freeze, spending limit settings, and digital issuance.",
+        caption:
+          "Frictionless card freeze, spending limit settings, and digital issuance.",
       },
     ],
     testimonial: {
@@ -288,7 +470,8 @@ export const PROJECTS_DATA: Project[] = [
       author: "David Sterling",
       role: "Founder & CEO",
       company: "FinPulse Financial UK",
-      avatar: "https://res.cloudinary.com/dpi0t9wfn/image/upload/v1789758023/shakeeb_pebhkn.jpg",
+      avatar:
+        "https://res.cloudinary.com/dpi0t9wfn/image/upload/v1789758023/shakeeb_pebhkn.jpg",
     },
     links: {
       live: "https://example.com/finpulse",
@@ -299,7 +482,8 @@ export const PROJECTS_DATA: Project[] = [
     id: "4",
     slug: "synth-design-system",
     title: "Synth UI Design System & Kit",
-    tagline: "Unified atomic component library and token architecture for multi-brand apps.",
+    tagline:
+      "Unified atomic component library and token architecture for multi-brand apps.",
     description:
       "A comprehensive design system comprising over 200+ accessible primitives, dark/light token palettes, interactive Figma variants, and zero-runtime Tailwind presets.",
     category: "UI/UX Design",
@@ -311,7 +495,14 @@ export const PROJECTS_DATA: Project[] = [
       "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1200&auto=format&fit=crop",
     heroBanner:
       "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=1600&auto=format&fit=crop",
-    tags: ["Figma", "Design Tokens", "Radix UI", "Tailwind CSS", "Storybook", "TypeScript"],
+    tags: [
+      "Figma",
+      "Design Tokens",
+      "Radix UI",
+      "Tailwind CSS",
+      "Storybook",
+      "TypeScript",
+    ],
     featured: false,
     overview:
       "As Synth-ko’s product ecosystem expanded to multiple customer-facing and internal tools, front-end teams faced increasing UI divergence, redundant styling code, and accessibility inconsistencies.",
@@ -348,28 +539,70 @@ export const PROJECTS_DATA: Project[] = [
       },
     ],
     stats: [
-      { label: "Component Primitives", value: "220+", subtext: "Production tested" },
-      { label: "Frontend Speed Boost", value: "2.5x", subtext: "Faster sprint delivery" },
-      { label: "Accessibility Score", value: "100%", subtext: "Lighthouse verified" },
-      { label: "Design Debt Cut", value: "70%", subtext: "Fewer one-off styles" },
+      {
+        label: "Component Primitives",
+        value: "220+",
+        subtext: "Production tested",
+      },
+      {
+        label: "Frontend Speed Boost",
+        value: "2.5x",
+        subtext: "Faster sprint delivery",
+      },
+      {
+        label: "Accessibility Score",
+        value: "100%",
+        subtext: "Lighthouse verified",
+      },
+      {
+        label: "Design Debt Cut",
+        value: "70%",
+        subtext: "Fewer one-off styles",
+      },
     ],
     techStackCategorized: [
-      { category: "Design Tools", items: ["Figma", "Figma Tokens", "FigJam", "Penpot"] },
-      { category: "Code Primitives", items: ["React 19", "Radix UI", "Tailwind CSS", "Class Variance Authority"] },
-      { category: "Documentation", items: ["Storybook 8", "MDX", "Docusaurus"] },
-      { category: "Tooling & CI", items: ["TypeScript", "Chromatic", "Axe Core", "Changesets"] },
+      {
+        category: "Design Tools",
+        items: ["Figma", "Figma Tokens", "FigJam", "Penpot"],
+      },
+      {
+        category: "Code Primitives",
+        items: [
+          "React 19",
+          "Radix UI",
+          "Tailwind CSS",
+          "Class Variance Authority",
+        ],
+      },
+      {
+        category: "Documentation",
+        items: ["Storybook 8", "MDX", "Docusaurus"],
+      },
+      {
+        category: "Tooling & CI",
+        items: ["TypeScript", "Chromatic", "Axe Core", "Changesets"],
+      },
     ],
-    techStack: ["Figma", "React", "Storybook", "Radix UI", "Tailwind CSS", "TypeScript"],
+    techStack: [
+      "Figma",
+      "React",
+      "Storybook",
+      "Radix UI",
+      "Tailwind CSS",
+      "TypeScript",
+    ],
     gallery: [
       {
         url: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1200&auto=format&fit=crop",
         title: "Design Token Variable Matrix",
-        caption: "Figma variable collections synchronized directly with Tailwind theme variables.",
+        caption:
+          "Figma variable collections synchronized directly with Tailwind theme variables.",
       },
       {
         url: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=1200&auto=format&fit=crop",
         title: "Accessible Component Gallery",
-        caption: "Storybook interactive workbench validating keyboard accessibility across dark and light modes.",
+        caption:
+          "Storybook interactive workbench validating keyboard accessibility across dark and light modes.",
       },
     ],
     links: {
@@ -381,7 +614,8 @@ export const PROJECTS_DATA: Project[] = [
     id: "5",
     slug: "stride-health-telemedicine",
     title: "Stride Telehealth Platform",
-    tagline: "HIPAA-compliant video consultations and electronic health record management.",
+    tagline:
+      "HIPAA-compliant video consultations and electronic health record management.",
     description:
       "Secure healthcare platform connecting certified doctors with patients via WebRTC HD video calls, prescription dispatching, and secure chat messaging.",
     category: "Web Apps",
@@ -430,28 +664,70 @@ export const PROJECTS_DATA: Project[] = [
       },
     ],
     stats: [
-      { label: "Consultations Completed", value: "120K+", subtext: "Across 24 specialties" },
-      { label: "Call Quality SLA", value: "99.98%", subtext: "Zero dropped connections" },
-      { label: "Patient Satisfaction", value: "98%", subtext: "Post-appointment surveys" },
-      { label: "Appointment Wait Time", value: "<15 Min", subtext: "Down from 14 days" },
+      {
+        label: "Consultations Completed",
+        value: "120K+",
+        subtext: "Across 24 specialties",
+      },
+      {
+        label: "Call Quality SLA",
+        value: "99.98%",
+        subtext: "Zero dropped connections",
+      },
+      {
+        label: "Patient Satisfaction",
+        value: "98%",
+        subtext: "Post-appointment surveys",
+      },
+      {
+        label: "Appointment Wait Time",
+        value: "<15 Min",
+        subtext: "Down from 14 days",
+      },
     ],
     techStackCategorized: [
-      { category: "Web Frontend", items: ["Next.js", "React", "Tailwind CSS", "Radix UI", "Lucide React"] },
-      { category: "Realtime & Video", items: ["WebRTC", "Socket.io", "Mediasoup SFU", "Twilio API"] },
-      { category: "Backend Services", items: ["Node.js", "Express", "Prisma ORM", "FHIR Standard"] },
-      { category: "Cloud & Compliance", items: ["AWS HIPAA Vault", "PostgreSQL (Encrypted)", "S3 Glacier", "Terraform"] },
+      {
+        category: "Web Frontend",
+        items: ["Next.js", "React", "Tailwind CSS", "Radix UI", "Lucide React"],
+      },
+      {
+        category: "Realtime & Video",
+        items: ["WebRTC", "Socket.io", "Mediasoup SFU", "Twilio API"],
+      },
+      {
+        category: "Backend Services",
+        items: ["Node.js", "Express", "Prisma ORM", "FHIR Standard"],
+      },
+      {
+        category: "Cloud & Compliance",
+        items: [
+          "AWS HIPAA Vault",
+          "PostgreSQL (Encrypted)",
+          "S3 Glacier",
+          "Terraform",
+        ],
+      },
     ],
-    techStack: ["Next.js", "WebRTC", "Socket.io", "Tailwind CSS", "Prisma", "AWS"],
+    techStack: [
+      "Next.js",
+      "WebRTC",
+      "Socket.io",
+      "Tailwind CSS",
+      "Prisma",
+      "AWS",
+    ],
     gallery: [
       {
         url: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1200&auto=format&fit=crop",
         title: "Clinician Live Video Interface",
-        caption: "Doctor view featuring split-screen video call alongside patient medical history and prescription tools.",
+        caption:
+          "Doctor view featuring split-screen video call alongside patient medical history and prescription tools.",
       },
       {
         url: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1200&auto=format&fit=crop",
         title: "Patient Appointment & Vitals Portal",
-        caption: "Mobile-responsive patient dashboard showing upcoming visits and wearable health diagnostics.",
+        caption:
+          "Mobile-responsive patient dashboard showing upcoming visits and wearable health diagnostics.",
       },
     ],
     testimonial: {
@@ -460,7 +736,8 @@ export const PROJECTS_DATA: Project[] = [
       author: "Dr. Evelyn Reed",
       role: "Medical Director",
       company: "Stride Healthcare Network",
-      avatar: "https://res.cloudinary.com/dpi0t9wfn/image/upload/v1789760635/mahfuzur_pubklw.jpg",
+      avatar:
+        "https://res.cloudinary.com/dpi0t9wfn/image/upload/v1789760635/mahfuzur_pubklw.jpg",
     },
     links: {
       live: "https://example.com/stride-health",
@@ -470,7 +747,8 @@ export const PROJECTS_DATA: Project[] = [
     id: "6",
     slug: "zenith-crypto-dex",
     title: "Zenith Decentralized Exchange",
-    tagline: "Ultra-fast automated market maker with cross-chain atomic liquidity routing.",
+    tagline:
+      "Ultra-fast automated market maker with cross-chain atomic liquidity routing.",
     description:
       "A high-frequency web3 swapping and liquidity protocol supporting EVM chains with slippage protection, MEV defense, and real-time Candlestick charts.",
     category: "Web Apps",
@@ -519,28 +797,65 @@ export const PROJECTS_DATA: Project[] = [
       },
     ],
     stats: [
-      { label: "Total Value Locked", value: "$85M+", subtext: "Across 4 EVM chains" },
-      { label: "Gas Cost Optimized", value: "24%", subtext: "Savings per transaction" },
-      { label: "Avg Execution Speed", value: "1.2s", subtext: "Block inclusion time" },
-      { label: "Cumulative Volume", value: "$420M+", subtext: "Traded to date" },
+      {
+        label: "Total Value Locked",
+        value: "$85M+",
+        subtext: "Across 4 EVM chains",
+      },
+      {
+        label: "Gas Cost Optimized",
+        value: "24%",
+        subtext: "Savings per transaction",
+      },
+      {
+        label: "Avg Execution Speed",
+        value: "1.2s",
+        subtext: "Block inclusion time",
+      },
+      {
+        label: "Cumulative Volume",
+        value: "$420M+",
+        subtext: "Traded to date",
+      },
     ],
     techStackCategorized: [
-      { category: "Web3 Frontend", items: ["Next.js 15", "Wagmi", "Viem", "RainbowKit", "TradingView"] },
-      { category: "Smart Contracts", items: ["Solidity 0.8.24", "Foundry", "OpenZeppelin", "Hardhat"] },
-      { category: "Indexers & Data", items: ["The Graph", "Alchemy RPC", "Etherscan API", "Socket.io"] },
-      { category: "Auditing & Security", items: ["CertiK", "Slither", "Mythril", "OpenZeppelin Defender"] },
+      {
+        category: "Web3 Frontend",
+        items: ["Next.js 15", "Wagmi", "Viem", "RainbowKit", "TradingView"],
+      },
+      {
+        category: "Smart Contracts",
+        items: ["Solidity 0.8.24", "Foundry", "OpenZeppelin", "Hardhat"],
+      },
+      {
+        category: "Indexers & Data",
+        items: ["The Graph", "Alchemy RPC", "Etherscan API", "Socket.io"],
+      },
+      {
+        category: "Auditing & Security",
+        items: ["CertiK", "Slither", "Mythril", "OpenZeppelin Defender"],
+      },
     ],
-    techStack: ["Next.js", "Wagmi", "Viem", "Tailwind CSS", "TradingView", "Solidity"],
+    techStack: [
+      "Next.js",
+      "Wagmi",
+      "Viem",
+      "Tailwind CSS",
+      "TradingView",
+      "Solidity",
+    ],
     gallery: [
       {
         url: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1200&auto=format&fit=crop",
         title: "Pro Trading & Swap Interface",
-        caption: "Integrated TradingView chart with instant token swap terminal and slippage setting controls.",
+        caption:
+          "Integrated TradingView chart with instant token swap terminal and slippage setting controls.",
       },
       {
         url: "https://images.unsplash.com/photo-1642543492481-44e81e3914a7?q=80&w=1200&auto=format&fit=crop",
         title: "Liquidity Pool & Yield Farming Console",
-        caption: "User LP position management showing real-time fees earned and APR breakdown.",
+        caption:
+          "User LP position management showing real-time fees earned and APR breakdown.",
       },
     ],
     testimonial: {
@@ -549,7 +864,8 @@ export const PROJECTS_DATA: Project[] = [
       author: "Kaelen Voss",
       role: "Lead Contributor",
       company: "Zenith DAO",
-      avatar: "https://res.cloudinary.com/dpi0t9wfn/image/upload/v1789758023/shakeeb_pebhkn.jpg",
+      avatar:
+        "https://res.cloudinary.com/dpi0t9wfn/image/upload/v1789758023/shakeeb_pebhkn.jpg",
     },
     links: {
       live: "https://example.com/zenith-dex",
@@ -573,7 +889,8 @@ export function getNextAndPrevProject(slug: string) {
   const currentIndex = PROJECTS_DATA.findIndex((p) => p.slug === slug);
   if (currentIndex === -1) return { prev: null, next: null };
 
-  const prevIndex = (currentIndex - 1 + PROJECTS_DATA.length) % PROJECTS_DATA.length;
+  const prevIndex =
+    (currentIndex - 1 + PROJECTS_DATA.length) % PROJECTS_DATA.length;
   const nextIndex = (currentIndex + 1) % PROJECTS_DATA.length;
 
   return {
