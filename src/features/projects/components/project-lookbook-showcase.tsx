@@ -70,9 +70,10 @@ export function ProjectLookbookShowcase() {
           </Marquee>
         </div>
 
-        {/* Row 2: Completely Clean from Both Sides (Zero edge overlays) */}
+        {/* Row 2: Moves in opposite direction (Left to Right) */}
         <div className="relative w-full overflow-hidden">
           <Marquee
+            reverse
             pauseOnHover={false}
             isPaused={isRow2Paused}
             repeat={4}

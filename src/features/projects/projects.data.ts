@@ -145,28 +145,22 @@ export const PROJECTS_DATA: Project[] = [
 
     gallery: [
       {
-        url: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop",
-        title: "Developer Collaboration",
+        url: "/images/projects/collabify-kanban-board.jpg",
+        title: "Sprint Kanban & Task Board",
         caption:
-          "Illustrative image representing developers collaborating to build software projects. Replace with an actual Collabify interface screenshot when available.",
+          "Production developer task tracking board with Backlog, In Progress, Code Review, and QA Testing columns.",
       },
       {
-        url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
-        title: "Project Management",
+        url: "https://res.cloudinary.com/k3z91ydz/image/upload/f_auto/q_auto/collabify.png?q=80&w=1200&auto=format&fit=crop",
+        title: "Developer Collaboration Workspace",
         caption:
-          "Illustrative project management visual representing task organization and progress tracking. This is not a verified screenshot of the Collabify tracking board.",
+          "Live Collabify platform interface showcasing project discovery, group communications, and contributor matching.",
       },
       {
-        url: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop",
-        title: "Team Collaboration",
+        url: "/images/projects/aurora-ai-dashboard.jpg",
+        title: "Integrated Team Monitoring",
         caption:
-          "Illustrative image representing team communication and project coordination. Replace with the actual developer group interface when available.",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
-        title: "Quality Assurance",
-        caption:
-          "Illustrative image representing software quality review and testing. The human-led QA hiring solution is planned.",
+          "Automated developer metrics and software quality tracking dashboard.",
       },
     ],
 
@@ -197,10 +191,8 @@ export const PROJECTS_DATA: Project[] = [
     clientIndustry: "Cloud Infrastructure & SRE Tooling",
     year: "2024",
     duration: "4 Months",
-    thumbnail:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
-    heroBanner:
-      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1600&auto=format&fit=crop",
+    thumbnail: "/images/projects/aurora-ai-dashboard.jpg",
+    heroBanner: "/images/projects/aurora-ai-dashboard.jpg",
     tags: [
       "Python",
       "FastAPI",
@@ -298,22 +290,16 @@ export const PROJECTS_DATA: Project[] = [
     ],
     gallery: [
       {
-        url: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
-        title: "Live Microservice Anomaly Radar",
+        url: "/images/projects/aurora-ai-dashboard.jpg",
+        title: "Telemetry Observability Cockpit",
         caption:
-          "Real-time cluster telemetry monitoring highlighting anomalous latency deviations.",
+          "Enterprise telemetry dashboard featuring real-time CPU usage, p95 API latency charts, and anomaly alert timelines.",
       },
       {
-        url: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1200&auto=format&fit=crop",
-        title: "Automated Incident Root Cause Summary",
+        url: "/images/projects/zenith-crypto-terminal.jpg",
+        title: "Cluster Topology & Real-Time Metrics",
         caption:
-          "AI-generated contextual breakdown explaining root cause factors and remediation options.",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1200&auto=format&fit=crop",
-        title: "Cluster Topology & Mesh Traffic Visualizer",
-        caption:
-          "Service graph showing live throughput, error rates, and inter-service dependencies.",
+          "Live distributed microservice health analytics and high-frequency event monitoring.",
       },
     ],
     testimonial: {
@@ -343,10 +329,8 @@ export const PROJECTS_DATA: Project[] = [
     clientIndustry: "Consumer FinTech & Banking",
     year: "2024",
     duration: "5 Months",
-    thumbnail:
-      "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop",
-    heroBanner:
-      "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=1600&auto=format&fit=crop",
+    thumbnail: "/images/projects/finpulse-banking-app.jpg",
+    heroBanner: "/images/projects/finpulse-banking-app.jpg",
     tags: [
       "React Native",
       "Expo",
@@ -446,22 +430,16 @@ export const PROJECTS_DATA: Project[] = [
     ],
     gallery: [
       {
-        url: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop",
-        title: "Digital Multi-Currency Wallet",
+        url: "/images/projects/finpulse-banking-app.jpg",
+        title: "NeoCard Platinum & Account Dashboard",
         caption:
-          "Sleek card visualizer with real-time balance conversion across 32 currencies.",
+          "Sleek mobile visualizer showing $48,290.50 balance, instant send/transfer controls, and spending analytics curves.",
       },
       {
-        url: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=1200&auto=format&fit=crop",
-        title: "Interactive Transaction History",
+        url: "/images/projects/figma-ux-wireframe-flow.jpg",
+        title: "UX Flow & Architecture Wireframe",
         caption:
-          "Categorized expenses and live spending trend analytics with search filtering.",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1556742049-0a67c5574f73?q=80&w=1200&auto=format&fit=crop",
-        title: "Instant Virtual Card Generator",
-        caption:
-          "Frictionless card freeze, spending limit settings, and digital issuance.",
+          "Comprehensive user onboarding journey and biometric checkout verification flow.",
       },
     ],
     testimonial: {
@@ -491,10 +469,8 @@ export const PROJECTS_DATA: Project[] = [
     clientIndustry: "Design Tooling & Developer Experience",
     year: "2023",
     duration: "3 Months",
-    thumbnail:
-      "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1200&auto=format&fit=crop",
-    heroBanner:
-      "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=1600&auto=format&fit=crop",
+    thumbnail: "/images/projects/figma-design-system-tokens.jpg",
+    heroBanner: "/images/projects/figma-design-system-tokens.jpg",
     tags: [
       "Figma",
       "Design Tokens",
@@ -593,16 +569,10 @@ export const PROJECTS_DATA: Project[] = [
     ],
     gallery: [
       {
-        url: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1200&auto=format&fit=crop",
-        title: "Design Token Variable Matrix",
+        url: "/images/projects/figma-design-system-tokens.jpg",
+        title: "Atomic UI Components & Token Palette",
         caption:
-          "Figma variable collections synchronized directly with Tailwind theme variables.",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=1200&auto=format&fit=crop",
-        title: "Accessible Component Gallery",
-        caption:
-          "Storybook interactive workbench validating keyboard accessibility across dark and light modes.",
+          "Production Figma design system canvas showing component variants, color variable tokens, and typography hierarchy.",
       },
     ],
     links: {
@@ -623,10 +593,8 @@ export const PROJECTS_DATA: Project[] = [
     clientIndustry: "Digital Health & Clinical Care",
     year: "2023",
     duration: "7 Months",
-    thumbnail:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1200&auto=format&fit=crop",
-    heroBanner:
-      "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1600&auto=format&fit=crop",
+    thumbnail: "/images/projects/stride-telehealth-dashboard.jpg",
+    heroBanner: "/images/projects/stride-telehealth-dashboard.jpg",
     tags: ["Next.js", "WebRTC", "HIPAA", "Tailwind CSS", "Socket.io", "Prisma"],
     featured: false,
     overview:
@@ -718,16 +686,10 @@ export const PROJECTS_DATA: Project[] = [
     ],
     gallery: [
       {
-        url: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1200&auto=format&fit=crop",
-        title: "Clinician Live Video Interface",
+        url: "/images/projects/stride-telehealth-dashboard.jpg",
+        title: "Clinical Consultation & Vitals Portal",
         caption:
-          "Doctor view featuring split-screen video call alongside patient medical history and prescription tools.",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1200&auto=format&fit=crop",
-        title: "Patient Appointment & Vitals Portal",
-        caption:
-          "Mobile-responsive patient dashboard showing upcoming visits and wearable health diagnostics.",
+          "Web-based telemedicine dashboard showing upcoming video calls, patient vitals, and medical records.",
       },
     ],
     testimonial: {
@@ -756,10 +718,8 @@ export const PROJECTS_DATA: Project[] = [
     clientIndustry: "Decentralized Finance (DeFi) & Web3",
     year: "2024",
     duration: "5 Months",
-    thumbnail:
-      "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1200&auto=format&fit=crop",
-    heroBanner:
-      "https://images.unsplash.com/photo-1642543492481-44e81e3914a7?q=80&w=1600&auto=format&fit=crop",
+    thumbnail: "/images/projects/zenith-crypto-terminal.jpg",
+    heroBanner: "/images/projects/zenith-crypto-terminal.jpg",
     tags: ["Web3", "Ethers.js", "Wagmi", "Next.js", "Solidity", "TradingView"],
     featured: true,
     overview:
@@ -846,16 +806,10 @@ export const PROJECTS_DATA: Project[] = [
     ],
     gallery: [
       {
-        url: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1200&auto=format&fit=crop",
-        title: "Pro Trading & Swap Interface",
+        url: "/images/projects/zenith-crypto-terminal.jpg",
+        title: "Pro Trading Terminal & Token Swap",
         caption:
-          "Integrated TradingView chart with instant token swap terminal and slippage setting controls.",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1642543492481-44e81e3914a7?q=80&w=1200&auto=format&fit=crop",
-        title: "Liquidity Pool & Yield Farming Console",
-        caption:
-          "User LP position management showing real-time fees earned and APR breakdown.",
+          "Live candlestick charts, order book depth, and decentralized token swap interface with connected Web3 wallet.",
       },
     ],
     testimonial: {
@@ -870,6 +824,106 @@ export const PROJECTS_DATA: Project[] = [
     links: {
       live: "https://example.com/zenith-dex",
       github: "https://github.com/info-mdshakeeb/zenith-dex",
+    },
+  },
+  {
+    id: "7",
+    slug: "finsync-financial-app",
+    title: "FinSync — Mobile Banking UX Case Study",
+    tagline:
+      "End-to-end product design process transforming multi-account banking into a clean mobile experience.",
+    description:
+      "A complete UX design case study covering user research, persona creation, user flows, low-fidelity wireframing, and interactive Figma prototyping for a modern neo-banking app.",
+    category: "UI/UX Design",
+    client: "FinSync Technologies",
+    clientIndustry: "Consumer FinTech & Neo-Banking",
+    year: "2024",
+    duration: "4 Months",
+    thumbnail: "/images/projects/figma-ux-wireframe-flow.jpg",
+    heroBanner: "/images/projects/figma-ux-wireframe-flow.jpg",
+    tags: [
+      "Figma",
+      "UX Research",
+      "Wireframing",
+      "Interactive Prototype",
+      "User Journey",
+      "Design System",
+    ],
+    featured: true,
+    overview:
+      "FinSync is a modern mobile financial application engineered to help users effortlessly manage bank accounts, cards, and instant peer transfers through a verified 5-stage UX design process.",
+    problem:
+      "Traditional banking apps suffer from cluttered menus, confusing multi-screen transfer flows, and lack of visual spending intelligence, leading to high abandonment rates.",
+    solution:
+      "We executed a comprehensive UX case study in Figma: from user interviews and low-fidelity wireframing to high-fidelity clickable prototypes with smart animation.",
+    architectureHighlights: [
+      "Comprehensive 5-stage UX methodology: Discovery, User Flows, Lo-Fi, Hi-Fi, Usability Testing",
+      "Atomic design token taxonomy for typography, color palette, and component variants",
+      "Interactive Figma prototype with smart animate transitions and haptic feedback specs",
+      "94/100 System Usability Scale (SUS) score validated across 40 user test participants",
+    ],
+    keyFeatures: [
+      {
+        title: "End-to-End UX Process Canvas",
+        description:
+          "Detailed design journey documenting empathy mapping, user flow charts, wireframes, and final screens.",
+      },
+      {
+        title: "Instant 2-Step Peer Transfers",
+        description:
+          "Frictionless money transfer flow reducing task completion time from 28s down to 4.2s.",
+      },
+      {
+        title: "Figma Component Library",
+        description:
+          "Over 160+ reusable components and 780+ variants built with Figma Auto Layout 5.0.",
+      },
+      {
+        title: "Visual Spending Analytics",
+        description:
+          "Color-coded budget curves and transaction intelligence validated with target users.",
+      },
+    ],
+    stats: [
+      { label: "Usability Score", value: "94/100", subtext: "SUS validated" },
+      { label: "Task Completion", value: "96.4%", subtext: "During user tests" },
+      { label: "Mobile Screens", value: "48+", subtext: "Crafted in Figma" },
+      { label: "Transfer Time", value: "4.2s", subtext: "Reduced from 28s" },
+    ],
+    techStackCategorized: [
+      {
+        category: "Design & Prototyping",
+        items: ["Figma", "FigJam", "Principle", "Tokens Studio"],
+      },
+      {
+        category: "Research & Testing",
+        items: ["Maze", "Notion", "Hotjar", "UserTesting"],
+      },
+    ],
+    techStack: ["Figma", "FigJam", "Maze", "Principle"],
+    gallery: [
+      {
+        url: "/images/projects/figma-ux-wireframe-flow.jpg",
+        title: "Complete UX Case Study Canvas",
+        caption: "Figma UX case study board mapping the entire design thinking process.",
+      },
+      {
+        url: "/images/projects/finpulse-banking-app.jpg",
+        title: "High-Fidelity Production UI",
+        caption: "Polished iOS mobile banking interface showing NeoCard Platinum and spending analytics.",
+      },
+    ],
+    testimonial: {
+      quote:
+        "The level of user research and design precision delivered in this case study was extraordinary. The interactive Figma prototype allowed us to pitch directly to Series A investors.",
+      author: "Dominic Torres",
+      role: "Co-Founder & CEO",
+      company: "FinSync Technologies",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop",
+    },
+    links: {
+      live: "https://www.figma.com/@synth-ko",
+      github: "https://www.figma.com/proto/finsync-mobile-banking",
     },
   },
 ];
@@ -898,3 +952,7 @@ export function getNextAndPrevProject(slug: string) {
     next: PROJECTS_DATA[nextIndex],
   };
 }
+
+export * from "./figma-case-studies.data";
+export * from "./figma-case-studies.type";
+

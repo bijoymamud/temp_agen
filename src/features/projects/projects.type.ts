@@ -48,6 +48,9 @@ export interface Project {
   clientIndustry?: string;
   year: string;
   duration: string;
+  status?: string;
+  longDescription?: string;
+  highlights?: string[];
   thumbnail: string;
   heroBanner?: string;
   tags: string[];

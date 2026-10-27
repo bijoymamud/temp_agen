@@ -83,7 +83,7 @@ export function ProjectCoinSlide({
                 {project.title}
               </h3>
               <span className="text-xs font-mono text-primary font-medium shrink-0 flex items-center gap-1">
-                <span>{project.category}</span>
+                <span>{project.category === "UI/UX Design" ? "Figma Case Study" : project.category}</span>
                 <ArrowUpRight className="h-3.5 w-3.5" />
               </span>
             </div>
@@ -112,7 +112,11 @@ export function ProjectCoinSlide({
           <h4 className="text-base font-bold text-foreground truncate max-w-xs">
             {project.title}
           </h4>
-          <p className="text-xs text-muted-foreground">Opening project...</p>
+          <p className="text-xs text-muted-foreground">
+            {project.category === "UI/UX Design"
+              ? "Opening Figma case study..."
+              : "Opening project..."}
+          </p>
         </div>
       </div>
     </div>

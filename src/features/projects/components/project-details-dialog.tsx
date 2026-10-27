@@ -71,7 +71,7 @@ export function ProjectDetailsDialog({
 
           {/* Description */}
           <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-            {project.longDescription || project.description}
+            {project.overview || project.description}
           </p>
 
           {/* Stats Grid */}
@@ -87,13 +87,13 @@ export function ProjectDetailsDialog({
           )}
 
           {/* Key Highlights */}
-          {project.highlights && project.highlights.length > 0 && (
+          {project.architectureHighlights && project.architectureHighlights.length > 0 && (
             <div className="mt-5 space-y-2">
               <h4 className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
                 Key Architectural Highlights
               </h4>
               <ul className="space-y-1.5">
-                {project.highlights.map((h, i) => (
+                {project.architectureHighlights.map((h, i) => (
                   <li key={i} className="flex items-start text-xs sm:text-sm text-foreground/90 gap-2">
                     <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
                     <span>{h}</span>
